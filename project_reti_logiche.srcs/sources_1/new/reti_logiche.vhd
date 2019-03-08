@@ -28,7 +28,7 @@ end project_reti_logiche;
 architecture Behavioral of project_reti_logiche is                                               ---------------------------------STATI DA OTTIMIZZARE-------------------------------
     type type_state is (START, RICHIESTA_RAM, WAIT_RAM_AND_INCREMENTA_INDIRIZZO, LETTO_MASCHERA, RICHIESTA_X_PRINCIPALE, WAIT_RAM, LEGGI_X_PRINCIPALE_RICHIESTA_Y, LEGGI_Y_PRINCIPALE, CHECK_CENTROIDE, LEGGI_X, LEGGI_Y, DONE);
     signal next_state, current_state : type_state;
-    signal address : std_logic_vector(7 downto 0) := (others => '0');
+    signal address : std_logic_vector(15 downto 0) := (others => '0');
     signal maschera_in : std_logic_vector(7 downto 0);
     signal x_principale, y_principale : std_logic_vector(7 downto 0);
       
@@ -52,7 +52,7 @@ begin
             when START =>
                 if (i_start='1') then
                     next_state <= RICHIESTA_RAM;
-                    address <= "00000000";
+                    address <= "0000000000000000";
                     o_data <= "00000000";
                 end if;
             
@@ -65,9 +65,9 @@ begin
                 o_en <= '0'; -- Va messo qui oppure il leggi maschera
                 if (UNSIGNED(address) = 0) then -- Controllo che indirizzo sia 17 in altro stato
                     next_state <= LETTO_MASCHERA;
-                elsif ((address and "00000001") = "00000001") then
+                elsif ((address and "0000000000000001") = "0000000000000001") then
                     next_state <= LEGGI_X;
-                elsif ((address and "00000001") = "00000000") then
+                elsif ((address and "0000000000000001") = "0000000000000000") then
                     next_state <= LEGGI_Y;
                 end if;
                 somma_parziale := UNSIGNED(address) + 1;
@@ -85,13 +85,13 @@ begin
             
             when RICHIESTA_X_PRINCIPALE =>
                  o_en <= '1';
-                 address <= "00010001";
-                 o_address <= "00010001";
+                 address <= "0000000000010001";
+                 o_address <= "0000000000010001";
                  next_state <= WAIT_RAM;
                  
              when WAIT_RAM =>
                 o_en <= '0'; -- Possibile errore per seganel o_en
-                if((address and "00000001") = "00000001") then
+                if((address and "0000000000000001") = "0000000000000001") then
                     next_state <= LEGGI_X_PRINCIPALE_RICHIESTA_Y;
                 else
                         next_state <= LEGGI_Y_PRINCIPALE;
@@ -100,17 +100,17 @@ begin
             when LEGGI_X_PRINCIPALE_RICHIESTA_Y =>
                 x_principale <= i_data;
                 o_en <= '1';
-                address <= "00010010";
-                o_address <= "00010010";
+                address <= "0000000000010010";
+                o_address <= "0000000000010010";
                 next_state <= WAIT_RAM;
             
             when LEGGI_Y_PRINCIPALE =>
                 y_principale <= i_data;
-                address <= "00000001";
+                address <= "0000000000000001";
                 next_state <= CHECK_CENTROIDE;
             
             when CHECK_CENTROIDE =>
-                if (address = "00010001") then
+                if (address = "0000000000010001") then
                     o_en <= '1';
                     o_we <= '1';
                     next_state <= DONE;
