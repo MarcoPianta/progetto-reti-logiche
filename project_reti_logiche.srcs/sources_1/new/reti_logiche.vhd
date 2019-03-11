@@ -26,10 +26,10 @@ entity project_reti_logiche is
 end project_reti_logiche;
 
 architecture Behavioral of project_reti_logiche is                                               ---------------------------------STATI DA OTTIMIZZARE-------------------------------
-    type type_state is (START, RICHIESTA_RAM, WAIT_RAM_AND_INCREMENTA_INDIRIZZO, LETTO_MASCHERA, RICHIESTA_X_PRINCIPALE, WAIT_RAM, LEGGI_X_PRINCIPALE_RICHIESTA_Y, LEGGI_Y_PRINCIPALE, CHECK_CENTROIDE, LEGGI_X, LEGGI_Y, DONE);
+    type type_state is (START, RICHIESTA_RAM, WAIT_RAM_AND_INCREMENTA_INDIRIZZO, LETTO_MASCHERA, RICHIESTA_X_PRINCIPALE, WAIT_RAM, LEGGI_X_PRINCIPALE_RICHIESTA_Y, LEGGI_Y_PRINCIPALE, CHECK_CENTROIDE, LEGGI_X, LEGGI_Y, MODIFICA_MASCHERA, DONE, SEGNALE_DONE);
     signal next_state, current_state : type_state;
     signal address : std_logic_vector(15 downto 0) := (others => '0');
-    signal maschera_in : std_logic_vector(7 downto 0);
+    signal maschera_in, maschera_output : std_logic_vector(7 downto 0);
     signal x_principale, y_principale : std_logic_vector(7 downto 0);
       
 begin
@@ -44,8 +44,9 @@ begin
     
     stato_prossimo : process(current_state)
     
-    variable somma_parziale : unsigned;
-    variable maschera_o_parziale : std_logic_vector(7 downto 0) := (0 => '1', others => '0'); 
+    variable somma_parziale : unsigned(15 downto 0) := to_unsigned(0,16); --Per incremento di indirizzo
+    variable maschera_o_parziale : std_logic_vector(7 downto 0) := (0 => '1', others => '0');
+    variable distanza_minima, distanza_corrente : unsigned(7 downto 0) := to_unsigned(0,8);
     
     begin
         case current_state is
@@ -54,6 +55,9 @@ begin
                     next_state <= RICHIESTA_RAM;
                     address <= "0000000000000000";
                     o_data <= "00000000";
+                    o_en <= '0';
+                    o_we <= '0';
+                    distanza_minima := to_unsigned(255,8);
                 end if;
             
             when RICHIESTA_RAM =>
@@ -110,7 +114,7 @@ begin
                 next_state <= CHECK_CENTROIDE;
             
             when CHECK_CENTROIDE =>
-                if (address = "0000000000010001") then
+                if (address = "0000000000010001") then -- se indirizzo è 17 finiamo esecuzione
                     o_en <= '1';
                     o_we <= '1';
                     next_state <= DONE;
@@ -126,6 +130,44 @@ begin
                     end if;
                 end if;
             
+            when LEGGI_X => -- Da chiedere
+                if (UNSIGNED(x_principale) > UNSIGNED(i_data)) then
+                    distanza_corrente := UNSIGNED(x_principale) - UNSIGNED(i_data);
+                else
+                    distanza_corrente := UNSIGNED(i_data) - UNSIGNED(x_principale);
+                end if;
+                next_state <= RICHIESTA_RAM;
+                
+            when LEGGI_Y =>
+                if (UNSIGNED(y_principale) > UNSIGNED(i_data)) then
+                    distanza_corrente := distanza_corrente + UNSIGNED(y_principale) - UNSIGNED(i_data);
+                else
+                    distanza_corrente := distanza_corrente + UNSIGNED(i_data) - UNSIGNED(y_principale);
+                end if;
+                next_state <= MODIFICA_MASCHERA;
+                
+            when MODIFICA_MASCHERA =>
+                if (distanza_corrente > distanza_minima) then                    
+                    maschera_o_parziale := maschera_o_parziale(6 downto 0) & '0';
+                    next_state <= CHECK_CENTROIDE;
+                else
+                    maschera_output <= maschera_output or maschera_o_parziale; --Legale ???????????????????????
+                    maschera_o_parziale := maschera_o_parziale(6 downto 0) & '0';
+                    next_state <= CHECK_CENTROIDE;                                                                                                   
+                end if;
+                
+            when DONE => -- Fare stato a parte per o_data???????????
+                o_data <= maschera_output;
+                o_en <= '1';
+                o_we <= '1';
+                o_done <= '1';
+                next_state <= SEGNALE_DONE;
+                
+            when SEGNALE_DONE =>
+                if (i_start = '0') then
+                    o_done <= '0';
+                    next_state <= START;
+                end if;                   
             -- In done bisogna mettere o_en = 0 e o_we = 0
             -- Modifica maschera usare shift a sx con un segnale patendo da 00000001 DA FARE ALLA FINE AGGIORNAMENTO PER CALCOLO
         end case;
