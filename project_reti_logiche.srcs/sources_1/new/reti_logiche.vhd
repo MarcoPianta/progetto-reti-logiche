@@ -29,7 +29,7 @@ architecture Behavioral of project_reti_logiche is                              
     type type_state is (START, RICHIESTA_RAM, WAIT_RAM_AND_INCREMENTA_INDIRIZZO, LETTO_MASCHERA, RICHIESTA_X_PRINCIPALE, WAIT_RAM, LEGGI_X_PRINCIPALE_RICHIESTA_Y, LEGGI_Y_PRINCIPALE, CHECK_CENTROIDE, LEGGI_X, LEGGI_Y, MODIFICA_MASCHERA, DONE, SEGNALE_DONE);
     signal next_state, current_state : type_state;
     signal address : std_logic_vector(15 downto 0) := (others => '0');
-    signal maschera_in, maschera_output : std_logic_vector(7 downto 0);
+    signal maschera_output : std_logic_vector(7 downto 0);
     signal x_principale, y_principale : std_logic_vector(7 downto 0);
       
 begin
@@ -42,18 +42,18 @@ begin
         end if;
     end process;
     
-    stato_prossimo : process(current_state)
+    stato_prossimo : process(current_state,i_start,i_data)
     
     variable somma_parziale : unsigned(15 downto 0) := to_unsigned(0,16); --Per incremento di indirizzo
     variable maschera_o_parziale : std_logic_vector(7 downto 0) := (0 => '1', others => '0');
     variable distanza_minima, distanza_corrente : unsigned(7 downto 0) := to_unsigned(0,8);
-    
+    variable maschera_in : std_logic_vector(7 downto 0);
     begin
         case current_state is
             when START =>
                 if (i_start='1') then
                     next_state <= RICHIESTA_RAM;
-                    address <= "0000000000000000";
+                    --address <= "0000000000000000";
                     o_data <= "00000000";
                     o_en <= '0';
                     o_we <= '0';
@@ -71,14 +71,15 @@ begin
                     next_state <= LETTO_MASCHERA;
                 elsif ((address and "0000000000000001") = "0000000000000001") then
                     next_state <= LEGGI_X;
-                elsif ((address and "0000000000000001") = "0000000000000000") then
+                else --((address and "0000000000000001") = "0000000000000000") then
                     next_state <= LEGGI_Y;
                 end if;
                 somma_parziale := UNSIGNED(address) + 1;
-                address <= std_logic_vector(somma_parziale); 
+                --address <= std_logic_vector(somma_parziale); 
             
             when LETTO_MASCHERA =>
-                maschera_in <= i_data;
+                address <= std_logic_vector(somma_parziale);
+                maschera_in := i_data; -- variabile ma in caso non funzioni la sintesi cambiare aggiungendo lo stato per elaborare la maschera 
                 if (maschera_in = "00000000") then
                     o_en <= '1';
                     o_we <= '1';
@@ -122,7 +123,7 @@ begin
                     if (maschera_in(0) = '1') then
                         next_state <= RICHIESTA_RAM;
                     else
-                        maschera_in <= '0' & maschera_in(7 downto 1);
+                        maschera_in := '0' & maschera_in(7 downto 1);
                         somma_parziale := UNSIGNED(address) + 2;
                         address <= std_logic_vector(somma_parziale);
                         maschera_o_parziale := maschera_o_parziale(6 downto 0) & '0';
@@ -136,6 +137,7 @@ begin
                 else
                     distanza_corrente := UNSIGNED(i_data) - UNSIGNED(x_principale);
                 end if;
+                address <= std_logic_vector(somma_parziale);
                 next_state <= RICHIESTA_RAM;
                 
             when LEGGI_Y =>
@@ -144,17 +146,20 @@ begin
                 else
                     distanza_corrente := distanza_corrente + UNSIGNED(i_data) - UNSIGNED(y_principale);
                 end if;
+                address <= std_logic_vector(somma_parziale);
                 next_state <= MODIFICA_MASCHERA;
-                
+
             when MODIFICA_MASCHERA =>
                 if (distanza_corrente > distanza_minima) then                    
                     maschera_o_parziale := maschera_o_parziale(6 downto 0) & '0';
-                    next_state <= CHECK_CENTROIDE;
-                else
+                elsif (distanza_corrente = distanza_minima) then
                     maschera_output <= maschera_output or maschera_o_parziale; --Legale ???????????????????????
                     maschera_o_parziale := maschera_o_parziale(6 downto 0) & '0';
-                    next_state <= CHECK_CENTROIDE;                                                                                                   
+                else
+                    maschera_output <= "00000000" or maschera_o_parziale; --Legale ???????????????????????
+                    maschera_o_parziale := maschera_o_parziale(6 downto 0) & '0';                                                                                                                
                 end if;
+                next_state <= CHECK_CENTROIDE;
                 
             when DONE => -- Fare stato a parte per o_data???????????
                 o_data <= maschera_output;
