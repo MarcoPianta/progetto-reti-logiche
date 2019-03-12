@@ -1,7 +1,7 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  \
 "../../../../project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd" \
-"../../../../project_reti_logiche.srcs/sim_1/imports/Test Bench/Test+Bench+di+Esempio.vhd" \
+"../../../../project_reti_logiche.srcs/sim_1/imports/Test Bench/Test+Bench+di+Esempio+con+maschera+a+0.vhd" \
 
 # Do not sort compile order
 nosort
