@@ -43,12 +43,14 @@ begin
         end if;
     end process;
     
-    stato_prossimo : process(current_state,i_start,address)
+    stato_prossimo : process(current_state,i_start,address,i_data)
     
     variable somma_parziale : unsigned(15 downto 0) := to_unsigned(0,16); --Per incremento di indirizzo
-    --variable maschera_o_parziale : std_logic_vector(7 downto 0) := (0 => '1', others => '0');
-    variable distanza_minima, distanza_corrente : unsigned(7 downto 0) := to_unsigned(0,8);
-    variable maschera_in : std_logic_vector(7 downto 0);
+    variable tmp_maschera_o_parziale : std_logic_vector(7 downto 0) := (0 => '1', others => '0');
+    variable distanza_minima, distanza_corrente, tmp_distanza_corrente : unsigned(7 downto 0) := to_unsigned(0,8);
+    variable maschera_in, tmp_maschera_in : std_logic_vector(7 downto 0) := (others => '0');
+    variable tmp_maschera_output : std_logic_vector(7 downto 0);
+    
     begin
     
         case current_state is
@@ -60,6 +62,8 @@ begin
                     o_en <= '0';
                     o_we <= '0';
                     distanza_minima := to_unsigned(255,8);
+                else
+                    next_state <= START;
                 end if;
             
             when RICHIESTA_RAM =>
@@ -74,6 +78,7 @@ begin
                 elsif ((address and "0000000000000001") = "0000000000000001") then
                     next_state <= LEGGI_X;
                 else --((address and "0000000000000001") = "0000000000000000") then
+                    tmp_distanza_corrente := distanza_corrente;
                     next_state <= LEGGI_Y;
                 end if;
                 somma_parziale := UNSIGNED(address) + 1;
@@ -114,6 +119,7 @@ begin
             when LEGGI_Y_PRINCIPALE =>
                 y_principale <= i_data;
                 address <= "0000000000000001";
+                --tmp_maschera_in := maschera_in;
                 next_state <= CHECK_CENTROIDE;
             
             when CHECK_CENTROIDE => -- Chiedere se va bene che la modifica fa subito scattare gli if
@@ -124,6 +130,7 @@ begin
                 else
                     if (maschera_in(0) = '1') then
                         next_state <= RICHIESTA_RAM;
+                        
                     else
                         somma_parziale := UNSIGNED(address) + 2;
                         address <= std_logic_vector(somma_parziale);
@@ -131,7 +138,7 @@ begin
                         next_state <= CHECK_CENTROIDE;                
                     end if;
                 end if;
-                maschera_in := '0' & maschera_in(7 downto 1);
+                maschera_in := '0' & maschera_in(7 downto 1); --Problema post sintesi????
                 distanza_corrente := to_unsigned(0 ,8);
             
             when LEGGI_X => -- Da chiedere
@@ -145,11 +152,12 @@ begin
                 
             when LEGGI_Y =>
                 if (UNSIGNED(y_principale) > UNSIGNED(i_data)) then
-                    distanza_corrente := distanza_corrente + UNSIGNED(y_principale) - UNSIGNED(i_data);
+                    distanza_corrente := tmp_distanza_corrente + UNSIGNED(y_principale) - UNSIGNED(i_data);
                 else
-                    distanza_corrente := distanza_corrente + UNSIGNED(i_data) - UNSIGNED(y_principale);
+                    distanza_corrente := tmp_distanza_corrente + UNSIGNED(i_data) - UNSIGNED(y_principale);
                 end if;
                 address <= std_logic_vector(somma_parziale);
+                --tmp_maschera_output := maschera_output;
                 next_state <= MODIFICA_MASCHERA;
 
             when MODIFICA_MASCHERA =>
@@ -163,6 +171,7 @@ begin
                     maschera_o_parziale <= maschera_o_parziale(6 downto 0) & '0';
                     distanza_minima := distanza_corrente;                                                                                                                
                 end if;
+                --tmp_maschera_in := maschera_in;
                 next_state <= CHECK_CENTROIDE;
                 
             when DONE => -- Fare stato a parte per o_data???????????
