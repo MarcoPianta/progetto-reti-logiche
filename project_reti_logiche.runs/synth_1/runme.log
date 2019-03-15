@@ -14,57 +14,82 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 3916 
+INFO: Helper process launched with PID 12688 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 363.570 ; gain = 101.211
+Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 363.285 ; gain = 100.480
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'project_reti_logiche' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:28]
-WARNING: [Synth 8-614] signal 'maschera_o_parziale' is read in the process but is not in the sensitivity list [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:46]
-WARNING: [Synth 8-614] signal 'x_principale' is read in the process but is not in the sensitivity list [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:46]
-WARNING: [Synth 8-614] signal 'y_principale' is read in the process but is not in the sensitivity list [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:46]
-WARNING: [Synth 8-614] signal 'maschera_output' is read in the process but is not in the sensitivity list [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:46]
+WARNING: [Synth 8-614] signal 'maschera_o_parziale' is read in the process but is not in the sensitivity list [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:47]
+WARNING: [Synth 8-614] signal 'tmp_maschera_in' is read in the process but is not in the sensitivity list [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:47]
+WARNING: [Synth 8-614] signal 'x_principale' is read in the process but is not in the sensitivity list [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:47]
+WARNING: [Synth 8-614] signal 'y_principale' is read in the process but is not in the sensitivity list [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:47]
+WARNING: [Synth 8-614] signal 'maschera_output' is read in the process but is not in the sensitivity list [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:47]
 INFO: [Synth 8-256] done synthesizing module 'project_reti_logiche' (1#1) [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:28]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 418.871 ; gain = 156.512
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 419.387 ; gain = 156.582
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 418.871 ; gain = 156.512
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 419.387 ; gain = 156.582
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a200tfbg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 418.871 ; gain = 156.512
----------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 419.387 ; gain = 156.582
 INFO: [Device 21-403] Loading part xc7a200tfbg484-1
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:154]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:145]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:56]
-INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:159]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:150]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:60]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_maschera_o_parziale_reg' and it is trimmed from '8' to '7' bits. [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:130]
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'project_reti_logiche'
 INFO: [Synth 8-5546] ROM "o_en" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "o_en" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "tmp_distanza_corrente" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-327] inferring latch for variable 'o_address_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:71]
-WARNING: [Synth 8-327] inferring latch for variable 'o_done_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:182]
-WARNING: [Synth 8-327] inferring latch for variable 'o_en_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:62]
-WARNING: [Synth 8-327] inferring latch for variable 'o_we_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:63]
-WARNING: [Synth 8-327] inferring latch for variable 'o_data_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:61]
-WARNING: [Synth 8-327] inferring latch for variable 'next_state_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:42]
-WARNING: [Synth 8-327] inferring latch for variable 'address_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:71]
-WARNING: [Synth 8-327] inferring latch for variable 'maschera_output_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:167]
-WARNING: [Synth 8-327] inferring latch for variable 'maschera_in_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:89]
-WARNING: [Synth 8-327] inferring latch for variable 'somma_parziale_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:84]
-WARNING: [Synth 8-327] inferring latch for variable 'maschera_o_parziale_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:137]
-WARNING: [Synth 8-327] inferring latch for variable 'distanza_minima_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:64]
-WARNING: [Synth 8-327] inferring latch for variable 'distanza_corrente_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:81]
-WARNING: [Synth 8-327] inferring latch for variable 'y_principale_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:120]
-WARNING: [Synth 8-327] inferring latch for variable 'x_principale_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:113]
-WARNING: [Synth 8-327] inferring latch for variable 'tmp_distanza_corrente_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:81]
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:43]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:43]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   start |                             0000 |                             0000
+           richiesta_ram |                             0001 |                             0001
+wait_ram_and_incrementa_indirizzo |                             0010 |                             0010
+          letto_maschera |                             0011 |                             0011
+  richiesta_x_principale |                             0100 |                             0100
+                wait_ram |                             0101 |                             0101
+leggi_x_principale_richiesta_y |                             0110 |                             0110
+      leggi_y_principale |                             0111 |                             0111
+                 leggi_x |                             1000 |                             1001
+                 leggi_y |                             1001 |                             1010
+       modifica_maschera |                             1010 |                             1011
+         check_centroide |                             1011 |                             1000
+                    done |                             1100 |                             1100
+            segnale_done |                             1101 |                             1101
+                  iSTATE |                             1110 |                             1111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'project_reti_logiche'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:43]
+WARNING: [Synth 8-327] inferring latch for variable 'o_address_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:75]
+WARNING: [Synth 8-327] inferring latch for variable 'x_principale_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:117]
+WARNING: [Synth 8-327] inferring latch for variable 'y_principale_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:124]
+WARNING: [Synth 8-327] inferring latch for variable 'tmp_distanza_corrente_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:85]
+WARNING: [Synth 8-327] inferring latch for variable 'distanza_minima_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:68]
+WARNING: [Synth 8-327] inferring latch for variable 'distanza_corrente_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:85]
+WARNING: [Synth 8-327] inferring latch for variable 'tmp_maschera_in_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:126]
+WARNING: [Synth 8-327] inferring latch for variable 'address_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:64]
+WARNING: [Synth 8-327] inferring latch for variable 'maschera_o_parziale_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:130]
+WARNING: [Synth 8-327] inferring latch for variable 'tmp_maschera_o_parziale_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:130]
+WARNING: [Synth 8-327] inferring latch for variable 'maschera_in_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:93]
+WARNING: [Synth 8-327] inferring latch for variable 'somma_parziale_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:88]
+WARNING: [Synth 8-327] inferring latch for variable 'maschera_output_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:165]
+WARNING: [Synth 8-327] inferring latch for variable 'tmp_maschera_output_reg' [C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sources_1/new/reti_logiche.vhd:165]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 418.871 ; gain = 156.512
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 435.590 ; gain = 172.785
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -80,20 +105,15 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     16 Bit       Adders := 2     
 	   4 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                4 Bit    Registers := 1     
 +---Muxes : 
 	  15 Input     16 Bit        Muxes := 3     
-	  15 Input      8 Bit        Muxes := 7     
 	   2 Input      8 Bit        Muxes := 5     
-	   3 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 3     
-	  15 Input      3 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 1     
-	  15 Input      1 Bit        Muxes := 17    
-	   2 Input      1 Bit        Muxes := 3     
-	   7 Input      1 Bit        Muxes := 1     
-	  17 Input      1 Bit        Muxes := 1     
+	  15 Input      8 Bit        Muxes := 9     
+	  15 Input      4 Bit        Muxes := 1     
+	  14 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 7     
+	  15 Input      1 Bit        Muxes := 19    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -106,20 +126,15 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     16 Bit       Adders := 2     
 	   4 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                4 Bit    Registers := 1     
 +---Muxes : 
 	  15 Input     16 Bit        Muxes := 3     
-	  15 Input      8 Bit        Muxes := 7     
 	   2 Input      8 Bit        Muxes := 5     
-	   3 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 3     
-	  15 Input      3 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 1     
-	  15 Input      1 Bit        Muxes := 17    
-	   2 Input      1 Bit        Muxes := 3     
-	   7 Input      1 Bit        Muxes := 1     
-	  17 Input      1 Bit        Muxes := 1     
+	  15 Input      8 Bit        Muxes := 9     
+	  15 Input      4 Bit        Muxes := 1     
+	  14 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 7     
+	  15 Input      1 Bit        Muxes := 19    
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -137,11 +152,14 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5546] ROM "o_en" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "o_en" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_distanza_corrente" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "o_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "o_en" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 617.176 ; gain = 354.816
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 617.840 ; gain = 355.035
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -154,7 +172,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 617.176 ; gain = 354.816
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 617.840 ; gain = 355.035
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -166,7 +184,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 617.176 ; gain = 354.816
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 617.840 ; gain = 355.035
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -190,7 +208,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 617.176 ; gain = 354.816
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 617.840 ; gain = 355.035
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -203,7 +221,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 617.176 ; gain = 354.816
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 617.840 ; gain = 355.035
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -215,25 +233,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 617.176 ; gain = 354.816
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 617.840 ; gain = 355.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 617.176 ; gain = 354.816
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 617.840 ; gain = 355.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 617.176 ; gain = 354.816
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 617.840 ; gain = 355.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 617.176 ; gain = 354.816
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 617.840 ; gain = 355.035
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -252,13 +270,13 @@ Report Cell Usage:
 |1     |BUFG   |     1|
 |2     |CARRY4 |    13|
 |3     |LUT1   |     1|
-|4     |LUT2   |    30|
-|5     |LUT3   |    50|
-|6     |LUT4   |    53|
-|7     |LUT5   |    30|
-|8     |LUT6   |    34|
+|4     |LUT2   |    28|
+|5     |LUT3   |    59|
+|6     |LUT4   |    62|
+|7     |LUT5   |    24|
+|8     |LUT6   |    36|
 |9     |FDCE   |     4|
-|10    |LD     |   127|
+|10    |LD     |   139|
 |11    |IBUF   |    11|
 |12    |OBUF   |    27|
 +------+-------+------+
@@ -267,31 +285,31 @@ Report Instance Areas:
 +------+---------+-------+------+
 |      |Instance |Module |Cells |
 +------+---------+-------+------+
-|1     |top      |       |   381|
+|1     |top      |       |   405|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 617.176 ; gain = 354.816
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 617.840 ; gain = 355.035
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 20 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 617.176 ; gain = 354.816
-Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 617.176 ; gain = 354.816
+Synthesis finished with 0 errors, 0 critical warnings and 23 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 617.840 ; gain = 355.035
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 617.840 ; gain = 355.035
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 140 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 152 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 714.484 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 722.629 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 127 instances were transformed.
-  LD => LDCE: 127 instances
+  A total of 139 instances were transformed.
+  LD => LDCE: 139 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-23 Infos, 20 Warnings, 0 Critical Warnings and 0 Errors encountered.
+29 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 714.484 ; gain = 462.539
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 714.484 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 722.629 ; gain = 470.305
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 722.629 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.runs/synth_1/project_reti_logiche.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file project_reti_logiche_utilization_synth.rpt -pb project_reti_logiche_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Mar 13 16:24:34 2019...
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 15 19:40:11 2019...

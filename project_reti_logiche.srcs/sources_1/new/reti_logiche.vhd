@@ -32,6 +32,7 @@ architecture Behavioral of project_reti_logiche is                              
     signal maschera_output : std_logic_vector(7 downto 0);
     signal x_principale, y_principale : std_logic_vector(7 downto 0);
     signal maschera_o_parziale : std_logic_vector(7 downto 0) := (0 => '1', others => '0');
+    signal tmp_maschera_in : std_logic_vector(7 downto 0) := (others => '0');
       
 begin
     registri_macchina: process(i_clk, i_rst)
@@ -44,20 +45,23 @@ begin
     end process;
     
     stato_prossimo : process(current_state,i_start,address,i_data)
-    
+        
     variable somma_parziale : unsigned(15 downto 0) := to_unsigned(0,16); --Per incremento di indirizzo
     variable tmp_maschera_o_parziale : std_logic_vector(7 downto 0) := (0 => '1', others => '0');
     variable distanza_minima, distanza_corrente, tmp_distanza_corrente : unsigned(7 downto 0) := to_unsigned(0,8);
-    variable maschera_in, tmp_maschera_in : std_logic_vector(7 downto 0) := (others => '0');
+    variable maschera_in : std_logic_vector(7 downto 0) := (others => '0');
     variable tmp_maschera_output : std_logic_vector(7 downto 0);
     
     begin
-    
+        o_data <= "00000000";
+        o_done <= '0';
+        o_en <= '0';
+        o_we <= '0';
         case current_state is
             when START =>
                 if (i_start='1') then --possibile aggiunta di lese con next state
                     next_state <= RICHIESTA_RAM;
-                    --address <= "0000000000000000";
+                    address <= "0000000000000000";
                     o_data <= "00000000";
                     o_en <= '0';
                     o_we <= '0';
@@ -102,11 +106,11 @@ begin
                  next_state <= WAIT_RAM;
                  
              when WAIT_RAM =>
-                o_en <= '0'; -- Possibile errore per seganel o_en
+                --o_en <= '0'; -- Possibile errore per segnale o_en
                 if((address and "0000000000000001") = "0000000000000001") then
                     next_state <= LEGGI_X_PRINCIPALE_RICHIESTA_Y;
                 else
-                        next_state <= LEGGI_Y_PRINCIPALE;
+                    next_state <= LEGGI_Y_PRINCIPALE;
                 end if;
                 
             when LEGGI_X_PRINCIPALE_RICHIESTA_Y =>
@@ -119,26 +123,27 @@ begin
             when LEGGI_Y_PRINCIPALE =>
                 y_principale <= i_data;
                 address <= "0000000000000001";
-                --tmp_maschera_in := maschera_in;
-                next_state <= CHECK_CENTROIDE;
+                tmp_maschera_in <= maschera_in;
+                next_state <= CHECK_CENTROIDE;                
             
             when CHECK_CENTROIDE => -- Chiedere se va bene che la modifica fa subito scattare gli if
+                tmp_maschera_o_parziale := maschera_o_parziale; --Possiblie problema per post sintesi causa loop
                 if (address = "0000000000010001") then -- se indirizzo è 17 finiamo esecuzione
                     o_en <= '1';
                     o_we <= '1';
                     next_state <= DONE;
                 else
-                    if (maschera_in(0) = '1') then
-                        next_state <= RICHIESTA_RAM;
-                        
+                    if (tmp_maschera_in(0) = '1') then
+                        next_state <= RICHIESTA_RAM;                        
                     else
                         somma_parziale := UNSIGNED(address) + 2;
                         address <= std_logic_vector(somma_parziale);
-                        maschera_o_parziale <= maschera_o_parziale(6 downto 0) & '0';
+                        maschera_o_parziale <= tmp_maschera_o_parziale(6 downto 0) & '0';
                         next_state <= CHECK_CENTROIDE;                
                     end if;
                 end if;
-                maschera_in := '0' & maschera_in(7 downto 1); --Problema post sintesi????
+                maschera_in := '0' & tmp_maschera_in(7 downto 1); --Problema post sintesi????
+                tmp_maschera_in <= maschera_in;
                 distanza_corrente := to_unsigned(0 ,8);
             
             when LEGGI_X => -- Da chiedere
@@ -157,21 +162,21 @@ begin
                     distanza_corrente := tmp_distanza_corrente + UNSIGNED(i_data) - UNSIGNED(y_principale);
                 end if;
                 address <= std_logic_vector(somma_parziale);
-                --tmp_maschera_output := maschera_output;
+                tmp_maschera_output := maschera_output;
+                tmp_maschera_o_parziale := maschera_o_parziale;
                 next_state <= MODIFICA_MASCHERA;
 
             when MODIFICA_MASCHERA =>
                 if (distanza_corrente > distanza_minima) then                    
-                    maschera_o_parziale <= maschera_o_parziale(6 downto 0) & '0';
+                    maschera_o_parziale <= tmp_maschera_o_parziale(6 downto 0) & '0';
                 elsif (distanza_corrente = distanza_minima) then
-                    maschera_output <= maschera_output or maschera_o_parziale; --Legale ???????????????????????
-                    maschera_o_parziale <= maschera_o_parziale(6 downto 0) & '0';
+                    maschera_output <= tmp_maschera_output or maschera_o_parziale; --Legale ???????????????????????
+                    maschera_o_parziale <= tmp_maschera_o_parziale(6 downto 0) & '0';
                 else
                     maschera_output <= "00000000" or maschera_o_parziale; --Legale ???????????????????????
-                    maschera_o_parziale <= maschera_o_parziale(6 downto 0) & '0';
+                    maschera_o_parziale <= tmp_maschera_o_parziale(6 downto 0) & '0';
                     distanza_minima := distanza_corrente;                                                                                                                
-                end if;
-                --tmp_maschera_in := maschera_in;
+                end if;                
                 next_state <= CHECK_CENTROIDE;
                 
             when DONE => -- Fare stato a parte per o_data???????????
