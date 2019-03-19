@@ -6,6 +6,7 @@
 --
 ----------------------------------------------------------------------------------
 
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
@@ -28,11 +29,11 @@ end project_reti_logiche;
 architecture Behavioral of project_reti_logiche is                                               ---------------------------------STATI DA OTTIMIZZARE-------------------------------
     type type_state is (START, RICHIESTA_RAM, WAIT_RAM_AND_INCREMENTA_INDIRIZZO, LETTO_MASCHERA, RICHIESTA_X_PRINCIPALE, WAIT_RAM, LEGGI_X_PRINCIPALE_RICHIESTA_Y, LEGGI_Y_PRINCIPALE, CHECK_CENTROIDE, LEGGI_X, LEGGI_Y, MODIFICA_MASCHERA, DONE, SEGNALE_DONE);
     signal next_state, current_state : type_state;
-    signal address : std_logic_vector(15 downto 0) := (others => '0');
+    signal address, next_address : std_logic_vector(15 downto 0) := (others => '0');
     signal maschera_output : std_logic_vector(7 downto 0);
-    signal x_principale, y_principale : std_logic_vector(7 downto 0);
-    signal maschera_o_parziale : std_logic_vector(7 downto 0) := (0 => '1', others => '0');
-    signal tmp_maschera_in : std_logic_vector(7 downto 0) := (others => '0');
+    signal x_principale, y_principale, x, y : std_logic_vector(7 downto 0) := (others => '0');
+    signal maschera_o_parziale, next_maschera_o_parziale : std_logic_vector(7 downto 0) := (0 => '1', others => '0');
+    --signal tmp_maschera_in : std_logic_vector(7 downto 0) := (others => '0');
       
 begin
     registri_macchina: process(i_clk, i_rst)
@@ -46,23 +47,38 @@ begin
     
     stato_prossimo : process(current_state,i_start,address,i_data)
         
-    variable somma_parziale : unsigned(15 downto 0) := to_unsigned(0,16); --Per incremento di indirizzo
+    variable somma_parziale, next_somma_parziale : unsigned(15 downto 0) := to_unsigned(0,16); --Per incremento di indirizzo
     variable tmp_maschera_o_parziale : std_logic_vector(7 downto 0) := (0 => '1', others => '0');
-    variable distanza_minima, distanza_corrente, tmp_distanza_corrente : unsigned(7 downto 0) := to_unsigned(0,8);
-    variable maschera_in : std_logic_vector(7 downto 0) := (others => '0');
+    variable distanza_minima, distanza_corrente, tmp_distanza_corrente, next_distanza_corrente, next_distanza_minima : unsigned(7 downto 0) := to_unsigned(0,8);
+    variable maschera_in, tmp_maschera_in : std_logic_vector(7 downto 0) := (others => '0');
     variable tmp_maschera_output : std_logic_vector(7 downto 0);
+    --variable x, y : std_logic_vector(7 downto 0) := (others => '0');
     
     begin
         o_data <= "00000000";
         o_done <= '0';
         o_en <= '0';
         o_we <= '0';
+        o_address <= "0000000000000000";
+        --da qui
+        
+        x <= x_principale ;
+        y <= y_principale ;
+        next_distanza_minima := distanza_minima;
+        --tmp_distanza_corrente := distanza_corrente;
+        next_distanza_corrente := distanza_corrente;
+        --address <= "0000000000000000";
+        tmp_maschera_o_parziale := maschera_o_parziale; --Possiblie problema per post sintesi causa loop
+        tmp_maschera_output := maschera_output;
+        tmp_maschera_in := maschera_in;
+        next_somma_parziale := somma_parziale;
+        
         case current_state is
             when START =>
                 if (i_start='1') then --possibile aggiunta di lese con next state
                     next_state <= RICHIESTA_RAM;
                     address <= "0000000000000000";
-                    o_data <= "00000000";
+                    --o_data <= "00000000";
                     o_en <= '0';
                     o_we <= '0';
                     distanza_minima := to_unsigned(255,8);
@@ -71,11 +87,14 @@ begin
                 end if;
             
             when RICHIESTA_RAM =>
+                --address <= next_address;
                 o_en <= '1';
                 o_address <= address;
                 next_state <= WAIT_RAM_AND_INCREMENTA_INDIRIZZO;
             
             when WAIT_RAM_AND_INCREMENTA_INDIRIZZO => --WARNING: Possibile cambio: possibile errore per ciclo di clock
+                distanza_corrente := next_distanza_corrente;
+                --address <= next_address;
                 o_en <= '0'; -- Va messo qui oppure il leggi maschera
                 if (UNSIGNED(address) = 0) then -- Controllo che indirizzo sia 17 in altro stato
                     next_state <= LETTO_MASCHERA;
@@ -89,6 +108,7 @@ begin
                 --address <= std_logic_vector(somma_parziale); 
             
             when LETTO_MASCHERA =>
+                somma_parziale := next_somma_parziale;
                 address <= std_logic_vector(somma_parziale);
                 maschera_in := i_data; -- variabile ma in caso non funzioni la sintesi cambiare aggiungendo lo stato per elaborare la maschera 
                 if (maschera_in = "00000000") then
@@ -96,7 +116,7 @@ begin
                     o_we <= '1';
                     next_state <= DONE;
                 else
-                    next_state <= RICHIESTA_X_PRINCIPALE;
+                  next_state <= RICHIESTA_X_PRINCIPALE;
                 end if;
             
             when RICHIESTA_X_PRINCIPALE =>
@@ -106,6 +126,7 @@ begin
                  next_state <= WAIT_RAM;
                  
              when WAIT_RAM =>
+                --address <= next_address;
                 --o_en <= '0'; -- Possibile errore per segnale o_en
                 if((address and "0000000000000001") = "0000000000000001") then
                     next_state <= LEGGI_X_PRINCIPALE_RICHIESTA_Y;
@@ -114,6 +135,7 @@ begin
                 end if;
                 
             when LEGGI_X_PRINCIPALE_RICHIESTA_Y =>
+                --x <= i_data; 
                 x_principale <= i_data;
                 o_en <= '1';
                 address <= "0000000000010010";
@@ -121,13 +143,15 @@ begin
                 next_state <= WAIT_RAM;
             
             when LEGGI_Y_PRINCIPALE =>
+                --y <= i_data;  
                 y_principale <= i_data;
-                address <= "0000000000000001";
-                tmp_maschera_in <= maschera_in;
+                address <= "0000000000000001";              
                 next_state <= CHECK_CENTROIDE;                
             
             when CHECK_CENTROIDE => -- Chiedere se va bene che la modifica fa subito scattare gli if
-                tmp_maschera_o_parziale := maschera_o_parziale; --Possiblie problema per post sintesi causa loop
+                --address <= next_address;
+                somma_parziale := next_somma_parziale;
+                maschera_in := tmp_maschera_in;
                 if (address = "0000000000010001") then -- se indirizzo è 17 finiamo esecuzione
                     o_en <= '1';
                     o_we <= '1';
@@ -143,40 +167,47 @@ begin
                     end if;
                 end if;
                 maschera_in := '0' & tmp_maschera_in(7 downto 1); --Problema post sintesi????
-                tmp_maschera_in <= maschera_in;
-                distanza_corrente := to_unsigned(0 ,8);
+                --tmp_maschera_in <= maschera_in;
             
             when LEGGI_X => -- Da chiedere
+                somma_parziale := next_somma_parziale;
+                distanza_corrente := next_distanza_corrente;
+                x_principale <= x;
                 if (UNSIGNED(x_principale) > UNSIGNED(i_data)) then
                     distanza_corrente := UNSIGNED(x_principale) - UNSIGNED(i_data);
                 else
                     distanza_corrente := UNSIGNED(i_data) - UNSIGNED(x_principale);
                 end if;
-                address <= std_logic_vector(somma_parziale);
+                address <= std_logic_vector(somma_parziale); 
                 next_state <= RICHIESTA_RAM;
                 
             when LEGGI_Y =>
+                somma_parziale := next_somma_parziale;
+                distanza_corrente := next_distanza_corrente;
+                y_principale <= y;
                 if (UNSIGNED(y_principale) > UNSIGNED(i_data)) then
                     distanza_corrente := tmp_distanza_corrente + UNSIGNED(y_principale) - UNSIGNED(i_data);
                 else
                     distanza_corrente := tmp_distanza_corrente + UNSIGNED(i_data) - UNSIGNED(y_principale);
                 end if;
                 address <= std_logic_vector(somma_parziale);
-                tmp_maschera_output := maschera_output;
-                tmp_maschera_o_parziale := maschera_o_parziale;
+                --tmp_maschera_output := maschera_output;
+                --tmp_maschera_o_parziale := maschera_o_parziale;
                 next_state <= MODIFICA_MASCHERA;
 
             when MODIFICA_MASCHERA =>
+                distanza_corrente := next_distanza_corrente;
+                distanza_minima := next_distanza_minima;
                 if (distanza_corrente > distanza_minima) then                    
                     maschera_o_parziale <= tmp_maschera_o_parziale(6 downto 0) & '0';
                 elsif (distanza_corrente = distanza_minima) then
-                    maschera_output <= tmp_maschera_output or maschera_o_parziale; --Legale ???????????????????????
+                    maschera_output <= tmp_maschera_output or maschera_o_parziale;
                     maschera_o_parziale <= tmp_maschera_o_parziale(6 downto 0) & '0';
                 else
-                    maschera_output <= "00000000" or maschera_o_parziale; --Legale ???????????????????????
+                    maschera_output <= "00000000" or maschera_o_parziale;
                     maschera_o_parziale <= tmp_maschera_o_parziale(6 downto 0) & '0';
                     distanza_minima := distanza_corrente;                                                                                                                
-                end if;                
+                end if;              
                 next_state <= CHECK_CENTROIDE;
                 
             when DONE => -- Fare stato a parte per o_data???????????
