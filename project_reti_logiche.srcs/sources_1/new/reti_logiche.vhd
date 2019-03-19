@@ -74,7 +74,7 @@ begin
                 elsif ((address and "0000000000000001") = "0000000000000001") then
                     next_state <= LEGGI_X;
                 else --((address and "0000000000000001") = "0000000000000000") then
-                    tmp_distanza_corrente := distanza_corrente;
+                    --tmp_distanza_corrente := distanza_corrente;
                     next_state <= LEGGI_Y;
                 end if;
                 somma_parziale := UNSIGNED(address) + 1;
@@ -115,27 +115,27 @@ begin
             when LEGGI_Y_PRINCIPALE =>
                 y_principale <= i_data;
                 address <= "0000000000000001";
-                tmp_maschera_in <= maschera_in;
+                --tmp_maschera_in <= maschera_in;
                 next_state <= CHECK_CENTROIDE;                
             
             when CHECK_CENTROIDE => -- Chiedere se va bene che la modifica fa subito scattare gli if
-                tmp_maschera_o_parziale := maschera_o_parziale; --Possiblie problema per post sintesi causa loop
+                --tmp_maschera_o_parziale := maschera_o_parziale; --Possiblie problema per post sintesi causa loop
                 if (address = "0000000000010001") then -- se indirizzo è 17 finiamo esecuzione
                     o_en <= '1';
                     o_we <= '1';
                     next_state <= DONE;
                 else
-                    if (tmp_maschera_in(0) = '1') then
+                    if (maschera_in(0) = '1') then --modifica da tmp_maschera_in a maschera_in
                         next_state <= RICHIESTA_RAM;                        
                     else
                         somma_parziale := UNSIGNED(address) + 2;
                         address <= std_logic_vector(somma_parziale);
-                        maschera_o_parziale <= tmp_maschera_o_parziale(6 downto 0) & '0';
+                        maschera_o_parziale <= maschera_o_parziale(6 downto 0) & '0';
                         next_state <= CHECK_CENTROIDE;                
                     end if;
                 end if;
-                maschera_in := '0' & tmp_maschera_in(7 downto 1); --Problema post sintesi????
-                tmp_maschera_in <= maschera_in;
+                maschera_in := '0' & maschera_in(7 downto 1); --Problema post sintesi????
+                --tmp_maschera_in <= maschera_in;
                 distanza_corrente := to_unsigned(0 ,8);
             
             when LEGGI_X => -- Da chiedere
@@ -149,24 +149,24 @@ begin
                 
             when LEGGI_Y =>
                 if (UNSIGNED(y_principale) > UNSIGNED(i_data)) then
-                    distanza_corrente := tmp_distanza_corrente + UNSIGNED(y_principale) - UNSIGNED(i_data);
+                    distanza_corrente := distanza_corrente + UNSIGNED(y_principale) - UNSIGNED(i_data);
                 else
-                    distanza_corrente := tmp_distanza_corrente + UNSIGNED(i_data) - UNSIGNED(y_principale);
+                    distanza_corrente := distanza_corrente + UNSIGNED(i_data) - UNSIGNED(y_principale);
                 end if;
                 address <= std_logic_vector(somma_parziale);
-                tmp_maschera_output := maschera_output;
-                tmp_maschera_o_parziale := maschera_o_parziale;
+                --tmp_maschera_output := maschera_output;
+                --tmp_maschera_o_parziale := maschera_o_parziale;
                 next_state <= MODIFICA_MASCHERA;
 
             when MODIFICA_MASCHERA =>
                 if (distanza_corrente > distanza_minima) then                    
-                    maschera_o_parziale <= tmp_maschera_o_parziale(6 downto 0) & '0';
+                    maschera_o_parziale <= maschera_o_parziale(6 downto 0) & '0';
                 elsif (distanza_corrente = distanza_minima) then
-                    maschera_output <= tmp_maschera_output or maschera_o_parziale; --Legale ???????????????????????
-                    maschera_o_parziale <= tmp_maschera_o_parziale(6 downto 0) & '0';
+                    maschera_output <= maschera_output or maschera_o_parziale; --Legale ???????????????????????
+                    maschera_o_parziale <= maschera_o_parziale(6 downto 0) & '0';
                 else
                     maschera_output <= "00000000" or maschera_o_parziale; --Legale ???????????????????????
-                    maschera_o_parziale <= tmp_maschera_o_parziale(6 downto 0) & '0';
+                    maschera_o_parziale <= maschera_o_parziale(6 downto 0) & '0';
                     distanza_minima := distanza_corrente;                                                                                                                
                 end if;                
                 next_state <= CHECK_CENTROIDE;

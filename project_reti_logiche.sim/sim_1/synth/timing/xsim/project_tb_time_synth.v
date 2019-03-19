@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Fri Mar 15 15:19:54 2019
+// Date        : Tue Mar 19 13:31:05 2019
 // Host        : DESKTOP-SUP4LUU running 64-bit major release  (build 9200)
 // Command     : write_verilog -mode timesim -nolib -sdf_anno true -force -file
 //               C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.sim/sim_1/synth/timing/xsim/project_tb_time_synth.v
@@ -34,150 +34,166 @@ module project_reti_logiche
   output o_we;
   output [7:0]o_data;
 
-  wire \FSM_sequential_next_state_reg[0]_i_1_n_0 ;
-  wire \FSM_sequential_next_state_reg[0]_i_2_n_0 ;
-  wire \FSM_sequential_next_state_reg[1]_i_1_n_0 ;
-  wire \FSM_sequential_next_state_reg[1]_i_2_n_0 ;
-  wire \FSM_sequential_next_state_reg[1]_i_3_n_0 ;
-  wire \FSM_sequential_next_state_reg[1]_i_4_n_0 ;
-  wire \FSM_sequential_next_state_reg[1]_i_5_n_0 ;
-  wire \FSM_sequential_next_state_reg[1]_i_6_n_0 ;
-  wire \FSM_sequential_next_state_reg[2]_i_1_n_0 ;
-  wire \FSM_sequential_next_state_reg[3]_i_10_n_0 ;
-  wire \FSM_sequential_next_state_reg[3]_i_11_n_0 ;
-  wire \FSM_sequential_next_state_reg[3]_i_1_n_0 ;
+  wire \FSM_sequential_next_state[0]_i_1_n_0 ;
+  wire \FSM_sequential_next_state[0]_i_2_n_0 ;
+  wire \FSM_sequential_next_state[0]_i_3_n_0 ;
+  wire \FSM_sequential_next_state[0]_i_4_n_0 ;
+  wire \FSM_sequential_next_state[1]_i_1_n_0 ;
+  wire \FSM_sequential_next_state[1]_i_2_n_0 ;
+  wire \FSM_sequential_next_state[1]_i_4_n_0 ;
+  wire \FSM_sequential_next_state[1]_i_5_n_0 ;
+  wire \FSM_sequential_next_state[2]_i_1_n_0 ;
+  wire \FSM_sequential_next_state[2]_i_2_n_0 ;
+  wire \FSM_sequential_next_state[2]_i_3_n_0 ;
+  wire \FSM_sequential_next_state[2]_i_4_n_0 ;
+  wire \FSM_sequential_next_state[2]_i_5_n_0 ;
+  wire \FSM_sequential_next_state[3]_i_1_n_0 ;
+  wire \FSM_sequential_next_state[3]_i_3_n_0 ;
+  wire \FSM_sequential_next_state[3]_i_4_n_0 ;
+  wire \FSM_sequential_next_state[3]_i_5_n_0 ;
+  wire \FSM_sequential_next_state[3]_i_6_n_0 ;
   wire \FSM_sequential_next_state_reg[3]_i_2_n_0 ;
-  wire \FSM_sequential_next_state_reg[3]_i_3_n_0 ;
-  wire \FSM_sequential_next_state_reg[3]_i_4_n_0 ;
-  wire \FSM_sequential_next_state_reg[3]_i_5_n_0 ;
-  wire \FSM_sequential_next_state_reg[3]_i_6_n_0 ;
-  wire \FSM_sequential_next_state_reg[3]_i_7_n_0 ;
-  wire \FSM_sequential_next_state_reg[3]_i_8_n_0 ;
-  wire \FSM_sequential_next_state_reg[3]_i_9_n_0 ;
-  wire [15:0]address;
-  wire \address_reg[0]_i_1_n_0 ;
-  wire \address_reg[10]_i_1_n_0 ;
-  wire \address_reg[11]_i_1_n_0 ;
-  wire \address_reg[11]_i_2_n_0 ;
-  wire \address_reg[11]_i_2_n_1 ;
-  wire \address_reg[11]_i_2_n_2 ;
-  wire \address_reg[11]_i_2_n_3 ;
-  wire \address_reg[12]_i_1_n_0 ;
-  wire \address_reg[13]_i_1_n_0 ;
-  wire \address_reg[14]_i_1_n_0 ;
-  wire \address_reg[15]_i_1_n_0 ;
-  wire \address_reg[15]_i_2_n_0 ;
-  wire \address_reg[15]_i_3_n_1 ;
-  wire \address_reg[15]_i_3_n_2 ;
-  wire \address_reg[15]_i_3_n_3 ;
-  wire \address_reg[1]_i_1_n_0 ;
-  wire \address_reg[2]_i_1_n_0 ;
-  wire \address_reg[3]_i_1_n_0 ;
-  wire \address_reg[3]_i_2_n_0 ;
-  wire \address_reg[3]_i_2_n_1 ;
-  wire \address_reg[3]_i_2_n_2 ;
-  wire \address_reg[3]_i_2_n_3 ;
-  wire \address_reg[3]_i_3_n_0 ;
-  wire \address_reg[4]_i_1_n_0 ;
-  wire \address_reg[5]_i_1_n_0 ;
-  wire \address_reg[6]_i_1_n_0 ;
-  wire \address_reg[7]_i_1_n_0 ;
-  wire \address_reg[7]_i_2_n_0 ;
-  wire \address_reg[7]_i_2_n_1 ;
-  wire \address_reg[7]_i_2_n_2 ;
-  wire \address_reg[7]_i_2_n_3 ;
-  wire \address_reg[8]_i_1_n_0 ;
-  wire \address_reg[9]_i_1_n_0 ;
-  wire [3:0]current_state;
-  wire [7:0]distanza_corrente;
-  wire \distanza_corrente_reg[0]_i_1_n_0 ;
-  wire \distanza_corrente_reg[1]_i_1_n_0 ;
-  wire \distanza_corrente_reg[2]_i_1_n_0 ;
-  wire \distanza_corrente_reg[3]_i_10_n_0 ;
-  wire \distanza_corrente_reg[3]_i_11_n_0 ;
-  wire \distanza_corrente_reg[3]_i_12_n_0 ;
-  wire \distanza_corrente_reg[3]_i_13_n_0 ;
-  wire \distanza_corrente_reg[3]_i_14_n_0 ;
-  wire \distanza_corrente_reg[3]_i_15_n_1 ;
-  wire \distanza_corrente_reg[3]_i_15_n_2 ;
-  wire \distanza_corrente_reg[3]_i_15_n_3 ;
-  wire \distanza_corrente_reg[3]_i_16_n_0 ;
-  wire \distanza_corrente_reg[3]_i_16_n_1 ;
-  wire \distanza_corrente_reg[3]_i_16_n_2 ;
-  wire \distanza_corrente_reg[3]_i_16_n_3 ;
-  wire \distanza_corrente_reg[3]_i_17_n_0 ;
-  wire \distanza_corrente_reg[3]_i_18_n_0 ;
-  wire \distanza_corrente_reg[3]_i_19_n_0 ;
+  wire address;
+  wire \address[0]_i_1_n_0 ;
+  wire \address[10]_i_1_n_0 ;
+  wire \address[11]_i_1_n_0 ;
+  wire \address[12]_i_1_n_0 ;
+  wire \address[13]_i_1_n_0 ;
+  wire \address[14]_i_1_n_0 ;
+  wire \address[15]_i_2_n_0 ;
+  wire \address[1]_i_1_n_0 ;
+  wire \address[2]_i_1_n_0 ;
+  wire \address[3]_i_1_n_0 ;
+  wire \address[4]_i_1_n_0 ;
+  wire \address[5]_i_1_n_0 ;
+  wire \address[6]_i_1_n_0 ;
+  wire \address[7]_i_1_n_0 ;
+  wire \address[8]_i_1_n_0 ;
+  wire \address[9]_i_1_n_0 ;
+  wire \address_reg_n_0_[10] ;
+  wire \address_reg_n_0_[11] ;
+  wire \address_reg_n_0_[12] ;
+  wire \address_reg_n_0_[13] ;
+  wire \address_reg_n_0_[14] ;
+  wire \address_reg_n_0_[15] ;
+  wire \address_reg_n_0_[1] ;
+  wire \address_reg_n_0_[2] ;
+  wire \address_reg_n_0_[3] ;
+  wire \address_reg_n_0_[4] ;
+  wire \address_reg_n_0_[5] ;
+  wire \address_reg_n_0_[6] ;
+  wire \address_reg_n_0_[7] ;
+  wire \address_reg_n_0_[8] ;
+  wire \address_reg_n_0_[9] ;
+  wire distanza_corrente;
+  wire \distanza_corrente[3]_i_10_n_0 ;
+  wire \distanza_corrente[3]_i_11_n_0 ;
+  wire \distanza_corrente[3]_i_12_n_0 ;
+  wire \distanza_corrente[3]_i_13_n_0 ;
+  wire \distanza_corrente[3]_i_14_n_0 ;
+  wire \distanza_corrente[3]_i_15_n_0 ;
+  wire \distanza_corrente[3]_i_16_n_0 ;
+  wire \distanza_corrente[3]_i_17_n_0 ;
+  wire \distanza_corrente[3]_i_18_n_0 ;
+  wire \distanza_corrente[3]_i_19_n_0 ;
+  wire \distanza_corrente[3]_i_22_n_0 ;
+  wire \distanza_corrente[3]_i_23_n_0 ;
+  wire \distanza_corrente[3]_i_24_n_0 ;
+  wire \distanza_corrente[3]_i_25_n_0 ;
+  wire \distanza_corrente[3]_i_26_n_0 ;
+  wire \distanza_corrente[3]_i_27_n_0 ;
+  wire \distanza_corrente[3]_i_28_n_0 ;
+  wire \distanza_corrente[3]_i_29_n_0 ;
+  wire \distanza_corrente[3]_i_2_n_0 ;
+  wire \distanza_corrente[3]_i_30_n_0 ;
+  wire \distanza_corrente[3]_i_31_n_0 ;
+  wire \distanza_corrente[3]_i_32_n_0 ;
+  wire \distanza_corrente[3]_i_33_n_0 ;
+  wire \distanza_corrente[3]_i_34_n_0 ;
+  wire \distanza_corrente[3]_i_35_n_0 ;
+  wire \distanza_corrente[3]_i_36_n_0 ;
+  wire \distanza_corrente[3]_i_37_n_0 ;
+  wire \distanza_corrente[3]_i_3_n_0 ;
+  wire \distanza_corrente[3]_i_4_n_0 ;
+  wire \distanza_corrente[3]_i_5_n_0 ;
+  wire \distanza_corrente[3]_i_6_n_0 ;
+  wire \distanza_corrente[3]_i_7_n_0 ;
+  wire \distanza_corrente[3]_i_8_n_0 ;
+  wire \distanza_corrente[3]_i_9_n_0 ;
+  wire \distanza_corrente[7]_i_10_n_0 ;
+  wire \distanza_corrente[7]_i_11_n_0 ;
+  wire \distanza_corrente[7]_i_12_n_0 ;
+  wire \distanza_corrente[7]_i_13_n_0 ;
+  wire \distanza_corrente[7]_i_14_n_0 ;
+  wire \distanza_corrente[7]_i_15_n_0 ;
+  wire \distanza_corrente[7]_i_16_n_0 ;
+  wire \distanza_corrente[7]_i_17_n_0 ;
+  wire \distanza_corrente[7]_i_18_n_0 ;
+  wire \distanza_corrente[7]_i_19_n_0 ;
+  wire \distanza_corrente[7]_i_1_n_0 ;
+  wire \distanza_corrente[7]_i_20_n_0 ;
+  wire \distanza_corrente[7]_i_21_n_0 ;
+  wire \distanza_corrente[7]_i_22_n_0 ;
+  wire \distanza_corrente[7]_i_23_n_0 ;
+  wire \distanza_corrente[7]_i_24_n_0 ;
+  wire \distanza_corrente[7]_i_25_n_0 ;
+  wire \distanza_corrente[7]_i_26_n_0 ;
+  wire \distanza_corrente[7]_i_27_n_0 ;
+  wire \distanza_corrente[7]_i_28_n_0 ;
+  wire \distanza_corrente[7]_i_29_n_0 ;
+  wire \distanza_corrente[7]_i_4_n_0 ;
+  wire \distanza_corrente[7]_i_5_n_0 ;
+  wire \distanza_corrente[7]_i_6_n_0 ;
+  wire \distanza_corrente[7]_i_7_n_0 ;
+  wire \distanza_corrente[7]_i_8_n_0 ;
+  wire \distanza_corrente[7]_i_9_n_0 ;
   wire \distanza_corrente_reg[3]_i_1_n_0 ;
+  wire \distanza_corrente_reg[3]_i_1_n_1 ;
+  wire \distanza_corrente_reg[3]_i_1_n_2 ;
+  wire \distanza_corrente_reg[3]_i_1_n_3 ;
   wire \distanza_corrente_reg[3]_i_20_n_0 ;
-  wire \distanza_corrente_reg[3]_i_21_n_0 ;
-  wire \distanza_corrente_reg[3]_i_22_n_0 ;
-  wire \distanza_corrente_reg[3]_i_23_n_0 ;
-  wire \distanza_corrente_reg[3]_i_24_n_0 ;
-  wire \distanza_corrente_reg[3]_i_25_n_0 ;
-  wire \distanza_corrente_reg[3]_i_26_n_0 ;
-  wire \distanza_corrente_reg[3]_i_27_n_0 ;
-  wire \distanza_corrente_reg[3]_i_28_n_0 ;
-  wire \distanza_corrente_reg[3]_i_29_n_0 ;
-  wire \distanza_corrente_reg[3]_i_2_n_0 ;
-  wire \distanza_corrente_reg[3]_i_2_n_1 ;
-  wire \distanza_corrente_reg[3]_i_2_n_2 ;
-  wire \distanza_corrente_reg[3]_i_2_n_3 ;
-  wire \distanza_corrente_reg[3]_i_30_n_0 ;
-  wire \distanza_corrente_reg[3]_i_31_n_0 ;
-  wire \distanza_corrente_reg[3]_i_32_n_0 ;
-  wire \distanza_corrente_reg[3]_i_33_n_0 ;
-  wire \distanza_corrente_reg[3]_i_34_n_0 ;
-  wire \distanza_corrente_reg[3]_i_3_n_0 ;
-  wire \distanza_corrente_reg[3]_i_4_n_0 ;
-  wire \distanza_corrente_reg[3]_i_5_n_0 ;
-  wire \distanza_corrente_reg[3]_i_6_n_0 ;
-  wire \distanza_corrente_reg[3]_i_7_n_0 ;
-  wire \distanza_corrente_reg[3]_i_8_n_0 ;
-  wire \distanza_corrente_reg[3]_i_9_n_0 ;
-  wire \distanza_corrente_reg[4]_i_1_n_0 ;
-  wire \distanza_corrente_reg[5]_i_1_n_0 ;
-  wire \distanza_corrente_reg[6]_i_1_n_0 ;
-  wire \distanza_corrente_reg[7]_i_10_n_0 ;
-  wire \distanza_corrente_reg[7]_i_11_n_0 ;
-  wire \distanza_corrente_reg[7]_i_12_n_0 ;
-  wire \distanza_corrente_reg[7]_i_13_n_0 ;
-  wire \distanza_corrente_reg[7]_i_14_n_0 ;
-  wire \distanza_corrente_reg[7]_i_15_n_0 ;
-  wire \distanza_corrente_reg[7]_i_16_n_0 ;
-  wire \distanza_corrente_reg[7]_i_17_n_0 ;
-  wire \distanza_corrente_reg[7]_i_18_n_0 ;
-  wire \distanza_corrente_reg[7]_i_19_n_0 ;
-  wire \distanza_corrente_reg[7]_i_1_n_0 ;
-  wire \distanza_corrente_reg[7]_i_20_n_0 ;
-  wire \distanza_corrente_reg[7]_i_21_n_0 ;
-  wire \distanza_corrente_reg[7]_i_2_n_0 ;
+  wire \distanza_corrente_reg[3]_i_20_n_1 ;
+  wire \distanza_corrente_reg[3]_i_20_n_2 ;
+  wire \distanza_corrente_reg[3]_i_20_n_3 ;
+  wire \distanza_corrente_reg[3]_i_21_n_1 ;
+  wire \distanza_corrente_reg[3]_i_21_n_2 ;
+  wire \distanza_corrente_reg[3]_i_21_n_3 ;
   wire \distanza_corrente_reg[7]_i_3_n_1 ;
   wire \distanza_corrente_reg[7]_i_3_n_2 ;
   wire \distanza_corrente_reg[7]_i_3_n_3 ;
-  wire \distanza_corrente_reg[7]_i_4_n_0 ;
-  wire \distanza_corrente_reg[7]_i_5_n_0 ;
-  wire \distanza_corrente_reg[7]_i_6_n_0 ;
-  wire \distanza_corrente_reg[7]_i_7_n_0 ;
-  wire \distanza_corrente_reg[7]_i_8_n_0 ;
-  wire \distanza_corrente_reg[7]_i_9_n_0 ;
-  wire [7:0]distanza_minima;
+  wire \distanza_corrente_reg_n_0_[0] ;
+  wire \distanza_corrente_reg_n_0_[1] ;
+  wire \distanza_corrente_reg_n_0_[2] ;
+  wire \distanza_corrente_reg_n_0_[3] ;
+  wire \distanza_corrente_reg_n_0_[4] ;
+  wire \distanza_corrente_reg_n_0_[5] ;
+  wire \distanza_corrente_reg_n_0_[6] ;
+  wire \distanza_corrente_reg_n_0_[7] ;
+  wire distanza_minima;
   wire distanza_minima1;
-  wire \distanza_minima_reg[0]_i_1_n_0 ;
-  wire \distanza_minima_reg[1]_i_1_n_0 ;
-  wire \distanza_minima_reg[2]_i_1_n_0 ;
-  wire \distanza_minima_reg[3]_i_1_n_0 ;
-  wire \distanza_minima_reg[4]_i_1_n_0 ;
-  wire \distanza_minima_reg[5]_i_1_n_0 ;
-  wire \distanza_minima_reg[6]_i_1_n_0 ;
-  wire \distanza_minima_reg[7]_i_1_n_0 ;
-  wire \distanza_minima_reg[7]_i_2_n_0 ;
-  wire \distanza_minima_reg[7]_i_3_n_0 ;
-  wire \distanza_minima_reg[7]_i_4_n_0 ;
-  wire \distanza_minima_reg[7]_i_5_n_0 ;
-  wire \distanza_minima_reg[7]_i_6_n_0 ;
-  wire \distanza_minima_reg[7]_i_7_n_0 ;
-  wire \distanza_minima_reg[7]_i_8_n_0 ;
+  wire \distanza_minima[0]_i_1_n_0 ;
+  wire \distanza_minima[1]_i_1_n_0 ;
+  wire \distanza_minima[2]_i_1_n_0 ;
+  wire \distanza_minima[3]_i_1_n_0 ;
+  wire \distanza_minima[4]_i_1_n_0 ;
+  wire \distanza_minima[5]_i_1_n_0 ;
+  wire \distanza_minima[6]_i_1_n_0 ;
+  wire \distanza_minima[7]_i_1_n_0 ;
+  wire \distanza_minima[7]_i_3_n_0 ;
+  wire \distanza_minima[7]_i_4_n_0 ;
+  wire \distanza_minima[7]_i_5_n_0 ;
+  wire \distanza_minima[7]_i_6_n_0 ;
+  wire \distanza_minima[7]_i_7_n_0 ;
+  wire \distanza_minima[7]_i_8_n_0 ;
+  wire \distanza_minima[7]_i_9_n_0 ;
+  wire \distanza_minima_reg_n_0_[0] ;
+  wire \distanza_minima_reg_n_0_[1] ;
+  wire \distanza_minima_reg_n_0_[2] ;
+  wire \distanza_minima_reg_n_0_[3] ;
+  wire \distanza_minima_reg_n_0_[4] ;
+  wire \distanza_minima_reg_n_0_[5] ;
+  wire \distanza_minima_reg_n_0_[6] ;
+  wire \distanza_minima_reg_n_0_[7] ;
   wire i_clk;
   wire i_clk_IBUF;
   wire i_clk_IBUF_BUFG;
@@ -188,1530 +204,1503 @@ module project_reti_logiche
   wire i_start;
   wire i_start_IBUF;
   wire [7:0]in13;
-  wire [15:1]in19;
-  wire [15:0]in20;
-  wire [7:0]maschera_in;
-  wire \maschera_in_reg[0]_i_1_n_0 ;
-  wire \maschera_in_reg[1]_i_1_n_0 ;
-  wire \maschera_in_reg[2]_i_1_n_0 ;
-  wire \maschera_in_reg[3]_i_1_n_0 ;
-  wire \maschera_in_reg[4]_i_1_n_0 ;
-  wire \maschera_in_reg[5]_i_1_n_0 ;
-  wire \maschera_in_reg[6]_i_1_n_0 ;
-  wire \maschera_in_reg[7]_i_1_n_0 ;
-  wire \maschera_in_reg[7]_i_2_n_0 ;
-  wire [7:0]maschera_o_parziale;
-  wire \maschera_o_parziale_reg[1]_i_1_n_0 ;
-  wire \maschera_o_parziale_reg[2]_i_1_n_0 ;
-  wire \maschera_o_parziale_reg[3]_i_1_n_0 ;
-  wire \maschera_o_parziale_reg[4]_i_1_n_0 ;
-  wire \maschera_o_parziale_reg[5]_i_1_n_0 ;
-  wire \maschera_o_parziale_reg[6]_i_1_n_0 ;
-  wire \maschera_o_parziale_reg[7]_i_1_n_0 ;
-  wire \maschera_o_parziale_reg[7]_i_2_n_0 ;
-  wire [7:0]maschera_output;
-  wire \maschera_output_reg[0]_i_1_n_0 ;
-  wire \maschera_output_reg[1]_i_1_n_0 ;
-  wire \maschera_output_reg[2]_i_1_n_0 ;
-  wire \maschera_output_reg[3]_i_1_n_0 ;
-  wire \maschera_output_reg[4]_i_1_n_0 ;
-  wire \maschera_output_reg[5]_i_1_n_0 ;
-  wire \maschera_output_reg[6]_i_1_n_0 ;
-  wire \maschera_output_reg[7]_i_10_n_0 ;
-  wire \maschera_output_reg[7]_i_11_n_0 ;
-  wire \maschera_output_reg[7]_i_1_n_0 ;
-  wire \maschera_output_reg[7]_i_2_n_0 ;
+  wire [15:1]in16;
+  wire [15:0]in17;
+  wire \maschera_in[0]_i_1_n_0 ;
+  wire \maschera_in[1]_i_1_n_0 ;
+  wire \maschera_in[2]_i_1_n_0 ;
+  wire \maschera_in[3]_i_1_n_0 ;
+  wire \maschera_in[4]_i_1_n_0 ;
+  wire \maschera_in[5]_i_1_n_0 ;
+  wire \maschera_in[6]_i_1_n_0 ;
+  wire \maschera_in[7]_i_1_n_0 ;
+  wire \maschera_in[7]_i_2_n_0 ;
+  wire \maschera_in_reg_n_0_[0] ;
+  wire \maschera_in_reg_n_0_[1] ;
+  wire \maschera_in_reg_n_0_[2] ;
+  wire \maschera_in_reg_n_0_[3] ;
+  wire \maschera_in_reg_n_0_[4] ;
+  wire \maschera_in_reg_n_0_[5] ;
+  wire \maschera_in_reg_n_0_[6] ;
+  wire \maschera_in_reg_n_0_[7] ;
+  wire maschera_o_parziale;
+  wire \maschera_o_parziale_reg_n_0_[0] ;
+  wire \maschera_o_parziale_reg_n_0_[1] ;
+  wire \maschera_o_parziale_reg_n_0_[2] ;
+  wire \maschera_o_parziale_reg_n_0_[3] ;
+  wire \maschera_o_parziale_reg_n_0_[4] ;
+  wire \maschera_o_parziale_reg_n_0_[5] ;
+  wire \maschera_o_parziale_reg_n_0_[6] ;
+  wire \maschera_o_parziale_reg_n_0_[7] ;
+  wire maschera_output;
+  wire \maschera_output[0]_i_1_n_0 ;
+  wire \maschera_output[1]_i_1_n_0 ;
+  wire \maschera_output[2]_i_1_n_0 ;
+  wire \maschera_output[3]_i_1_n_0 ;
+  wire \maschera_output[4]_i_1_n_0 ;
+  wire \maschera_output[5]_i_1_n_0 ;
+  wire \maschera_output[6]_i_1_n_0 ;
+  wire \maschera_output[7]_i_10_n_0 ;
+  wire \maschera_output[7]_i_11_n_0 ;
+  wire \maschera_output[7]_i_2_n_0 ;
+  wire \maschera_output[7]_i_4_n_0 ;
+  wire \maschera_output[7]_i_5_n_0 ;
+  wire \maschera_output[7]_i_6_n_0 ;
+  wire \maschera_output[7]_i_7_n_0 ;
+  wire \maschera_output[7]_i_8_n_0 ;
+  wire \maschera_output[7]_i_9_n_0 ;
   wire \maschera_output_reg[7]_i_3_n_1 ;
   wire \maschera_output_reg[7]_i_3_n_2 ;
   wire \maschera_output_reg[7]_i_3_n_3 ;
-  wire \maschera_output_reg[7]_i_4_n_0 ;
-  wire \maschera_output_reg[7]_i_5_n_0 ;
-  wire \maschera_output_reg[7]_i_6_n_0 ;
-  wire \maschera_output_reg[7]_i_7_n_0 ;
-  wire \maschera_output_reg[7]_i_8_n_0 ;
-  wire \maschera_output_reg[7]_i_9_n_0 ;
+  wire \maschera_output_reg_n_0_[0] ;
+  wire \maschera_output_reg_n_0_[1] ;
+  wire \maschera_output_reg_n_0_[2] ;
+  wire \maschera_output_reg_n_0_[3] ;
+  wire \maschera_output_reg_n_0_[4] ;
+  wire \maschera_output_reg_n_0_[5] ;
+  wire \maschera_output_reg_n_0_[6] ;
+  wire \maschera_output_reg_n_0_[7] ;
   wire [3:0]next_state;
+  wire next_state00;
+  wire [1:1]next_state__0;
   wire [15:0]o_address;
+  wire [4:0]o_address0_in;
+  wire \o_address[15]_i_1_n_0 ;
+  wire \o_address[4]_i_1_n_0 ;
   wire [15:0]o_address_OBUF;
-  wire \o_address_reg[0]_i_1_n_0 ;
-  wire \o_address_reg[10]_i_1_n_0 ;
-  wire \o_address_reg[11]_i_1_n_0 ;
-  wire \o_address_reg[12]_i_1_n_0 ;
-  wire \o_address_reg[13]_i_1_n_0 ;
-  wire \o_address_reg[14]_i_1_n_0 ;
-  wire \o_address_reg[15]_i_1_n_0 ;
-  wire \o_address_reg[15]_i_2_n_0 ;
-  wire \o_address_reg[1]_i_1_n_0 ;
-  wire \o_address_reg[2]_i_1_n_0 ;
-  wire \o_address_reg[3]_i_1_n_0 ;
-  wire \o_address_reg[4]_i_1_n_0 ;
-  wire \o_address_reg[5]_i_1_n_0 ;
-  wire \o_address_reg[6]_i_1_n_0 ;
-  wire \o_address_reg[7]_i_1_n_0 ;
-  wire \o_address_reg[8]_i_1_n_0 ;
-  wire \o_address_reg[9]_i_1_n_0 ;
   wire [7:0]o_data;
+  wire \o_data[7]_i_1_n_0 ;
+  wire \o_data[7]_i_2_n_0 ;
   wire [7:0]o_data_OBUF;
   wire o_done;
   wire o_done_OBUF;
+  wire o_done_i_1_n_0;
+  wire o_done_i_2_n_0;
   wire o_en;
   wire o_en_OBUF;
-  wire o_en_OBUF_inst_i_2_n_0;
-  wire o_en_OBUF_inst_i_3_n_0;
-  wire o_en_OBUF_inst_i_4_n_0;
-  wire o_en_OBUF_inst_i_5_n_0;
-  wire o_en_OBUF_inst_i_6_n_0;
-  wire o_en_OBUF_inst_i_7_n_0;
+  wire o_en_i_1_n_0;
+  wire o_en_i_2_n_0;
+  wire o_en_i_3_n_0;
   wire o_we;
   wire o_we_OBUF;
-  wire [6:0]p_0_in;
-  wire p_0_in__0;
-  wire [15:0]somma_parziale;
-  wire \somma_parziale_reg[0]_i_1_n_0 ;
-  wire \somma_parziale_reg[10]_i_1_n_0 ;
-  wire \somma_parziale_reg[11]_i_1_n_0 ;
-  wire \somma_parziale_reg[12]_i_1_n_0 ;
+  wire o_we_i_1_n_0;
+  wire o_we_i_2_n_0;
+  wire o_we_i_3_n_0;
+  wire p_0_in;
+  wire somma_parziale;
+  wire \somma_parziale[0]_i_1_n_0 ;
+  wire \somma_parziale[10]_i_1_n_0 ;
+  wire \somma_parziale[11]_i_1_n_0 ;
+  wire \somma_parziale[12]_i_1_n_0 ;
+  wire \somma_parziale[13]_i_1_n_0 ;
+  wire \somma_parziale[14]_i_1_n_0 ;
+  wire \somma_parziale[15]_i_2_n_0 ;
+  wire \somma_parziale[1]_i_1_n_0 ;
+  wire \somma_parziale[2]_i_1_n_0 ;
+  wire \somma_parziale[3]_i_1_n_0 ;
+  wire \somma_parziale[3]_i_3_n_0 ;
+  wire \somma_parziale[4]_i_1_n_0 ;
+  wire \somma_parziale[5]_i_1_n_0 ;
+  wire \somma_parziale[6]_i_1_n_0 ;
+  wire \somma_parziale[7]_i_1_n_0 ;
+  wire \somma_parziale[8]_i_1_n_0 ;
+  wire \somma_parziale[9]_i_1_n_0 ;
+  wire \somma_parziale_reg[11]_i_2_n_0 ;
+  wire \somma_parziale_reg[11]_i_2_n_1 ;
+  wire \somma_parziale_reg[11]_i_2_n_2 ;
+  wire \somma_parziale_reg[11]_i_2_n_3 ;
   wire \somma_parziale_reg[12]_i_2_n_0 ;
   wire \somma_parziale_reg[12]_i_2_n_1 ;
   wire \somma_parziale_reg[12]_i_2_n_2 ;
   wire \somma_parziale_reg[12]_i_2_n_3 ;
-  wire \somma_parziale_reg[13]_i_1_n_0 ;
-  wire \somma_parziale_reg[14]_i_1_n_0 ;
-  wire \somma_parziale_reg[15]_i_1_n_0 ;
-  wire \somma_parziale_reg[15]_i_2_n_0 ;
+  wire \somma_parziale_reg[15]_i_3_n_1 ;
   wire \somma_parziale_reg[15]_i_3_n_2 ;
   wire \somma_parziale_reg[15]_i_3_n_3 ;
-  wire \somma_parziale_reg[1]_i_1_n_0 ;
-  wire \somma_parziale_reg[2]_i_1_n_0 ;
-  wire \somma_parziale_reg[3]_i_1_n_0 ;
-  wire \somma_parziale_reg[4]_i_1_n_0 ;
+  wire \somma_parziale_reg[15]_i_4_n_2 ;
+  wire \somma_parziale_reg[15]_i_4_n_3 ;
+  wire \somma_parziale_reg[3]_i_2_n_0 ;
+  wire \somma_parziale_reg[3]_i_2_n_1 ;
+  wire \somma_parziale_reg[3]_i_2_n_2 ;
+  wire \somma_parziale_reg[3]_i_2_n_3 ;
   wire \somma_parziale_reg[4]_i_2_n_0 ;
   wire \somma_parziale_reg[4]_i_2_n_1 ;
   wire \somma_parziale_reg[4]_i_2_n_2 ;
   wire \somma_parziale_reg[4]_i_2_n_3 ;
-  wire \somma_parziale_reg[5]_i_1_n_0 ;
-  wire \somma_parziale_reg[6]_i_1_n_0 ;
-  wire \somma_parziale_reg[7]_i_1_n_0 ;
-  wire \somma_parziale_reg[8]_i_1_n_0 ;
+  wire \somma_parziale_reg[7]_i_2_n_0 ;
+  wire \somma_parziale_reg[7]_i_2_n_1 ;
+  wire \somma_parziale_reg[7]_i_2_n_2 ;
+  wire \somma_parziale_reg[7]_i_2_n_3 ;
   wire \somma_parziale_reg[8]_i_2_n_0 ;
   wire \somma_parziale_reg[8]_i_2_n_1 ;
   wire \somma_parziale_reg[8]_i_2_n_2 ;
   wire \somma_parziale_reg[8]_i_2_n_3 ;
-  wire \somma_parziale_reg[9]_i_1_n_0 ;
-  wire [7:0]tmp_distanza_corrente;
-  wire \tmp_distanza_corrente_reg[7]_i_1_n_0 ;
-  wire \tmp_distanza_corrente_reg[7]_i_2_n_0 ;
-  wire \tmp_maschera_in_reg[0]_i_1_n_0 ;
-  wire \tmp_maschera_in_reg[1]_i_1_n_0 ;
-  wire \tmp_maschera_in_reg[2]_i_1_n_0 ;
-  wire \tmp_maschera_in_reg[3]_i_1_n_0 ;
-  wire \tmp_maschera_in_reg[4]_i_1_n_0 ;
-  wire \tmp_maschera_in_reg[5]_i_1_n_0 ;
-  wire \tmp_maschera_in_reg[6]_i_1_n_0 ;
-  wire \tmp_maschera_in_reg[7]_i_1_n_0 ;
-  wire \tmp_maschera_in_reg[7]_i_2_n_0 ;
-  wire \tmp_maschera_in_reg_n_0_[0] ;
-  wire [6:0]tmp_maschera_o_parziale;
-  wire \tmp_maschera_o_parziale_reg[6]_i_1_n_0 ;
-  wire [7:0]tmp_maschera_output;
-  wire \tmp_maschera_output_reg[7]_i_1_n_0 ;
-  wire [7:0]x_principale;
-  wire \x_principale_reg[7]_i_1_n_0 ;
-  wire [7:0]y_principale;
-  wire \y_principale_reg[7]_i_1_n_0 ;
-  wire [3:3]\NLW_address_reg[15]_i_3_CO_UNCONNECTED ;
-  wire [3:0]\NLW_distanza_corrente_reg[3]_i_15_O_UNCONNECTED ;
-  wire [3:0]\NLW_distanza_corrente_reg[3]_i_16_O_UNCONNECTED ;
+  wire \somma_parziale_reg_n_0_[0] ;
+  wire \somma_parziale_reg_n_0_[10] ;
+  wire \somma_parziale_reg_n_0_[11] ;
+  wire \somma_parziale_reg_n_0_[12] ;
+  wire \somma_parziale_reg_n_0_[13] ;
+  wire \somma_parziale_reg_n_0_[14] ;
+  wire \somma_parziale_reg_n_0_[15] ;
+  wire \somma_parziale_reg_n_0_[1] ;
+  wire \somma_parziale_reg_n_0_[2] ;
+  wire \somma_parziale_reg_n_0_[3] ;
+  wire \somma_parziale_reg_n_0_[4] ;
+  wire \somma_parziale_reg_n_0_[5] ;
+  wire \somma_parziale_reg_n_0_[6] ;
+  wire \somma_parziale_reg_n_0_[7] ;
+  wire \somma_parziale_reg_n_0_[8] ;
+  wire \somma_parziale_reg_n_0_[9] ;
+  wire x_principale;
+  wire \x_principale_reg_n_0_[0] ;
+  wire \x_principale_reg_n_0_[1] ;
+  wire \x_principale_reg_n_0_[2] ;
+  wire \x_principale_reg_n_0_[3] ;
+  wire \x_principale_reg_n_0_[4] ;
+  wire \x_principale_reg_n_0_[5] ;
+  wire \x_principale_reg_n_0_[6] ;
+  wire \x_principale_reg_n_0_[7] ;
+  wire \y_principale[7]_i_1_n_0 ;
+  wire \y_principale_reg_n_0_[0] ;
+  wire \y_principale_reg_n_0_[1] ;
+  wire \y_principale_reg_n_0_[2] ;
+  wire \y_principale_reg_n_0_[3] ;
+  wire \y_principale_reg_n_0_[4] ;
+  wire \y_principale_reg_n_0_[5] ;
+  wire \y_principale_reg_n_0_[6] ;
+  wire \y_principale_reg_n_0_[7] ;
+  wire [3:0]\NLW_distanza_corrente_reg[3]_i_20_O_UNCONNECTED ;
+  wire [3:0]\NLW_distanza_corrente_reg[3]_i_21_O_UNCONNECTED ;
   wire [3:3]\NLW_distanza_corrente_reg[7]_i_3_CO_UNCONNECTED ;
   wire [3:0]\NLW_maschera_output_reg[7]_i_3_O_UNCONNECTED ;
-  wire [3:2]\NLW_somma_parziale_reg[15]_i_3_CO_UNCONNECTED ;
-  wire [3:3]\NLW_somma_parziale_reg[15]_i_3_O_UNCONNECTED ;
+  wire [3:3]\NLW_somma_parziale_reg[15]_i_3_CO_UNCONNECTED ;
+  wire [3:2]\NLW_somma_parziale_reg[15]_i_4_CO_UNCONNECTED ;
+  wire [3:3]\NLW_somma_parziale_reg[15]_i_4_O_UNCONNECTED ;
 
 initial begin
  $sdf_annotate("project_tb_time_synth.sdf",,,,"tool_control");
 end
-  (* FSM_ENCODED_STATES = "letto_maschera:0011,richiesta_x_principale:0100,wait_ram_and_incrementa_indirizzo:0010,segnale_done:1101,modifica_maschera:1010,done:1100,leggi_y:1001,richiesta_ram:0001,start:0000,leggi_x:1000,leggi_y_principale:0111,check_centroide:1011,leggi_x_principale_richiesta_y:0110,iSTATE:1110,wait_ram:0101" *) 
-  FDCE #(
-    .INIT(1'b0)) 
-    \FSM_sequential_current_state_reg[0] 
-       (.C(i_clk_IBUF_BUFG),
-        .CE(1'b1),
-        .CLR(i_rst_IBUF),
-        .D(next_state[0]),
-        .Q(current_state[0]));
-  (* FSM_ENCODED_STATES = "letto_maschera:0011,richiesta_x_principale:0100,wait_ram_and_incrementa_indirizzo:0010,segnale_done:1101,modifica_maschera:1010,done:1100,leggi_y:1001,richiesta_ram:0001,start:0000,leggi_x:1000,leggi_y_principale:0111,check_centroide:1011,leggi_x_principale_richiesta_y:0110,iSTATE:1110,wait_ram:0101" *) 
-  FDCE #(
-    .INIT(1'b0)) 
-    \FSM_sequential_current_state_reg[1] 
-       (.C(i_clk_IBUF_BUFG),
-        .CE(1'b1),
-        .CLR(i_rst_IBUF),
-        .D(next_state[1]),
-        .Q(current_state[1]));
-  (* FSM_ENCODED_STATES = "letto_maschera:0011,richiesta_x_principale:0100,wait_ram_and_incrementa_indirizzo:0010,segnale_done:1101,modifica_maschera:1010,done:1100,leggi_y:1001,richiesta_ram:0001,start:0000,leggi_x:1000,leggi_y_principale:0111,check_centroide:1011,leggi_x_principale_richiesta_y:0110,iSTATE:1110,wait_ram:0101" *) 
-  FDCE #(
-    .INIT(1'b0)) 
-    \FSM_sequential_current_state_reg[2] 
-       (.C(i_clk_IBUF_BUFG),
-        .CE(1'b1),
-        .CLR(i_rst_IBUF),
-        .D(next_state[2]),
-        .Q(current_state[2]));
-  (* FSM_ENCODED_STATES = "letto_maschera:0011,richiesta_x_principale:0100,wait_ram_and_incrementa_indirizzo:0010,segnale_done:1101,modifica_maschera:1010,done:1100,leggi_y:1001,richiesta_ram:0001,start:0000,leggi_x:1000,leggi_y_principale:0111,check_centroide:1011,leggi_x_principale_richiesta_y:0110,iSTATE:1110,wait_ram:0101" *) 
-  FDCE #(
-    .INIT(1'b0)) 
-    \FSM_sequential_current_state_reg[3] 
-       (.C(i_clk_IBUF_BUFG),
-        .CE(1'b1),
-        .CLR(i_rst_IBUF),
-        .D(next_state[3]),
-        .Q(current_state[3]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \FSM_sequential_next_state_reg[0] 
-       (.CLR(1'b0),
-        .D(\FSM_sequential_next_state_reg[0]_i_1_n_0 ),
-        .G(\FSM_sequential_next_state_reg[3]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(next_state[0]));
   LUT6 #(
-    .INIT(64'h0000000004FFFFFF)) 
-    \FSM_sequential_next_state_reg[0]_i_1 
-       (.I0(o_en_OBUF_inst_i_2_n_0),
-        .I1(current_state[1]),
-        .I2(current_state[2]),
-        .I3(current_state[3]),
-        .I4(current_state[0]),
-        .I5(\FSM_sequential_next_state_reg[0]_i_2_n_0 ),
-        .O(\FSM_sequential_next_state_reg[0]_i_1_n_0 ));
+    .INIT(64'hFEFEEEFEFEFEFEFE)) 
+    \FSM_sequential_next_state[0]_i_1 
+       (.I0(\FSM_sequential_next_state[0]_i_2_n_0 ),
+        .I1(\FSM_sequential_next_state[0]_i_3_n_0 ),
+        .I2(\FSM_sequential_next_state[0]_i_4_n_0 ),
+        .I3(next_state00),
+        .I4(next_state[1]),
+        .I5(next_state[0]),
+        .O(\FSM_sequential_next_state[0]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h08FF0000)) 
+    \FSM_sequential_next_state[0]_i_2 
+       (.I0(\FSM_sequential_next_state[1]_i_4_n_0 ),
+        .I1(next_state[1]),
+        .I2(next_state[2]),
+        .I3(next_state[0]),
+        .I4(next_state[3]),
+        .O(\FSM_sequential_next_state[0]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h0400040055405545)) 
-    \FSM_sequential_next_state_reg[0]_i_2 
-       (.I0(current_state[3]),
-        .I1(address[0]),
-        .I2(current_state[1]),
-        .I3(current_state[0]),
-        .I4(i_start_IBUF),
-        .I5(current_state[2]),
-        .O(\FSM_sequential_next_state_reg[0]_i_2_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \FSM_sequential_next_state_reg[1] 
-       (.CLR(1'b0),
-        .D(\FSM_sequential_next_state_reg[1]_i_1_n_0 ),
-        .G(\FSM_sequential_next_state_reg[3]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(next_state[1]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF4545FF45)) 
-    \FSM_sequential_next_state_reg[1]_i_1 
-       (.I0(\FSM_sequential_next_state_reg[1]_i_2_n_0 ),
-        .I1(\FSM_sequential_next_state_reg[1]_i_3_n_0 ),
-        .I2(\FSM_sequential_next_state_reg[1]_i_4_n_0 ),
-        .I3(\FSM_sequential_next_state_reg[3]_i_5_n_0 ),
-        .I4(\FSM_sequential_next_state_reg[1]_i_5_n_0 ),
-        .I5(\FSM_sequential_next_state_reg[1]_i_6_n_0 ),
-        .O(\FSM_sequential_next_state_reg[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT4 #(
-    .INIT(16'hF1FF)) 
-    \FSM_sequential_next_state_reg[1]_i_2 
-       (.I0(current_state[0]),
-        .I1(current_state[1]),
-        .I2(current_state[2]),
-        .I3(current_state[3]),
-        .O(\FSM_sequential_next_state_reg[1]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'h5555555555555515)) 
-    \FSM_sequential_next_state_reg[1]_i_3 
-       (.I0(\tmp_maschera_in_reg_n_0_[0] ),
-        .I1(address[0]),
-        .I2(address[4]),
-        .I3(\FSM_sequential_next_state_reg[3]_i_10_n_0 ),
-        .I4(o_en_OBUF_inst_i_5_n_0),
-        .I5(o_en_OBUF_inst_i_4_n_0),
-        .O(\FSM_sequential_next_state_reg[1]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \FSM_sequential_next_state_reg[1]_i_4 
-       (.I0(current_state[1]),
-        .I1(current_state[0]),
-        .O(\FSM_sequential_next_state_reg[1]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT4 #(
-    .INIT(16'hCECF)) 
-    \FSM_sequential_next_state_reg[1]_i_5 
-       (.I0(current_state[2]),
-        .I1(current_state[3]),
-        .I2(current_state[0]),
-        .I3(current_state[1]),
-        .O(\FSM_sequential_next_state_reg[1]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
-  LUT4 #(
-    .INIT(16'h8000)) 
-    \FSM_sequential_next_state_reg[1]_i_6 
-       (.I0(current_state[0]),
-        .I1(current_state[3]),
-        .I2(current_state[2]),
-        .I3(i_start_IBUF),
-        .O(\FSM_sequential_next_state_reg[1]_i_6_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \FSM_sequential_next_state_reg[2] 
-       (.CLR(1'b0),
-        .D(\FSM_sequential_next_state_reg[2]_i_1_n_0 ),
-        .G(\FSM_sequential_next_state_reg[3]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(next_state[2]));
-  LUT6 #(
-    .INIT(64'hFF803FC033803FC0)) 
-    \FSM_sequential_next_state_reg[2]_i_1 
-       (.I0(o_en_OBUF_inst_i_2_n_0),
-        .I1(current_state[0]),
-        .I2(current_state[1]),
-        .I3(current_state[2]),
-        .I4(current_state[3]),
+    .INIT(64'h2202222220002020)) 
+    \FSM_sequential_next_state[0]_i_3 
+       (.I0(\distanza_minima[7]_i_5_n_0 ),
+        .I1(next_state[0]),
+        .I2(next_state[1]),
+        .I3(next_state__0),
+        .I4(next_state00),
         .I5(i_start_IBUF),
-        .O(\FSM_sequential_next_state_reg[2]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \FSM_sequential_next_state_reg[3] 
-       (.CLR(1'b0),
-        .D(\FSM_sequential_next_state_reg[3]_i_1_n_0 ),
-        .G(\FSM_sequential_next_state_reg[3]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(next_state[3]));
-  LUT6 #(
-    .INIT(64'h00000000AEAE00AE)) 
-    \FSM_sequential_next_state_reg[3]_i_1 
-       (.I0(\FSM_sequential_next_state_reg[3]_i_3_n_0 ),
-        .I1(\FSM_sequential_next_state_reg[3]_i_4_n_0 ),
-        .I2(\FSM_sequential_next_state_reg[3]_i_5_n_0 ),
-        .I3(\FSM_sequential_next_state_reg[3]_i_6_n_0 ),
-        .I4(\FSM_sequential_next_state_reg[3]_i_7_n_0 ),
-        .I5(\FSM_sequential_next_state_reg[3]_i_8_n_0 ),
-        .O(\FSM_sequential_next_state_reg[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+        .O(\FSM_sequential_next_state[0]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT2 #(
-    .INIT(4'hE)) 
-    \FSM_sequential_next_state_reg[3]_i_10 
-       (.I0(address[2]),
-        .I1(address[3]),
-        .O(\FSM_sequential_next_state_reg[3]_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
-  LUT4 #(
-    .INIT(16'h8CFF)) 
-    \FSM_sequential_next_state_reg[3]_i_11 
-       (.I0(i_start_IBUF),
-        .I1(current_state[2]),
-        .I2(current_state[0]),
-        .I3(current_state[3]),
-        .O(\FSM_sequential_next_state_reg[3]_i_11_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT5 #(
-    .INIT(32'hBFFFFFFF)) 
-    \FSM_sequential_next_state_reg[3]_i_2 
-       (.I0(current_state[1]),
-        .I1(i_start_IBUF),
-        .I2(current_state[2]),
-        .I3(current_state[3]),
-        .I4(current_state[0]),
-        .O(\FSM_sequential_next_state_reg[3]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT4 #(
-    .INIT(16'hEAAA)) 
-    \FSM_sequential_next_state_reg[3]_i_3 
-       (.I0(current_state[3]),
-        .I1(current_state[2]),
-        .I2(current_state[1]),
-        .I3(current_state[0]),
-        .O(\FSM_sequential_next_state_reg[3]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
-  LUT2 #(
-    .INIT(4'hB)) 
-    \FSM_sequential_next_state_reg[3]_i_4 
-       (.I0(o_en_OBUF_inst_i_3_n_0),
-        .I1(current_state[0]),
-        .O(\FSM_sequential_next_state_reg[3]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT5 #(
-    .INIT(32'hDDDDDDDF)) 
-    \FSM_sequential_next_state_reg[3]_i_5 
-       (.I0(current_state[1]),
-        .I1(current_state[2]),
-        .I2(o_en_OBUF_inst_i_4_n_0),
-        .I3(\FSM_sequential_next_state_reg[3]_i_9_n_0 ),
-        .I4(current_state[0]),
-        .O(\FSM_sequential_next_state_reg[3]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT3 #(
-    .INIT(8'h80)) 
-    \FSM_sequential_next_state_reg[3]_i_6 
-       (.I0(\tmp_maschera_in_reg_n_0_[0] ),
-        .I1(current_state[0]),
-        .I2(current_state[1]),
-        .O(\FSM_sequential_next_state_reg[3]_i_6_n_0 ));
+    .INIT(4'h2)) 
+    \FSM_sequential_next_state[0]_i_4 
+       (.I0(next_state[2]),
+        .I1(next_state[3]),
+        .O(\FSM_sequential_next_state[0]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFF00000008)) 
-    \FSM_sequential_next_state_reg[3]_i_7 
-       (.I0(address[0]),
-        .I1(address[4]),
-        .I2(\FSM_sequential_next_state_reg[3]_i_10_n_0 ),
-        .I3(o_en_OBUF_inst_i_5_n_0),
-        .I4(o_en_OBUF_inst_i_4_n_0),
-        .I5(\FSM_sequential_next_state_reg[3]_i_11_n_0 ),
-        .O(\FSM_sequential_next_state_reg[3]_i_7_n_0 ));
+    .INIT(64'h6750275067402740)) 
+    \FSM_sequential_next_state[1]_i_1 
+       (.I0(next_state[2]),
+        .I1(next_state[3]),
+        .I2(next_state[1]),
+        .I3(next_state[0]),
+        .I4(\FSM_sequential_next_state[1]_i_2_n_0 ),
+        .I5(next_state__0),
+        .O(\FSM_sequential_next_state[1]_i_1_n_0 ));
+  LUT2 #(
+    .INIT(4'h2)) 
+    \FSM_sequential_next_state[1]_i_2 
+       (.I0(\FSM_sequential_next_state[1]_i_4_n_0 ),
+        .I1(\maschera_in_reg_n_0_[0] ),
+        .O(\FSM_sequential_next_state[1]_i_2_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT5 #(
-    .INIT(32'h0004C004)) 
-    \FSM_sequential_next_state_reg[3]_i_8 
-       (.I0(current_state[1]),
-        .I1(current_state[3]),
-        .I2(current_state[0]),
-        .I3(current_state[2]),
-        .I4(i_start_IBUF),
-        .O(\FSM_sequential_next_state_reg[3]_i_8_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT4 #(
+    .INIT(16'h0001)) 
+    \FSM_sequential_next_state[1]_i_3 
+       (.I0(\FSM_sequential_next_state[2]_i_3_n_0 ),
+        .I1(next_state00),
+        .I2(\address_reg_n_0_[4] ),
+        .I3(\FSM_sequential_next_state[2]_i_4_n_0 ),
+        .O(next_state__0));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
-    \FSM_sequential_next_state_reg[3]_i_9 
-       (.I0(o_en_OBUF_inst_i_5_n_0),
-        .I1(address[0]),
-        .I2(address[4]),
-        .I3(address[2]),
-        .I4(address[3]),
-        .O(\FSM_sequential_next_state_reg[3]_i_9_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+    \FSM_sequential_next_state[1]_i_4 
+       (.I0(\address_reg_n_0_[13] ),
+        .I1(\FSM_sequential_next_state[2]_i_5_n_0 ),
+        .I2(\FSM_sequential_next_state[1]_i_5_n_0 ),
+        .I3(\FSM_sequential_next_state[2]_i_3_n_0 ),
+        .I4(\address_reg_n_0_[15] ),
+        .O(\FSM_sequential_next_state[1]_i_4_n_0 ));
+  LUT4 #(
+    .INIT(16'hEFFF)) 
+    \FSM_sequential_next_state[1]_i_5 
+       (.I0(\address_reg_n_0_[12] ),
+        .I1(\address_reg_n_0_[14] ),
+        .I2(\address_reg_n_0_[4] ),
+        .I3(next_state00),
+        .O(\FSM_sequential_next_state[1]_i_5_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT5 #(
+    .INIT(32'h333F80C0)) 
+    \FSM_sequential_next_state[2]_i_1 
+       (.I0(\FSM_sequential_next_state[2]_i_2_n_0 ),
+        .I1(next_state[0]),
+        .I2(next_state[1]),
+        .I3(next_state[3]),
+        .I4(next_state[2]),
+        .O(\FSM_sequential_next_state[2]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT4 #(
+    .INIT(16'h0040)) 
+    \FSM_sequential_next_state[2]_i_2 
+       (.I0(\FSM_sequential_next_state[2]_i_3_n_0 ),
+        .I1(next_state00),
+        .I2(\address_reg_n_0_[4] ),
+        .I3(\FSM_sequential_next_state[2]_i_4_n_0 ),
+        .O(\FSM_sequential_next_state[2]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    \FSM_sequential_next_state[2]_i_3 
+       (.I0(\address_reg_n_0_[7] ),
+        .I1(\address_reg_n_0_[6] ),
+        .I2(\address_reg_n_0_[3] ),
+        .I3(\address_reg_n_0_[2] ),
+        .I4(\address_reg_n_0_[1] ),
+        .I5(\address_reg_n_0_[5] ),
+        .O(\FSM_sequential_next_state[2]_i_3_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    \FSM_sequential_next_state[2]_i_4 
+       (.I0(\FSM_sequential_next_state[2]_i_5_n_0 ),
+        .I1(\address_reg_n_0_[14] ),
+        .I2(\address_reg_n_0_[15] ),
+        .I3(\address_reg_n_0_[12] ),
+        .I4(\address_reg_n_0_[13] ),
+        .O(\FSM_sequential_next_state[2]_i_4_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \FSM_sequential_next_state[2]_i_5 
+       (.I0(\address_reg_n_0_[8] ),
+        .I1(\address_reg_n_0_[9] ),
+        .I2(\address_reg_n_0_[10] ),
+        .I3(\address_reg_n_0_[11] ),
+        .O(\FSM_sequential_next_state[2]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'h7F5F7F7F7F7F7F7F)) 
+    \FSM_sequential_next_state[3]_i_1 
+       (.I0(next_state[3]),
+        .I1(next_state[1]),
+        .I2(next_state[2]),
+        .I3(i_rst_IBUF),
+        .I4(i_start_IBUF),
+        .I5(next_state[0]),
+        .O(\FSM_sequential_next_state[3]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'hF000C050)) 
+    \FSM_sequential_next_state[3]_i_3 
+       (.I0(next_state__0),
+        .I1(\FSM_sequential_next_state[3]_i_5_n_0 ),
+        .I2(next_state[1]),
+        .I3(next_state[0]),
+        .I4(next_state[2]),
+        .O(\FSM_sequential_next_state[3]_i_3_n_0 ));
+  LUT5 #(
+    .INIT(32'h3333F7CC)) 
+    \FSM_sequential_next_state[3]_i_4 
+       (.I0(\maschera_in_reg_n_0_[0] ),
+        .I1(next_state[0]),
+        .I2(\FSM_sequential_next_state[2]_i_2_n_0 ),
+        .I3(next_state[1]),
+        .I4(next_state[2]),
+        .O(\FSM_sequential_next_state[3]_i_4_n_0 ));
+  LUT5 #(
+    .INIT(32'h00010000)) 
+    \FSM_sequential_next_state[3]_i_5 
+       (.I0(i_data_IBUF[4]),
+        .I1(i_data_IBUF[5]),
+        .I2(i_data_IBUF[6]),
+        .I3(i_data_IBUF[7]),
+        .I4(\FSM_sequential_next_state[3]_i_6_n_0 ),
+        .O(\FSM_sequential_next_state[3]_i_5_n_0 ));
+  LUT4 #(
+    .INIT(16'h0001)) 
+    \FSM_sequential_next_state[3]_i_6 
+       (.I0(i_data_IBUF[1]),
+        .I1(i_data_IBUF[0]),
+        .I2(i_data_IBUF[3]),
+        .I3(i_data_IBUF[2]),
+        .O(\FSM_sequential_next_state[3]_i_6_n_0 ));
+  (* FSM_ENCODED_STATES = "letto_maschera:0011,richiesta_x_principale:0100,wait_ram_and_incrementa_indirizzo:0010,segnale_done:1101,modifica_maschera:1010,done:1100,leggi_y:1001,richiesta_ram:0001,start:0000,leggi_x:1000,leggi_y_principale:0111,leggi_x_principale_richiesta_y:0110,check_centroide:1011,wait_ram:0101" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \FSM_sequential_next_state_reg[0] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\FSM_sequential_next_state[3]_i_1_n_0 ),
+        .D(\FSM_sequential_next_state[0]_i_1_n_0 ),
+        .Q(next_state[0]),
+        .R(1'b0));
+  (* FSM_ENCODED_STATES = "letto_maschera:0011,richiesta_x_principale:0100,wait_ram_and_incrementa_indirizzo:0010,segnale_done:1101,modifica_maschera:1010,done:1100,leggi_y:1001,richiesta_ram:0001,start:0000,leggi_x:1000,leggi_y_principale:0111,leggi_x_principale_richiesta_y:0110,check_centroide:1011,wait_ram:0101" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \FSM_sequential_next_state_reg[1] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\FSM_sequential_next_state[3]_i_1_n_0 ),
+        .D(\FSM_sequential_next_state[1]_i_1_n_0 ),
+        .Q(next_state[1]),
+        .R(1'b0));
+  (* FSM_ENCODED_STATES = "letto_maschera:0011,richiesta_x_principale:0100,wait_ram_and_incrementa_indirizzo:0010,segnale_done:1101,modifica_maschera:1010,done:1100,leggi_y:1001,richiesta_ram:0001,start:0000,leggi_x:1000,leggi_y_principale:0111,leggi_x_principale_richiesta_y:0110,check_centroide:1011,wait_ram:0101" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \FSM_sequential_next_state_reg[2] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\FSM_sequential_next_state[3]_i_1_n_0 ),
+        .D(\FSM_sequential_next_state[2]_i_1_n_0 ),
+        .Q(next_state[2]),
+        .R(1'b0));
+  (* FSM_ENCODED_STATES = "letto_maschera:0011,richiesta_x_principale:0100,wait_ram_and_incrementa_indirizzo:0010,segnale_done:1101,modifica_maschera:1010,done:1100,leggi_y:1001,richiesta_ram:0001,start:0000,leggi_x:1000,leggi_y_principale:0111,leggi_x_principale_richiesta_y:0110,check_centroide:1011,wait_ram:0101" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \FSM_sequential_next_state_reg[3] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\FSM_sequential_next_state[3]_i_1_n_0 ),
+        .D(\FSM_sequential_next_state_reg[3]_i_2_n_0 ),
+        .Q(next_state[3]),
+        .R(1'b0));
+  MUXF7 \FSM_sequential_next_state_reg[3]_i_2 
+       (.I0(\FSM_sequential_next_state[3]_i_3_n_0 ),
+        .I1(\FSM_sequential_next_state[3]_i_4_n_0 ),
+        .O(\FSM_sequential_next_state_reg[3]_i_2_n_0 ),
+        .S(next_state[3]));
+  LUT6 #(
+    .INIT(64'h3B00FFFC38003030)) 
+    \address[0]_i_1 
+       (.I0(in17[0]),
+        .I1(next_state[3]),
+        .I2(next_state[2]),
+        .I3(next_state[0]),
+        .I4(next_state[1]),
+        .I5(\somma_parziale_reg_n_0_[0] ),
+        .O(\address[0]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h0000CAA0)) 
+    \address[10]_i_1 
+       (.I0(\somma_parziale_reg_n_0_[10] ),
+        .I1(in17[10]),
+        .I2(next_state[3]),
+        .I3(next_state[1]),
+        .I4(next_state[2]),
+        .O(\address[10]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h0000CAA0)) 
+    \address[11]_i_1 
+       (.I0(\somma_parziale_reg_n_0_[11] ),
+        .I1(in17[11]),
+        .I2(next_state[3]),
+        .I3(next_state[1]),
+        .I4(next_state[2]),
+        .O(\address[11]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h0000CAA0)) 
+    \address[12]_i_1 
+       (.I0(\somma_parziale_reg_n_0_[12] ),
+        .I1(in17[12]),
+        .I2(next_state[3]),
+        .I3(next_state[1]),
+        .I4(next_state[2]),
+        .O(\address[12]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT5 #(
+    .INIT(32'h0000CAA0)) 
+    \address[13]_i_1 
+       (.I0(\somma_parziale_reg_n_0_[13] ),
+        .I1(in17[13]),
+        .I2(next_state[3]),
+        .I3(next_state[1]),
+        .I4(next_state[2]),
+        .O(\address[13]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h0000CAA0)) 
+    \address[14]_i_1 
+       (.I0(\somma_parziale_reg_n_0_[14] ),
+        .I1(in17[14]),
+        .I2(next_state[3]),
+        .I3(next_state[1]),
+        .I4(next_state[2]),
+        .O(\address[14]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0F000F0FCFF000FA)) 
+    \address[15]_i_1 
+       (.I0(i_start_IBUF),
+        .I1(\FSM_sequential_next_state[1]_i_2_n_0 ),
+        .I2(next_state[3]),
+        .I3(next_state[1]),
+        .I4(next_state[0]),
+        .I5(next_state[2]),
+        .O(address));
+  LUT5 #(
+    .INIT(32'h0000CAA0)) 
+    \address[15]_i_2 
+       (.I0(\somma_parziale_reg_n_0_[15] ),
+        .I1(in17[15]),
+        .I2(next_state[3]),
+        .I3(next_state[1]),
+        .I4(next_state[2]),
+        .O(\address[15]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h00300030AFF0A030)) 
+    \address[1]_i_1 
+       (.I0(in17[1]),
+        .I1(next_state[0]),
+        .I2(next_state[1]),
+        .I3(next_state[3]),
+        .I4(\somma_parziale_reg_n_0_[1] ),
+        .I5(next_state[2]),
+        .O(\address[1]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h0000CAA0)) 
+    \address[2]_i_1 
+       (.I0(\somma_parziale_reg_n_0_[2] ),
+        .I1(in17[2]),
+        .I2(next_state[3]),
+        .I3(next_state[1]),
+        .I4(next_state[2]),
+        .O(\address[2]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h0000CAA0)) 
+    \address[3]_i_1 
+       (.I0(\somma_parziale_reg_n_0_[3] ),
+        .I1(in17[3]),
+        .I2(next_state[3]),
+        .I3(next_state[1]),
+        .I4(next_state[2]),
+        .O(\address[3]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h00005555F3C0AA00)) 
+    \address[4]_i_1 
+       (.I0(next_state[0]),
+        .I1(next_state[1]),
+        .I2(in17[4]),
+        .I3(\somma_parziale_reg_n_0_[4] ),
+        .I4(next_state[3]),
+        .I5(next_state[2]),
+        .O(\address[4]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h0000CAA0)) 
+    \address[5]_i_1 
+       (.I0(\somma_parziale_reg_n_0_[5] ),
+        .I1(in17[5]),
+        .I2(next_state[3]),
+        .I3(next_state[1]),
+        .I4(next_state[2]),
+        .O(\address[5]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h0000CAA0)) 
+    \address[6]_i_1 
+       (.I0(\somma_parziale_reg_n_0_[6] ),
+        .I1(in17[6]),
+        .I2(next_state[3]),
+        .I3(next_state[1]),
+        .I4(next_state[2]),
+        .O(\address[6]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h0000CAA0)) 
+    \address[7]_i_1 
+       (.I0(\somma_parziale_reg_n_0_[7] ),
+        .I1(in17[7]),
+        .I2(next_state[3]),
+        .I3(next_state[1]),
+        .I4(next_state[2]),
+        .O(\address[7]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h0000CAA0)) 
+    \address[8]_i_1 
+       (.I0(\somma_parziale_reg_n_0_[8] ),
+        .I1(in17[8]),
+        .I2(next_state[3]),
+        .I3(next_state[1]),
+        .I4(next_state[2]),
+        .O(\address[8]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h0000CAA0)) 
+    \address[9]_i_1 
+       (.I0(\somma_parziale_reg_n_0_[9] ),
+        .I1(in17[9]),
+        .I2(next_state[3]),
+        .I3(next_state[1]),
+        .I4(next_state[2]),
+        .O(\address[9]_i_1_n_0 ));
+  FDRE #(
     .INIT(1'b0)) 
     \address_reg[0] 
-       (.CLR(1'b0),
-        .D(\address_reg[0]_i_1_n_0 ),
-        .G(\address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(address[0]));
-  LUT6 #(
-    .INIT(64'hAAFCFFC0AA30FFC0)) 
-    \address_reg[0]_i_1 
-       (.I0(current_state[0]),
-        .I1(current_state[3]),
-        .I2(somma_parziale[0]),
-        .I3(current_state[2]),
-        .I4(current_state[1]),
-        .I5(in20[0]),
-        .O(\address_reg[0]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(address),
+        .D(\address[0]_i_1_n_0 ),
+        .Q(next_state00),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \address_reg[10] 
-       (.CLR(1'b0),
-        .D(\address_reg[10]_i_1_n_0 ),
-        .G(\address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(address[10]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT5 #(
-    .INIT(32'h0000E828)) 
-    \address_reg[10]_i_1 
-       (.I0(somma_parziale[10]),
-        .I1(current_state[1]),
-        .I2(current_state[3]),
-        .I3(in20[10]),
-        .I4(current_state[2]),
-        .O(\address_reg[10]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(address),
+        .D(\address[10]_i_1_n_0 ),
+        .Q(\address_reg_n_0_[10] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \address_reg[11] 
-       (.CLR(1'b0),
-        .D(\address_reg[11]_i_1_n_0 ),
-        .G(\address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(address[11]));
-  LUT5 #(
-    .INIT(32'h54400440)) 
-    \address_reg[11]_i_1 
-       (.I0(current_state[2]),
-        .I1(somma_parziale[11]),
-        .I2(current_state[1]),
-        .I3(current_state[3]),
-        .I4(in20[11]),
-        .O(\address_reg[11]_i_1_n_0 ));
-  (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
-  CARRY4 \address_reg[11]_i_2 
-       (.CI(\address_reg[7]_i_2_n_0 ),
-        .CO({\address_reg[11]_i_2_n_0 ,\address_reg[11]_i_2_n_1 ,\address_reg[11]_i_2_n_2 ,\address_reg[11]_i_2_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(in20[11:8]),
-        .S(address[11:8]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(address),
+        .D(\address[11]_i_1_n_0 ),
+        .Q(\address_reg_n_0_[11] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \address_reg[12] 
-       (.CLR(1'b0),
-        .D(\address_reg[12]_i_1_n_0 ),
-        .G(\address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(address[12]));
-  LUT5 #(
-    .INIT(32'h54400440)) 
-    \address_reg[12]_i_1 
-       (.I0(current_state[2]),
-        .I1(somma_parziale[12]),
-        .I2(current_state[1]),
-        .I3(current_state[3]),
-        .I4(in20[12]),
-        .O(\address_reg[12]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(address),
+        .D(\address[12]_i_1_n_0 ),
+        .Q(\address_reg_n_0_[12] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \address_reg[13] 
-       (.CLR(1'b0),
-        .D(\address_reg[13]_i_1_n_0 ),
-        .G(\address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(address[13]));
-  LUT5 #(
-    .INIT(32'h0000E828)) 
-    \address_reg[13]_i_1 
-       (.I0(somma_parziale[13]),
-        .I1(current_state[1]),
-        .I2(current_state[3]),
-        .I3(in20[13]),
-        .I4(current_state[2]),
-        .O(\address_reg[13]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(address),
+        .D(\address[13]_i_1_n_0 ),
+        .Q(\address_reg_n_0_[13] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \address_reg[14] 
-       (.CLR(1'b0),
-        .D(\address_reg[14]_i_1_n_0 ),
-        .G(\address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(address[14]));
-  LUT5 #(
-    .INIT(32'h54400440)) 
-    \address_reg[14]_i_1 
-       (.I0(current_state[2]),
-        .I1(somma_parziale[14]),
-        .I2(current_state[1]),
-        .I3(current_state[3]),
-        .I4(in20[14]),
-        .O(\address_reg[14]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(address),
+        .D(\address[14]_i_1_n_0 ),
+        .Q(\address_reg_n_0_[14] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \address_reg[15] 
-       (.CLR(1'b0),
-        .D(\address_reg[15]_i_1_n_0 ),
-        .G(\address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(address[15]));
-  LUT5 #(
-    .INIT(32'h54400440)) 
-    \address_reg[15]_i_1 
-       (.I0(current_state[2]),
-        .I1(somma_parziale[15]),
-        .I2(current_state[1]),
-        .I3(current_state[3]),
-        .I4(in20[15]),
-        .O(\address_reg[15]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFA0F0000FFF0C)) 
-    \address_reg[15]_i_2 
-       (.I0(\FSM_sequential_next_state_reg[1]_i_3_n_0 ),
-        .I1(i_start_IBUF),
-        .I2(current_state[0]),
-        .I3(current_state[3]),
-        .I4(current_state[2]),
-        .I5(current_state[1]),
-        .O(\address_reg[15]_i_2_n_0 ));
-  (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
-  CARRY4 \address_reg[15]_i_3 
-       (.CI(\address_reg[11]_i_2_n_0 ),
-        .CO({\NLW_address_reg[15]_i_3_CO_UNCONNECTED [3],\address_reg[15]_i_3_n_1 ,\address_reg[15]_i_3_n_2 ,\address_reg[15]_i_3_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(in20[15:12]),
-        .S(address[15:12]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(address),
+        .D(\address[15]_i_2_n_0 ),
+        .Q(\address_reg_n_0_[15] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \address_reg[1] 
-       (.CLR(1'b0),
-        .D(\address_reg[1]_i_1_n_0 ),
-        .G(\address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(address[1]));
-  LUT6 #(
-    .INIT(64'h5D5F5D55FF000000)) 
-    \address_reg[1]_i_1 
-       (.I0(current_state[0]),
-        .I1(in20[1]),
-        .I2(current_state[2]),
-        .I3(current_state[3]),
-        .I4(somma_parziale[1]),
-        .I5(current_state[1]),
-        .O(\address_reg[1]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(address),
+        .D(\address[1]_i_1_n_0 ),
+        .Q(\address_reg_n_0_[1] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \address_reg[2] 
-       (.CLR(1'b0),
-        .D(\address_reg[2]_i_1_n_0 ),
-        .G(\address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(address[2]));
-  LUT5 #(
-    .INIT(32'h54400440)) 
-    \address_reg[2]_i_1 
-       (.I0(current_state[2]),
-        .I1(somma_parziale[2]),
-        .I2(current_state[1]),
-        .I3(current_state[3]),
-        .I4(in20[2]),
-        .O(\address_reg[2]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(address),
+        .D(\address[2]_i_1_n_0 ),
+        .Q(\address_reg_n_0_[2] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \address_reg[3] 
-       (.CLR(1'b0),
-        .D(\address_reg[3]_i_1_n_0 ),
-        .G(\address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(address[3]));
-  LUT5 #(
-    .INIT(32'h54400440)) 
-    \address_reg[3]_i_1 
-       (.I0(current_state[2]),
-        .I1(somma_parziale[3]),
-        .I2(current_state[1]),
-        .I3(current_state[3]),
-        .I4(in20[3]),
-        .O(\address_reg[3]_i_1_n_0 ));
-  (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
-  CARRY4 \address_reg[3]_i_2 
-       (.CI(1'b0),
-        .CO({\address_reg[3]_i_2_n_0 ,\address_reg[3]_i_2_n_1 ,\address_reg[3]_i_2_n_2 ,\address_reg[3]_i_2_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,address[1],1'b0}),
-        .O(in20[3:0]),
-        .S({address[3:2],\address_reg[3]_i_3_n_0 ,address[0]}));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \address_reg[3]_i_3 
-       (.I0(address[1]),
-        .O(\address_reg[3]_i_3_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(address),
+        .D(\address[3]_i_1_n_0 ),
+        .Q(\address_reg_n_0_[3] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \address_reg[4] 
-       (.CLR(1'b0),
-        .D(\address_reg[4]_i_1_n_0 ),
-        .G(\address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(address[4]));
-  LUT6 #(
-    .INIT(64'hF0FF6666F0004444)) 
-    \address_reg[4]_i_1 
-       (.I0(current_state[0]),
-        .I1(current_state[2]),
-        .I2(in20[4]),
-        .I3(current_state[1]),
-        .I4(current_state[3]),
-        .I5(somma_parziale[4]),
-        .O(\address_reg[4]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(address),
+        .D(\address[4]_i_1_n_0 ),
+        .Q(\address_reg_n_0_[4] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \address_reg[5] 
-       (.CLR(1'b0),
-        .D(\address_reg[5]_i_1_n_0 ),
-        .G(\address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(address[5]));
-  LUT5 #(
-    .INIT(32'h54400440)) 
-    \address_reg[5]_i_1 
-       (.I0(current_state[2]),
-        .I1(somma_parziale[5]),
-        .I2(current_state[1]),
-        .I3(current_state[3]),
-        .I4(in20[5]),
-        .O(\address_reg[5]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(address),
+        .D(\address[5]_i_1_n_0 ),
+        .Q(\address_reg_n_0_[5] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \address_reg[6] 
-       (.CLR(1'b0),
-        .D(\address_reg[6]_i_1_n_0 ),
-        .G(\address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(address[6]));
-  LUT5 #(
-    .INIT(32'h0000E828)) 
-    \address_reg[6]_i_1 
-       (.I0(somma_parziale[6]),
-        .I1(current_state[1]),
-        .I2(current_state[3]),
-        .I3(in20[6]),
-        .I4(current_state[2]),
-        .O(\address_reg[6]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(address),
+        .D(\address[6]_i_1_n_0 ),
+        .Q(\address_reg_n_0_[6] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \address_reg[7] 
-       (.CLR(1'b0),
-        .D(\address_reg[7]_i_1_n_0 ),
-        .G(\address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(address[7]));
-  LUT5 #(
-    .INIT(32'h54400440)) 
-    \address_reg[7]_i_1 
-       (.I0(current_state[2]),
-        .I1(somma_parziale[7]),
-        .I2(current_state[1]),
-        .I3(current_state[3]),
-        .I4(in20[7]),
-        .O(\address_reg[7]_i_1_n_0 ));
-  (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
-  CARRY4 \address_reg[7]_i_2 
-       (.CI(\address_reg[3]_i_2_n_0 ),
-        .CO({\address_reg[7]_i_2_n_0 ,\address_reg[7]_i_2_n_1 ,\address_reg[7]_i_2_n_2 ,\address_reg[7]_i_2_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(in20[7:4]),
-        .S(address[7:4]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(address),
+        .D(\address[7]_i_1_n_0 ),
+        .Q(\address_reg_n_0_[7] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \address_reg[8] 
-       (.CLR(1'b0),
-        .D(\address_reg[8]_i_1_n_0 ),
-        .G(\address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(address[8]));
-  LUT5 #(
-    .INIT(32'h54400440)) 
-    \address_reg[8]_i_1 
-       (.I0(current_state[2]),
-        .I1(somma_parziale[8]),
-        .I2(current_state[1]),
-        .I3(current_state[3]),
-        .I4(in20[8]),
-        .O(\address_reg[8]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(address),
+        .D(\address[8]_i_1_n_0 ),
+        .Q(\address_reg_n_0_[8] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \address_reg[9] 
-       (.CLR(1'b0),
-        .D(\address_reg[9]_i_1_n_0 ),
-        .G(\address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(address[9]));
+       (.C(i_clk_IBUF_BUFG),
+        .CE(address),
+        .D(\address[9]_i_1_n_0 ),
+        .Q(\address_reg_n_0_[9] ),
+        .R(1'b0));
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \distanza_corrente[3]_i_10 
+       (.I0(\distanza_corrente[3]_i_16_n_0 ),
+        .I1(next_state[1]),
+        .O(\distanza_corrente[3]_i_10_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \distanza_corrente[3]_i_11 
+       (.I0(\distanza_corrente[3]_i_17_n_0 ),
+        .I1(next_state[1]),
+        .O(\distanza_corrente[3]_i_11_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \distanza_corrente[3]_i_12 
+       (.I0(\distanza_corrente[3]_i_18_n_0 ),
+        .I1(next_state[1]),
+        .O(\distanza_corrente[3]_i_12_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \distanza_corrente[3]_i_13 
+       (.I0(\distanza_corrente[3]_i_19_n_0 ),
+        .I1(next_state[1]),
+        .O(\distanza_corrente[3]_i_13_n_0 ));
+  LUT6 #(
+    .INIT(64'h11FFBBF0110FBB00)) 
+    \distanza_corrente[3]_i_14 
+       (.I0(\distanza_corrente_reg[3]_i_20_n_0 ),
+        .I1(\y_principale_reg_n_0_[0] ),
+        .I2(p_0_in),
+        .I3(next_state[0]),
+        .I4(i_data_IBUF[0]),
+        .I5(\x_principale_reg_n_0_[0] ),
+        .O(\distanza_corrente[3]_i_14_n_0 ));
+  LUT6 #(
+    .INIT(64'hDD00DD0F88F088FF)) 
+    \distanza_corrente[3]_i_15 
+       (.I0(\distanza_corrente_reg[3]_i_20_n_0 ),
+        .I1(\y_principale_reg_n_0_[0] ),
+        .I2(p_0_in),
+        .I3(next_state[0]),
+        .I4(\x_principale_reg_n_0_[0] ),
+        .I5(i_data_IBUF[0]),
+        .O(\distanza_corrente[3]_i_15_n_0 ));
+  LUT6 #(
+    .INIT(64'hDD00DD0F88F088FF)) 
+    \distanza_corrente[3]_i_16 
+       (.I0(\distanza_corrente_reg[3]_i_20_n_0 ),
+        .I1(\y_principale_reg_n_0_[2] ),
+        .I2(p_0_in),
+        .I3(next_state[0]),
+        .I4(\x_principale_reg_n_0_[2] ),
+        .I5(i_data_IBUF[2]),
+        .O(\distanza_corrente[3]_i_16_n_0 ));
+  LUT6 #(
+    .INIT(64'h11FFBBF0110FBB00)) 
+    \distanza_corrente[3]_i_17 
+       (.I0(\distanza_corrente_reg[3]_i_20_n_0 ),
+        .I1(\y_principale_reg_n_0_[2] ),
+        .I2(p_0_in),
+        .I3(next_state[0]),
+        .I4(i_data_IBUF[2]),
+        .I5(\x_principale_reg_n_0_[2] ),
+        .O(\distanza_corrente[3]_i_17_n_0 ));
+  LUT6 #(
+    .INIT(64'hDD00DD0F88F088FF)) 
+    \distanza_corrente[3]_i_18 
+       (.I0(\distanza_corrente_reg[3]_i_20_n_0 ),
+        .I1(\y_principale_reg_n_0_[1] ),
+        .I2(p_0_in),
+        .I3(next_state[0]),
+        .I4(\x_principale_reg_n_0_[1] ),
+        .I5(i_data_IBUF[1]),
+        .O(\distanza_corrente[3]_i_18_n_0 ));
+  LUT6 #(
+    .INIT(64'h11FFBBF0110FBB00)) 
+    \distanza_corrente[3]_i_19 
+       (.I0(\distanza_corrente_reg[3]_i_20_n_0 ),
+        .I1(\y_principale_reg_n_0_[1] ),
+        .I2(p_0_in),
+        .I3(next_state[0]),
+        .I4(i_data_IBUF[1]),
+        .I5(\x_principale_reg_n_0_[1] ),
+        .O(\distanza_corrente[3]_i_19_n_0 ));
   LUT5 #(
-    .INIT(32'h54400440)) 
-    \address_reg[9]_i_1 
-       (.I0(current_state[2]),
-        .I1(somma_parziale[9]),
-        .I2(current_state[1]),
-        .I3(current_state[3]),
-        .I4(in20[9]),
-        .O(\address_reg[9]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \distanza_corrente_reg[0] 
-       (.CLR(1'b0),
-        .D(\distanza_corrente_reg[0]_i_1_n_0 ),
-        .G(\distanza_corrente_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(distanza_corrente[0]));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \distanza_corrente_reg[0]_i_1 
-       (.I0(in13[0]),
-        .I1(current_state[1]),
-        .O(\distanza_corrente_reg[0]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \distanza_corrente_reg[1] 
-       (.CLR(1'b0),
-        .D(\distanza_corrente_reg[1]_i_1_n_0 ),
-        .G(\distanza_corrente_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(distanza_corrente[1]));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \distanza_corrente_reg[1]_i_1 
-       (.I0(in13[1]),
-        .I1(current_state[1]),
-        .O(\distanza_corrente_reg[1]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \distanza_corrente_reg[2] 
-       (.CLR(1'b0),
-        .D(\distanza_corrente_reg[2]_i_1_n_0 ),
-        .G(\distanza_corrente_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(distanza_corrente[2]));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \distanza_corrente_reg[2]_i_1 
-       (.I0(in13[2]),
-        .I1(current_state[1]),
-        .O(\distanza_corrente_reg[2]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \distanza_corrente_reg[3] 
-       (.CLR(1'b0),
-        .D(\distanza_corrente_reg[3]_i_1_n_0 ),
-        .G(\distanza_corrente_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(distanza_corrente[3]));
-  (* SOFT_HLUTNM = "soft_lutpair57" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \distanza_corrente_reg[3]_i_1 
-       (.I0(in13[3]),
-        .I1(current_state[1]),
-        .O(\distanza_corrente_reg[3]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hA65656A6)) 
-    \distanza_corrente_reg[3]_i_10 
-       (.I0(i_data_IBUF[0]),
-        .I1(x_principale[0]),
-        .I2(current_state[0]),
-        .I3(y_principale[0]),
-        .I4(tmp_distanza_corrente[0]),
-        .O(\distanza_corrente_reg[3]_i_10_n_0 ));
-  LUT6 #(
-    .INIT(64'h0F1800180018F018)) 
-    \distanza_corrente_reg[3]_i_11 
-       (.I0(x_principale[2]),
-        .I1(p_0_in__0),
-        .I2(i_data_IBUF[2]),
-        .I3(current_state[0]),
-        .I4(\distanza_corrente_reg[3]_i_16_n_0 ),
-        .I5(y_principale[2]),
-        .O(\distanza_corrente_reg[3]_i_11_n_0 ));
-  LUT6 #(
-    .INIT(64'h00185518AA180018)) 
-    \distanza_corrente_reg[3]_i_12 
-       (.I0(i_data_IBUF[2]),
-        .I1(p_0_in__0),
-        .I2(x_principale[2]),
-        .I3(current_state[0]),
-        .I4(\distanza_corrente_reg[3]_i_16_n_0 ),
-        .I5(y_principale[2]),
-        .O(\distanza_corrente_reg[3]_i_12_n_0 ));
-  LUT6 #(
-    .INIT(64'h0F1800180018F018)) 
-    \distanza_corrente_reg[3]_i_13 
-       (.I0(x_principale[1]),
-        .I1(p_0_in__0),
-        .I2(i_data_IBUF[1]),
-        .I3(current_state[0]),
-        .I4(\distanza_corrente_reg[3]_i_16_n_0 ),
-        .I5(y_principale[1]),
-        .O(\distanza_corrente_reg[3]_i_13_n_0 ));
-  LUT6 #(
-    .INIT(64'h00185518AA180018)) 
-    \distanza_corrente_reg[3]_i_14 
-       (.I0(i_data_IBUF[1]),
-        .I1(p_0_in__0),
-        .I2(x_principale[1]),
-        .I3(current_state[0]),
-        .I4(\distanza_corrente_reg[3]_i_16_n_0 ),
-        .I5(y_principale[1]),
-        .O(\distanza_corrente_reg[3]_i_14_n_0 ));
-  CARRY4 \distanza_corrente_reg[3]_i_15 
-       (.CI(1'b0),
-        .CO({p_0_in__0,\distanza_corrente_reg[3]_i_15_n_1 ,\distanza_corrente_reg[3]_i_15_n_2 ,\distanza_corrente_reg[3]_i_15_n_3 }),
-        .CYINIT(1'b0),
-        .DI({\distanza_corrente_reg[3]_i_19_n_0 ,\distanza_corrente_reg[3]_i_20_n_0 ,\distanza_corrente_reg[3]_i_21_n_0 ,\distanza_corrente_reg[3]_i_22_n_0 }),
-        .O(\NLW_distanza_corrente_reg[3]_i_15_O_UNCONNECTED [3:0]),
-        .S({\distanza_corrente_reg[3]_i_23_n_0 ,\distanza_corrente_reg[3]_i_24_n_0 ,\distanza_corrente_reg[3]_i_25_n_0 ,\distanza_corrente_reg[3]_i_26_n_0 }));
-  CARRY4 \distanza_corrente_reg[3]_i_16 
-       (.CI(1'b0),
-        .CO({\distanza_corrente_reg[3]_i_16_n_0 ,\distanza_corrente_reg[3]_i_16_n_1 ,\distanza_corrente_reg[3]_i_16_n_2 ,\distanza_corrente_reg[3]_i_16_n_3 }),
-        .CYINIT(1'b0),
-        .DI({\distanza_corrente_reg[3]_i_27_n_0 ,\distanza_corrente_reg[3]_i_28_n_0 ,\distanza_corrente_reg[3]_i_29_n_0 ,\distanza_corrente_reg[3]_i_30_n_0 }),
-        .O(\NLW_distanza_corrente_reg[3]_i_16_O_UNCONNECTED [3:0]),
-        .S({\distanza_corrente_reg[3]_i_31_n_0 ,\distanza_corrente_reg[3]_i_32_n_0 ,\distanza_corrente_reg[3]_i_33_n_0 ,\distanza_corrente_reg[3]_i_34_n_0 }));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+    .INIT(32'hFF080800)) 
+    \distanza_corrente[3]_i_2 
+       (.I0(\distanza_corrente_reg_n_0_[2] ),
+        .I1(next_state[0]),
+        .I2(next_state[2]),
+        .I3(\distanza_corrente[3]_i_10_n_0 ),
+        .I4(\distanza_corrente[3]_i_11_n_0 ),
+        .O(\distanza_corrente[3]_i_2_n_0 ));
   LUT4 #(
-    .INIT(16'hB847)) 
-    \distanza_corrente_reg[3]_i_17 
-       (.I0(y_principale[3]),
-        .I1(current_state[0]),
-        .I2(x_principale[3]),
-        .I3(i_data_IBUF[3]),
-        .O(\distanza_corrente_reg[3]_i_17_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+    .INIT(16'h2F02)) 
+    \distanza_corrente[3]_i_22 
+       (.I0(\y_principale_reg_n_0_[6] ),
+        .I1(i_data_IBUF[6]),
+        .I2(i_data_IBUF[7]),
+        .I3(\y_principale_reg_n_0_[7] ),
+        .O(\distanza_corrente[3]_i_22_n_0 ));
   LUT4 #(
-    .INIT(16'hB847)) 
-    \distanza_corrente_reg[3]_i_18 
-       (.I0(y_principale[2]),
-        .I1(current_state[0]),
-        .I2(x_principale[2]),
-        .I3(i_data_IBUF[2]),
-        .O(\distanza_corrente_reg[3]_i_18_n_0 ));
-  LUT4 #(
-    .INIT(16'h4D44)) 
-    \distanza_corrente_reg[3]_i_19 
-       (.I0(i_data_IBUF[7]),
-        .I1(x_principale[7]),
-        .I2(i_data_IBUF[6]),
-        .I3(x_principale[6]),
-        .O(\distanza_corrente_reg[3]_i_19_n_0 ));
-  (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
-  CARRY4 \distanza_corrente_reg[3]_i_2 
-       (.CI(1'b0),
-        .CO({\distanza_corrente_reg[3]_i_2_n_0 ,\distanza_corrente_reg[3]_i_2_n_1 ,\distanza_corrente_reg[3]_i_2_n_2 ,\distanza_corrente_reg[3]_i_2_n_3 }),
-        .CYINIT(1'b0),
-        .DI({\distanza_corrente_reg[3]_i_3_n_0 ,\distanza_corrente_reg[3]_i_4_n_0 ,\distanza_corrente_reg[3]_i_5_n_0 ,\distanza_corrente_reg[3]_i_6_n_0 }),
-        .O(in13[3:0]),
-        .S({\distanza_corrente_reg[3]_i_7_n_0 ,\distanza_corrente_reg[3]_i_8_n_0 ,\distanza_corrente_reg[3]_i_9_n_0 ,\distanza_corrente_reg[3]_i_10_n_0 }));
-  LUT4 #(
-    .INIT(16'h44D4)) 
-    \distanza_corrente_reg[3]_i_20 
-       (.I0(i_data_IBUF[5]),
-        .I1(x_principale[5]),
-        .I2(x_principale[4]),
-        .I3(i_data_IBUF[4]),
-        .O(\distanza_corrente_reg[3]_i_20_n_0 ));
-  LUT4 #(
-    .INIT(16'h44D4)) 
-    \distanza_corrente_reg[3]_i_21 
-       (.I0(i_data_IBUF[3]),
-        .I1(x_principale[3]),
-        .I2(x_principale[2]),
-        .I3(i_data_IBUF[2]),
-        .O(\distanza_corrente_reg[3]_i_21_n_0 ));
-  LUT4 #(
-    .INIT(16'h44D4)) 
-    \distanza_corrente_reg[3]_i_22 
-       (.I0(i_data_IBUF[1]),
-        .I1(x_principale[1]),
-        .I2(x_principale[0]),
-        .I3(i_data_IBUF[0]),
-        .O(\distanza_corrente_reg[3]_i_22_n_0 ));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    \distanza_corrente_reg[3]_i_23 
-       (.I0(x_principale[7]),
-        .I1(i_data_IBUF[7]),
-        .I2(x_principale[6]),
-        .I3(i_data_IBUF[6]),
-        .O(\distanza_corrente_reg[3]_i_23_n_0 ));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    \distanza_corrente_reg[3]_i_24 
-       (.I0(x_principale[5]),
-        .I1(i_data_IBUF[5]),
-        .I2(x_principale[4]),
-        .I3(i_data_IBUF[4]),
-        .O(\distanza_corrente_reg[3]_i_24_n_0 ));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    \distanza_corrente_reg[3]_i_25 
-       (.I0(x_principale[3]),
-        .I1(i_data_IBUF[3]),
-        .I2(x_principale[2]),
-        .I3(i_data_IBUF[2]),
-        .O(\distanza_corrente_reg[3]_i_25_n_0 ));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    \distanza_corrente_reg[3]_i_26 
-       (.I0(x_principale[1]),
-        .I1(i_data_IBUF[1]),
-        .I2(x_principale[0]),
-        .I3(i_data_IBUF[0]),
-        .O(\distanza_corrente_reg[3]_i_26_n_0 ));
-  LUT4 #(
-    .INIT(16'h22B2)) 
-    \distanza_corrente_reg[3]_i_27 
-       (.I0(y_principale[7]),
-        .I1(i_data_IBUF[7]),
-        .I2(y_principale[6]),
-        .I3(i_data_IBUF[6]),
-        .O(\distanza_corrente_reg[3]_i_27_n_0 ));
-  LUT4 #(
-    .INIT(16'h22B2)) 
-    \distanza_corrente_reg[3]_i_28 
-       (.I0(y_principale[5]),
-        .I1(i_data_IBUF[5]),
-        .I2(y_principale[4]),
-        .I3(i_data_IBUF[4]),
-        .O(\distanza_corrente_reg[3]_i_28_n_0 ));
-  LUT4 #(
-    .INIT(16'h22B2)) 
-    \distanza_corrente_reg[3]_i_29 
-       (.I0(y_principale[3]),
-        .I1(i_data_IBUF[3]),
-        .I2(y_principale[2]),
-        .I3(i_data_IBUF[2]),
-        .O(\distanza_corrente_reg[3]_i_29_n_0 ));
-  LUT4 #(
-    .INIT(16'hBAAA)) 
-    \distanza_corrente_reg[3]_i_3 
-       (.I0(\distanza_corrente_reg[3]_i_11_n_0 ),
-        .I1(\distanza_corrente_reg[3]_i_12_n_0 ),
-        .I2(current_state[0]),
-        .I3(tmp_distanza_corrente[2]),
-        .O(\distanza_corrente_reg[3]_i_3_n_0 ));
-  LUT4 #(
-    .INIT(16'h22B2)) 
-    \distanza_corrente_reg[3]_i_30 
-       (.I0(y_principale[1]),
-        .I1(i_data_IBUF[1]),
-        .I2(y_principale[0]),
-        .I3(i_data_IBUF[0]),
-        .O(\distanza_corrente_reg[3]_i_30_n_0 ));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    \distanza_corrente_reg[3]_i_31 
-       (.I0(i_data_IBUF[7]),
-        .I1(y_principale[7]),
-        .I2(i_data_IBUF[6]),
-        .I3(y_principale[6]),
-        .O(\distanza_corrente_reg[3]_i_31_n_0 ));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    \distanza_corrente_reg[3]_i_32 
-       (.I0(i_data_IBUF[5]),
-        .I1(y_principale[5]),
-        .I2(i_data_IBUF[4]),
-        .I3(y_principale[4]),
-        .O(\distanza_corrente_reg[3]_i_32_n_0 ));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    \distanza_corrente_reg[3]_i_33 
-       (.I0(i_data_IBUF[3]),
-        .I1(y_principale[3]),
-        .I2(i_data_IBUF[2]),
-        .I3(y_principale[2]),
-        .O(\distanza_corrente_reg[3]_i_33_n_0 ));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    \distanza_corrente_reg[3]_i_34 
-       (.I0(i_data_IBUF[1]),
-        .I1(y_principale[1]),
-        .I2(i_data_IBUF[0]),
-        .I3(y_principale[0]),
-        .O(\distanza_corrente_reg[3]_i_34_n_0 ));
-  LUT4 #(
-    .INIT(16'hBAAA)) 
-    \distanza_corrente_reg[3]_i_4 
-       (.I0(\distanza_corrente_reg[3]_i_13_n_0 ),
-        .I1(\distanza_corrente_reg[3]_i_14_n_0 ),
-        .I2(current_state[0]),
-        .I3(tmp_distanza_corrente[1]),
-        .O(\distanza_corrente_reg[3]_i_4_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFBDF0BD0FBDFFBD)) 
-    \distanza_corrente_reg[3]_i_5 
-       (.I0(x_principale[0]),
-        .I1(p_0_in__0),
-        .I2(i_data_IBUF[0]),
-        .I3(current_state[0]),
-        .I4(\distanza_corrente_reg[3]_i_16_n_0 ),
-        .I5(y_principale[0]),
-        .O(\distanza_corrente_reg[3]_i_5_n_0 ));
-  LUT4 #(
-    .INIT(16'h56A6)) 
-    \distanza_corrente_reg[3]_i_6 
-       (.I0(i_data_IBUF[0]),
-        .I1(x_principale[0]),
-        .I2(current_state[0]),
-        .I3(y_principale[0]),
-        .O(\distanza_corrente_reg[3]_i_6_n_0 ));
-  LUT6 #(
-    .INIT(64'hF20D0FF00DF20FF0)) 
-    \distanza_corrente_reg[3]_i_7 
-       (.I0(tmp_distanza_corrente[2]),
-        .I1(\distanza_corrente_reg[3]_i_12_n_0 ),
-        .I2(\distanza_corrente_reg[3]_i_11_n_0 ),
-        .I3(\distanza_corrente_reg[3]_i_17_n_0 ),
-        .I4(current_state[0]),
-        .I5(tmp_distanza_corrente[3]),
-        .O(\distanza_corrente_reg[3]_i_7_n_0 ));
-  LUT6 #(
-    .INIT(64'hF20D0FF00DF20FF0)) 
-    \distanza_corrente_reg[3]_i_8 
-       (.I0(tmp_distanza_corrente[1]),
-        .I1(\distanza_corrente_reg[3]_i_14_n_0 ),
-        .I2(\distanza_corrente_reg[3]_i_13_n_0 ),
-        .I3(\distanza_corrente_reg[3]_i_18_n_0 ),
-        .I4(current_state[0]),
-        .I5(tmp_distanza_corrente[2]),
-        .O(\distanza_corrente_reg[3]_i_8_n_0 ));
-  LUT6 #(
-    .INIT(64'h8B74748B47B8B847)) 
-    \distanza_corrente_reg[3]_i_9 
-       (.I0(y_principale[1]),
-        .I1(current_state[0]),
-        .I2(x_principale[1]),
-        .I3(i_data_IBUF[1]),
-        .I4(\distanza_corrente_reg[3]_i_5_n_0 ),
-        .I5(tmp_distanza_corrente[1]),
-        .O(\distanza_corrente_reg[3]_i_9_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \distanza_corrente_reg[4] 
-       (.CLR(1'b0),
-        .D(\distanza_corrente_reg[4]_i_1_n_0 ),
-        .G(\distanza_corrente_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(distanza_corrente[4]));
-  (* SOFT_HLUTNM = "soft_lutpair57" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \distanza_corrente_reg[4]_i_1 
-       (.I0(in13[4]),
-        .I1(current_state[1]),
-        .O(\distanza_corrente_reg[4]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \distanza_corrente_reg[5] 
-       (.CLR(1'b0),
-        .D(\distanza_corrente_reg[5]_i_1_n_0 ),
-        .G(\distanza_corrente_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(distanza_corrente[5]));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \distanza_corrente_reg[5]_i_1 
-       (.I0(in13[5]),
-        .I1(current_state[1]),
-        .O(\distanza_corrente_reg[5]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \distanza_corrente_reg[6] 
-       (.CLR(1'b0),
-        .D(\distanza_corrente_reg[6]_i_1_n_0 ),
-        .G(\distanza_corrente_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(distanza_corrente[6]));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \distanza_corrente_reg[6]_i_1 
-       (.I0(in13[6]),
-        .I1(current_state[1]),
-        .O(\distanza_corrente_reg[6]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \distanza_corrente_reg[7] 
-       (.CLR(1'b0),
-        .D(\distanza_corrente_reg[7]_i_1_n_0 ),
-        .G(\distanza_corrente_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(distanza_corrente[7]));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \distanza_corrente_reg[7]_i_1 
-       (.I0(in13[7]),
-        .I1(current_state[1]),
-        .O(\distanza_corrente_reg[7]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hF20D0FF00DF20FF0)) 
-    \distanza_corrente_reg[7]_i_10 
-       (.I0(tmp_distanza_corrente[3]),
-        .I1(\distanza_corrente_reg[7]_i_16_n_0 ),
-        .I2(\distanza_corrente_reg[7]_i_15_n_0 ),
-        .I3(\distanza_corrente_reg[7]_i_21_n_0 ),
-        .I4(current_state[0]),
-        .I5(tmp_distanza_corrente[4]),
-        .O(\distanza_corrente_reg[7]_i_10_n_0 ));
-  LUT6 #(
-    .INIT(64'h0F1800180018F018)) 
-    \distanza_corrente_reg[7]_i_11 
-       (.I0(x_principale[5]),
-        .I1(p_0_in__0),
+    .INIT(16'h2F02)) 
+    \distanza_corrente[3]_i_23 
+       (.I0(\y_principale_reg_n_0_[4] ),
+        .I1(i_data_IBUF[4]),
         .I2(i_data_IBUF[5]),
-        .I3(current_state[0]),
-        .I4(\distanza_corrente_reg[3]_i_16_n_0 ),
-        .I5(y_principale[5]),
-        .O(\distanza_corrente_reg[7]_i_11_n_0 ));
-  LUT6 #(
-    .INIT(64'h00185518AA180018)) 
-    \distanza_corrente_reg[7]_i_12 
-       (.I0(i_data_IBUF[5]),
-        .I1(p_0_in__0),
-        .I2(x_principale[5]),
-        .I3(current_state[0]),
-        .I4(\distanza_corrente_reg[3]_i_16_n_0 ),
-        .I5(y_principale[5]),
-        .O(\distanza_corrente_reg[7]_i_12_n_0 ));
-  LUT6 #(
-    .INIT(64'h0F1800180018F018)) 
-    \distanza_corrente_reg[7]_i_13 
-       (.I0(x_principale[4]),
-        .I1(p_0_in__0),
-        .I2(i_data_IBUF[4]),
-        .I3(current_state[0]),
-        .I4(\distanza_corrente_reg[3]_i_16_n_0 ),
-        .I5(y_principale[4]),
-        .O(\distanza_corrente_reg[7]_i_13_n_0 ));
-  LUT6 #(
-    .INIT(64'h00185518AA180018)) 
-    \distanza_corrente_reg[7]_i_14 
-       (.I0(i_data_IBUF[4]),
-        .I1(p_0_in__0),
-        .I2(x_principale[4]),
-        .I3(current_state[0]),
-        .I4(\distanza_corrente_reg[3]_i_16_n_0 ),
-        .I5(y_principale[4]),
-        .O(\distanza_corrente_reg[7]_i_14_n_0 ));
-  LUT6 #(
-    .INIT(64'h0F1800180018F018)) 
-    \distanza_corrente_reg[7]_i_15 
-       (.I0(x_principale[3]),
-        .I1(p_0_in__0),
+        .I3(\y_principale_reg_n_0_[5] ),
+        .O(\distanza_corrente[3]_i_23_n_0 ));
+  LUT4 #(
+    .INIT(16'h2F02)) 
+    \distanza_corrente[3]_i_24 
+       (.I0(\y_principale_reg_n_0_[2] ),
+        .I1(i_data_IBUF[2]),
         .I2(i_data_IBUF[3]),
-        .I3(current_state[0]),
-        .I4(\distanza_corrente_reg[3]_i_16_n_0 ),
-        .I5(y_principale[3]),
-        .O(\distanza_corrente_reg[7]_i_15_n_0 ));
-  LUT6 #(
-    .INIT(64'h00185518AA180018)) 
-    \distanza_corrente_reg[7]_i_16 
+        .I3(\y_principale_reg_n_0_[3] ),
+        .O(\distanza_corrente[3]_i_24_n_0 ));
+  LUT4 #(
+    .INIT(16'h2F02)) 
+    \distanza_corrente[3]_i_25 
+       (.I0(\y_principale_reg_n_0_[0] ),
+        .I1(i_data_IBUF[0]),
+        .I2(i_data_IBUF[1]),
+        .I3(\y_principale_reg_n_0_[1] ),
+        .O(\distanza_corrente[3]_i_25_n_0 ));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    \distanza_corrente[3]_i_26 
+       (.I0(i_data_IBUF[7]),
+        .I1(\y_principale_reg_n_0_[7] ),
+        .I2(i_data_IBUF[6]),
+        .I3(\y_principale_reg_n_0_[6] ),
+        .O(\distanza_corrente[3]_i_26_n_0 ));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    \distanza_corrente[3]_i_27 
+       (.I0(i_data_IBUF[5]),
+        .I1(\y_principale_reg_n_0_[5] ),
+        .I2(i_data_IBUF[4]),
+        .I3(\y_principale_reg_n_0_[4] ),
+        .O(\distanza_corrente[3]_i_27_n_0 ));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    \distanza_corrente[3]_i_28 
        (.I0(i_data_IBUF[3]),
-        .I1(p_0_in__0),
-        .I2(x_principale[3]),
-        .I3(current_state[0]),
-        .I4(\distanza_corrente_reg[3]_i_16_n_0 ),
-        .I5(y_principale[3]),
-        .O(\distanza_corrente_reg[7]_i_16_n_0 ));
-  LUT6 #(
-    .INIT(64'hB0B08F8FB0BF808F)) 
-    \distanza_corrente_reg[7]_i_17 
-       (.I0(y_principale[6]),
-        .I1(\distanza_corrente_reg[3]_i_16_n_0 ),
-        .I2(current_state[0]),
-        .I3(x_principale[6]),
-        .I4(i_data_IBUF[6]),
-        .I5(p_0_in__0),
-        .O(\distanza_corrente_reg[7]_i_17_n_0 ));
-  LUT6 #(
-    .INIT(64'h1F101F1FDFD0D0D0)) 
-    \distanza_corrente_reg[7]_i_18 
-       (.I0(y_principale[6]),
-        .I1(\distanza_corrente_reg[3]_i_16_n_0 ),
-        .I2(current_state[0]),
-        .I3(x_principale[6]),
-        .I4(p_0_in__0),
-        .I5(i_data_IBUF[6]),
-        .O(\distanza_corrente_reg[7]_i_18_n_0 ));
+        .I1(\y_principale_reg_n_0_[3] ),
+        .I2(i_data_IBUF[2]),
+        .I3(\y_principale_reg_n_0_[2] ),
+        .O(\distanza_corrente[3]_i_28_n_0 ));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    \distanza_corrente[3]_i_29 
+       (.I0(i_data_IBUF[1]),
+        .I1(\y_principale_reg_n_0_[1] ),
+        .I2(i_data_IBUF[0]),
+        .I3(\y_principale_reg_n_0_[0] ),
+        .O(\distanza_corrente[3]_i_29_n_0 ));
   LUT5 #(
-    .INIT(32'h906F9F60)) 
-    \distanza_corrente_reg[7]_i_19 
-       (.I0(tmp_distanza_corrente[7]),
-        .I1(y_principale[7]),
-        .I2(current_state[0]),
-        .I3(i_data_IBUF[7]),
-        .I4(x_principale[7]),
-        .O(\distanza_corrente_reg[7]_i_19_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+    .INIT(32'hFF080800)) 
+    \distanza_corrente[3]_i_3 
+       (.I0(\distanza_corrente_reg_n_0_[1] ),
+        .I1(next_state[0]),
+        .I2(next_state[2]),
+        .I3(\distanza_corrente[3]_i_12_n_0 ),
+        .I4(\distanza_corrente[3]_i_13_n_0 ),
+        .O(\distanza_corrente[3]_i_3_n_0 ));
+  LUT4 #(
+    .INIT(16'h2F02)) 
+    \distanza_corrente[3]_i_30 
+       (.I0(\x_principale_reg_n_0_[6] ),
+        .I1(i_data_IBUF[6]),
+        .I2(i_data_IBUF[7]),
+        .I3(\x_principale_reg_n_0_[7] ),
+        .O(\distanza_corrente[3]_i_30_n_0 ));
+  LUT4 #(
+    .INIT(16'h2F02)) 
+    \distanza_corrente[3]_i_31 
+       (.I0(\x_principale_reg_n_0_[4] ),
+        .I1(i_data_IBUF[4]),
+        .I2(i_data_IBUF[5]),
+        .I3(\x_principale_reg_n_0_[5] ),
+        .O(\distanza_corrente[3]_i_31_n_0 ));
+  LUT4 #(
+    .INIT(16'h2F02)) 
+    \distanza_corrente[3]_i_32 
+       (.I0(\x_principale_reg_n_0_[2] ),
+        .I1(i_data_IBUF[2]),
+        .I2(i_data_IBUF[3]),
+        .I3(\x_principale_reg_n_0_[3] ),
+        .O(\distanza_corrente[3]_i_32_n_0 ));
+  LUT4 #(
+    .INIT(16'h2F02)) 
+    \distanza_corrente[3]_i_33 
+       (.I0(\x_principale_reg_n_0_[0] ),
+        .I1(i_data_IBUF[0]),
+        .I2(i_data_IBUF[1]),
+        .I3(\x_principale_reg_n_0_[1] ),
+        .O(\distanza_corrente[3]_i_33_n_0 ));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    \distanza_corrente[3]_i_34 
+       (.I0(i_data_IBUF[7]),
+        .I1(\x_principale_reg_n_0_[7] ),
+        .I2(\x_principale_reg_n_0_[6] ),
+        .I3(i_data_IBUF[6]),
+        .O(\distanza_corrente[3]_i_34_n_0 ));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    \distanza_corrente[3]_i_35 
+       (.I0(i_data_IBUF[5]),
+        .I1(\x_principale_reg_n_0_[5] ),
+        .I2(\x_principale_reg_n_0_[4] ),
+        .I3(i_data_IBUF[4]),
+        .O(\distanza_corrente[3]_i_35_n_0 ));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    \distanza_corrente[3]_i_36 
+       (.I0(i_data_IBUF[3]),
+        .I1(\x_principale_reg_n_0_[3] ),
+        .I2(\x_principale_reg_n_0_[2] ),
+        .I3(i_data_IBUF[2]),
+        .O(\distanza_corrente[3]_i_36_n_0 ));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    \distanza_corrente[3]_i_37 
+       (.I0(i_data_IBUF[1]),
+        .I1(\x_principale_reg_n_0_[1] ),
+        .I2(\x_principale_reg_n_0_[0] ),
+        .I3(i_data_IBUF[0]),
+        .O(\distanza_corrente[3]_i_37_n_0 ));
+  LUT3 #(
+    .INIT(8'h32)) 
+    \distanza_corrente[3]_i_4 
+       (.I0(\distanza_corrente[3]_i_14_n_0 ),
+        .I1(next_state[1]),
+        .I2(\distanza_corrente[3]_i_15_n_0 ),
+        .O(\distanza_corrente[3]_i_4_n_0 ));
+  LUT3 #(
+    .INIT(8'hED)) 
+    \distanza_corrente[3]_i_5 
+       (.I0(\distanza_corrente[3]_i_14_n_0 ),
+        .I1(next_state[1]),
+        .I2(\distanza_corrente[3]_i_15_n_0 ),
+        .O(\distanza_corrente[3]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'h9669969696969696)) 
+    \distanza_corrente[3]_i_6 
+       (.I0(\distanza_corrente[3]_i_2_n_0 ),
+        .I1(\distanza_corrente[7]_i_16_n_0 ),
+        .I2(\distanza_corrente[7]_i_15_n_0 ),
+        .I3(next_state[2]),
+        .I4(next_state[0]),
+        .I5(\distanza_corrente_reg_n_0_[3] ),
+        .O(\distanza_corrente[3]_i_6_n_0 ));
+  LUT6 #(
+    .INIT(64'h9669969696969696)) 
+    \distanza_corrente[3]_i_7 
+       (.I0(\distanza_corrente[3]_i_3_n_0 ),
+        .I1(\distanza_corrente[3]_i_11_n_0 ),
+        .I2(\distanza_corrente[3]_i_10_n_0 ),
+        .I3(next_state[2]),
+        .I4(next_state[0]),
+        .I5(\distanza_corrente_reg_n_0_[2] ),
+        .O(\distanza_corrente[3]_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'h9669969696969696)) 
+    \distanza_corrente[3]_i_8 
+       (.I0(\distanza_corrente[3]_i_4_n_0 ),
+        .I1(\distanza_corrente[3]_i_13_n_0 ),
+        .I2(\distanza_corrente[3]_i_12_n_0 ),
+        .I3(next_state[2]),
+        .I4(next_state[0]),
+        .I5(\distanza_corrente_reg_n_0_[1] ),
+        .O(\distanza_corrente[3]_i_8_n_0 ));
+  LUT6 #(
+    .INIT(64'hEDEDEDED12EDEDED)) 
+    \distanza_corrente[3]_i_9 
+       (.I0(\distanza_corrente[3]_i_14_n_0 ),
+        .I1(next_state[1]),
+        .I2(\distanza_corrente[3]_i_15_n_0 ),
+        .I3(\distanza_corrente_reg_n_0_[0] ),
+        .I4(next_state[0]),
+        .I5(next_state[2]),
+        .O(\distanza_corrente[3]_i_9_n_0 ));
+  LUT4 #(
+    .INIT(16'h0080)) 
+    \distanza_corrente[7]_i_1 
+       (.I0(next_state[0]),
+        .I1(next_state[1]),
+        .I2(next_state[3]),
+        .I3(next_state[2]),
+        .O(\distanza_corrente[7]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h9669969696969696)) 
+    \distanza_corrente[7]_i_10 
+       (.I0(\distanza_corrente[7]_i_6_n_0 ),
+        .I1(\distanza_corrente[7]_i_14_n_0 ),
+        .I2(\distanza_corrente[7]_i_13_n_0 ),
+        .I3(next_state[2]),
+        .I4(next_state[0]),
+        .I5(\distanza_corrente_reg_n_0_[4] ),
+        .O(\distanza_corrente[7]_i_10_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \distanza_corrente[7]_i_11 
+       (.I0(\distanza_corrente[7]_i_20_n_0 ),
+        .I1(next_state[1]),
+        .O(\distanza_corrente[7]_i_11_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \distanza_corrente[7]_i_12 
+       (.I0(\distanza_corrente[7]_i_21_n_0 ),
+        .I1(next_state[1]),
+        .O(\distanza_corrente[7]_i_12_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \distanza_corrente[7]_i_13 
+       (.I0(\distanza_corrente[7]_i_22_n_0 ),
+        .I1(next_state[1]),
+        .O(\distanza_corrente[7]_i_13_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \distanza_corrente[7]_i_14 
+       (.I0(\distanza_corrente[7]_i_23_n_0 ),
+        .I1(next_state[1]),
+        .O(\distanza_corrente[7]_i_14_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \distanza_corrente[7]_i_15 
+       (.I0(\distanza_corrente[7]_i_24_n_0 ),
+        .I1(next_state[1]),
+        .O(\distanza_corrente[7]_i_15_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \distanza_corrente[7]_i_16 
+       (.I0(\distanza_corrente[7]_i_25_n_0 ),
+        .I1(next_state[1]),
+        .O(\distanza_corrente[7]_i_16_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \distanza_corrente[7]_i_17 
+       (.I0(\distanza_corrente[7]_i_26_n_0 ),
+        .I1(next_state[1]),
+        .O(\distanza_corrente[7]_i_17_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \distanza_corrente[7]_i_18 
+       (.I0(\distanza_corrente[7]_i_27_n_0 ),
+        .I1(next_state[1]),
+        .O(\distanza_corrente[7]_i_18_n_0 ));
+  LUT6 #(
+    .INIT(64'h080808F70808F708)) 
+    \distanza_corrente[7]_i_19 
+       (.I0(\distanza_corrente_reg_n_0_[7] ),
+        .I1(next_state[0]),
+        .I2(next_state[2]),
+        .I3(\distanza_corrente[7]_i_28_n_0 ),
+        .I4(next_state[1]),
+        .I5(\distanza_corrente[7]_i_29_n_0 ),
+        .O(\distanza_corrente[7]_i_19_n_0 ));
   LUT4 #(
     .INIT(16'h4404)) 
-    \distanza_corrente_reg[7]_i_2 
-       (.I0(current_state[2]),
-        .I1(current_state[3]),
-        .I2(current_state[1]),
-        .I3(current_state[0]),
-        .O(\distanza_corrente_reg[7]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'hB847)) 
-    \distanza_corrente_reg[7]_i_20 
-       (.I0(y_principale[5]),
-        .I1(current_state[0]),
-        .I2(x_principale[5]),
-        .I3(i_data_IBUF[5]),
-        .O(\distanza_corrente_reg[7]_i_20_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
-  LUT4 #(
-    .INIT(16'hB847)) 
-    \distanza_corrente_reg[7]_i_21 
-       (.I0(y_principale[4]),
-        .I1(current_state[0]),
-        .I2(x_principale[4]),
-        .I3(i_data_IBUF[4]),
-        .O(\distanza_corrente_reg[7]_i_21_n_0 ));
+    \distanza_corrente[7]_i_2 
+       (.I0(next_state[2]),
+        .I1(next_state[3]),
+        .I2(next_state[1]),
+        .I3(next_state[0]),
+        .O(distanza_corrente));
+  LUT6 #(
+    .INIT(64'hDD00DD0F88F088FF)) 
+    \distanza_corrente[7]_i_20 
+       (.I0(\distanza_corrente_reg[3]_i_20_n_0 ),
+        .I1(\y_principale_reg_n_0_[5] ),
+        .I2(p_0_in),
+        .I3(next_state[0]),
+        .I4(\x_principale_reg_n_0_[5] ),
+        .I5(i_data_IBUF[5]),
+        .O(\distanza_corrente[7]_i_20_n_0 ));
+  LUT6 #(
+    .INIT(64'h11FFBBF0110FBB00)) 
+    \distanza_corrente[7]_i_21 
+       (.I0(\distanza_corrente_reg[3]_i_20_n_0 ),
+        .I1(\y_principale_reg_n_0_[5] ),
+        .I2(p_0_in),
+        .I3(next_state[0]),
+        .I4(i_data_IBUF[5]),
+        .I5(\x_principale_reg_n_0_[5] ),
+        .O(\distanza_corrente[7]_i_21_n_0 ));
+  LUT6 #(
+    .INIT(64'hDD00DD0F88F088FF)) 
+    \distanza_corrente[7]_i_22 
+       (.I0(\distanza_corrente_reg[3]_i_20_n_0 ),
+        .I1(\y_principale_reg_n_0_[4] ),
+        .I2(p_0_in),
+        .I3(next_state[0]),
+        .I4(\x_principale_reg_n_0_[4] ),
+        .I5(i_data_IBUF[4]),
+        .O(\distanza_corrente[7]_i_22_n_0 ));
+  LUT6 #(
+    .INIT(64'h11FFBBF0110FBB00)) 
+    \distanza_corrente[7]_i_23 
+       (.I0(\distanza_corrente_reg[3]_i_20_n_0 ),
+        .I1(\y_principale_reg_n_0_[4] ),
+        .I2(p_0_in),
+        .I3(next_state[0]),
+        .I4(i_data_IBUF[4]),
+        .I5(\x_principale_reg_n_0_[4] ),
+        .O(\distanza_corrente[7]_i_23_n_0 ));
+  LUT6 #(
+    .INIT(64'hDD00DD0F88F088FF)) 
+    \distanza_corrente[7]_i_24 
+       (.I0(\distanza_corrente_reg[3]_i_20_n_0 ),
+        .I1(\y_principale_reg_n_0_[3] ),
+        .I2(p_0_in),
+        .I3(next_state[0]),
+        .I4(\x_principale_reg_n_0_[3] ),
+        .I5(i_data_IBUF[3]),
+        .O(\distanza_corrente[7]_i_24_n_0 ));
+  LUT6 #(
+    .INIT(64'h11FFBBF0110FBB00)) 
+    \distanza_corrente[7]_i_25 
+       (.I0(\distanza_corrente_reg[3]_i_20_n_0 ),
+        .I1(\y_principale_reg_n_0_[3] ),
+        .I2(p_0_in),
+        .I3(next_state[0]),
+        .I4(i_data_IBUF[3]),
+        .I5(\x_principale_reg_n_0_[3] ),
+        .O(\distanza_corrente[7]_i_25_n_0 ));
+  LUT6 #(
+    .INIT(64'h11FFBBF0110FBB00)) 
+    \distanza_corrente[7]_i_26 
+       (.I0(\distanza_corrente_reg[3]_i_20_n_0 ),
+        .I1(\y_principale_reg_n_0_[6] ),
+        .I2(p_0_in),
+        .I3(next_state[0]),
+        .I4(i_data_IBUF[6]),
+        .I5(\x_principale_reg_n_0_[6] ),
+        .O(\distanza_corrente[7]_i_26_n_0 ));
+  LUT6 #(
+    .INIT(64'hDD00DD0F88F088FF)) 
+    \distanza_corrente[7]_i_27 
+       (.I0(\distanza_corrente_reg[3]_i_20_n_0 ),
+        .I1(\y_principale_reg_n_0_[6] ),
+        .I2(p_0_in),
+        .I3(next_state[0]),
+        .I4(\x_principale_reg_n_0_[6] ),
+        .I5(i_data_IBUF[6]),
+        .O(\distanza_corrente[7]_i_27_n_0 ));
+  LUT6 #(
+    .INIT(64'hDD00DD0F88F088FF)) 
+    \distanza_corrente[7]_i_28 
+       (.I0(\distanza_corrente_reg[3]_i_20_n_0 ),
+        .I1(\y_principale_reg_n_0_[7] ),
+        .I2(p_0_in),
+        .I3(next_state[0]),
+        .I4(\x_principale_reg_n_0_[7] ),
+        .I5(i_data_IBUF[7]),
+        .O(\distanza_corrente[7]_i_28_n_0 ));
+  LUT6 #(
+    .INIT(64'h11FFBBF0110FBB00)) 
+    \distanza_corrente[7]_i_29 
+       (.I0(\distanza_corrente_reg[3]_i_20_n_0 ),
+        .I1(\y_principale_reg_n_0_[7] ),
+        .I2(p_0_in),
+        .I3(next_state[0]),
+        .I4(i_data_IBUF[7]),
+        .I5(\x_principale_reg_n_0_[7] ),
+        .O(\distanza_corrente[7]_i_29_n_0 ));
+  LUT5 #(
+    .INIT(32'hFF080800)) 
+    \distanza_corrente[7]_i_4 
+       (.I0(\distanza_corrente_reg_n_0_[5] ),
+        .I1(next_state[0]),
+        .I2(next_state[2]),
+        .I3(\distanza_corrente[7]_i_11_n_0 ),
+        .I4(\distanza_corrente[7]_i_12_n_0 ),
+        .O(\distanza_corrente[7]_i_4_n_0 ));
+  LUT5 #(
+    .INIT(32'hFF080800)) 
+    \distanza_corrente[7]_i_5 
+       (.I0(\distanza_corrente_reg_n_0_[4] ),
+        .I1(next_state[0]),
+        .I2(next_state[2]),
+        .I3(\distanza_corrente[7]_i_13_n_0 ),
+        .I4(\distanza_corrente[7]_i_14_n_0 ),
+        .O(\distanza_corrente[7]_i_5_n_0 ));
+  LUT5 #(
+    .INIT(32'hFF080800)) 
+    \distanza_corrente[7]_i_6 
+       (.I0(\distanza_corrente_reg_n_0_[3] ),
+        .I1(next_state[0]),
+        .I2(next_state[2]),
+        .I3(\distanza_corrente[7]_i_15_n_0 ),
+        .I4(\distanza_corrente[7]_i_16_n_0 ),
+        .O(\distanza_corrente[7]_i_6_n_0 ));
+  LUT6 #(
+    .INIT(64'h717777778E888888)) 
+    \distanza_corrente[7]_i_7 
+       (.I0(\distanza_corrente[7]_i_17_n_0 ),
+        .I1(\distanza_corrente[7]_i_18_n_0 ),
+        .I2(next_state[2]),
+        .I3(next_state[0]),
+        .I4(\distanza_corrente_reg_n_0_[6] ),
+        .I5(\distanza_corrente[7]_i_19_n_0 ),
+        .O(\distanza_corrente[7]_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'h9669969696969696)) 
+    \distanza_corrente[7]_i_8 
+       (.I0(\distanza_corrente[7]_i_4_n_0 ),
+        .I1(\distanza_corrente[7]_i_17_n_0 ),
+        .I2(\distanza_corrente[7]_i_18_n_0 ),
+        .I3(next_state[2]),
+        .I4(next_state[0]),
+        .I5(\distanza_corrente_reg_n_0_[6] ),
+        .O(\distanza_corrente[7]_i_8_n_0 ));
+  LUT6 #(
+    .INIT(64'h9669969696969696)) 
+    \distanza_corrente[7]_i_9 
+       (.I0(\distanza_corrente[7]_i_5_n_0 ),
+        .I1(\distanza_corrente[7]_i_12_n_0 ),
+        .I2(\distanza_corrente[7]_i_11_n_0 ),
+        .I3(next_state[2]),
+        .I4(next_state[0]),
+        .I5(\distanza_corrente_reg_n_0_[5] ),
+        .O(\distanza_corrente[7]_i_9_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \distanza_corrente_reg[0] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(distanza_corrente),
+        .D(in13[0]),
+        .Q(\distanza_corrente_reg_n_0_[0] ),
+        .R(\distanza_corrente[7]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \distanza_corrente_reg[1] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(distanza_corrente),
+        .D(in13[1]),
+        .Q(\distanza_corrente_reg_n_0_[1] ),
+        .R(\distanza_corrente[7]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \distanza_corrente_reg[2] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(distanza_corrente),
+        .D(in13[2]),
+        .Q(\distanza_corrente_reg_n_0_[2] ),
+        .R(\distanza_corrente[7]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \distanza_corrente_reg[3] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(distanza_corrente),
+        .D(in13[3]),
+        .Q(\distanza_corrente_reg_n_0_[3] ),
+        .R(\distanza_corrente[7]_i_1_n_0 ));
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
+  CARRY4 \distanza_corrente_reg[3]_i_1 
+       (.CI(1'b0),
+        .CO({\distanza_corrente_reg[3]_i_1_n_0 ,\distanza_corrente_reg[3]_i_1_n_1 ,\distanza_corrente_reg[3]_i_1_n_2 ,\distanza_corrente_reg[3]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({\distanza_corrente[3]_i_2_n_0 ,\distanza_corrente[3]_i_3_n_0 ,\distanza_corrente[3]_i_4_n_0 ,\distanza_corrente[3]_i_5_n_0 }),
+        .O(in13[3:0]),
+        .S({\distanza_corrente[3]_i_6_n_0 ,\distanza_corrente[3]_i_7_n_0 ,\distanza_corrente[3]_i_8_n_0 ,\distanza_corrente[3]_i_9_n_0 }));
+  CARRY4 \distanza_corrente_reg[3]_i_20 
+       (.CI(1'b0),
+        .CO({\distanza_corrente_reg[3]_i_20_n_0 ,\distanza_corrente_reg[3]_i_20_n_1 ,\distanza_corrente_reg[3]_i_20_n_2 ,\distanza_corrente_reg[3]_i_20_n_3 }),
+        .CYINIT(1'b0),
+        .DI({\distanza_corrente[3]_i_22_n_0 ,\distanza_corrente[3]_i_23_n_0 ,\distanza_corrente[3]_i_24_n_0 ,\distanza_corrente[3]_i_25_n_0 }),
+        .O(\NLW_distanza_corrente_reg[3]_i_20_O_UNCONNECTED [3:0]),
+        .S({\distanza_corrente[3]_i_26_n_0 ,\distanza_corrente[3]_i_27_n_0 ,\distanza_corrente[3]_i_28_n_0 ,\distanza_corrente[3]_i_29_n_0 }));
+  CARRY4 \distanza_corrente_reg[3]_i_21 
+       (.CI(1'b0),
+        .CO({p_0_in,\distanza_corrente_reg[3]_i_21_n_1 ,\distanza_corrente_reg[3]_i_21_n_2 ,\distanza_corrente_reg[3]_i_21_n_3 }),
+        .CYINIT(1'b0),
+        .DI({\distanza_corrente[3]_i_30_n_0 ,\distanza_corrente[3]_i_31_n_0 ,\distanza_corrente[3]_i_32_n_0 ,\distanza_corrente[3]_i_33_n_0 }),
+        .O(\NLW_distanza_corrente_reg[3]_i_21_O_UNCONNECTED [3:0]),
+        .S({\distanza_corrente[3]_i_34_n_0 ,\distanza_corrente[3]_i_35_n_0 ,\distanza_corrente[3]_i_36_n_0 ,\distanza_corrente[3]_i_37_n_0 }));
+  FDRE #(
+    .INIT(1'b0)) 
+    \distanza_corrente_reg[4] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(distanza_corrente),
+        .D(in13[4]),
+        .Q(\distanza_corrente_reg_n_0_[4] ),
+        .R(\distanza_corrente[7]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \distanza_corrente_reg[5] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(distanza_corrente),
+        .D(in13[5]),
+        .Q(\distanza_corrente_reg_n_0_[5] ),
+        .R(\distanza_corrente[7]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \distanza_corrente_reg[6] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(distanza_corrente),
+        .D(in13[6]),
+        .Q(\distanza_corrente_reg_n_0_[6] ),
+        .R(\distanza_corrente[7]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \distanza_corrente_reg[7] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(distanza_corrente),
+        .D(in13[7]),
+        .Q(\distanza_corrente_reg_n_0_[7] ),
+        .R(\distanza_corrente[7]_i_1_n_0 ));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 \distanza_corrente_reg[7]_i_3 
-       (.CI(\distanza_corrente_reg[3]_i_2_n_0 ),
+       (.CI(\distanza_corrente_reg[3]_i_1_n_0 ),
         .CO({\NLW_distanza_corrente_reg[7]_i_3_CO_UNCONNECTED [3],\distanza_corrente_reg[7]_i_3_n_1 ,\distanza_corrente_reg[7]_i_3_n_2 ,\distanza_corrente_reg[7]_i_3_n_3 }),
         .CYINIT(1'b0),
-        .DI({1'b0,\distanza_corrente_reg[7]_i_4_n_0 ,\distanza_corrente_reg[7]_i_5_n_0 ,\distanza_corrente_reg[7]_i_6_n_0 }),
+        .DI({1'b0,\distanza_corrente[7]_i_4_n_0 ,\distanza_corrente[7]_i_5_n_0 ,\distanza_corrente[7]_i_6_n_0 }),
         .O(in13[7:4]),
-        .S({\distanza_corrente_reg[7]_i_7_n_0 ,\distanza_corrente_reg[7]_i_8_n_0 ,\distanza_corrente_reg[7]_i_9_n_0 ,\distanza_corrente_reg[7]_i_10_n_0 }));
-  LUT4 #(
-    .INIT(16'hBAAA)) 
-    \distanza_corrente_reg[7]_i_4 
-       (.I0(\distanza_corrente_reg[7]_i_11_n_0 ),
-        .I1(\distanza_corrente_reg[7]_i_12_n_0 ),
-        .I2(current_state[0]),
-        .I3(tmp_distanza_corrente[5]),
-        .O(\distanza_corrente_reg[7]_i_4_n_0 ));
-  LUT4 #(
-    .INIT(16'hBAAA)) 
-    \distanza_corrente_reg[7]_i_5 
-       (.I0(\distanza_corrente_reg[7]_i_13_n_0 ),
-        .I1(\distanza_corrente_reg[7]_i_14_n_0 ),
-        .I2(current_state[0]),
-        .I3(tmp_distanza_corrente[4]),
-        .O(\distanza_corrente_reg[7]_i_5_n_0 ));
-  LUT4 #(
-    .INIT(16'hBAAA)) 
-    \distanza_corrente_reg[7]_i_6 
-       (.I0(\distanza_corrente_reg[7]_i_15_n_0 ),
-        .I1(\distanza_corrente_reg[7]_i_16_n_0 ),
-        .I2(current_state[0]),
-        .I3(tmp_distanza_corrente[3]),
-        .O(\distanza_corrente_reg[7]_i_6_n_0 ));
-  LUT5 #(
-    .INIT(32'hE8881777)) 
-    \distanza_corrente_reg[7]_i_7 
-       (.I0(\distanza_corrente_reg[7]_i_17_n_0 ),
-        .I1(\distanza_corrente_reg[7]_i_18_n_0 ),
-        .I2(tmp_distanza_corrente[6]),
-        .I3(current_state[0]),
-        .I4(\distanza_corrente_reg[7]_i_19_n_0 ),
-        .O(\distanza_corrente_reg[7]_i_7_n_0 ));
-  LUT5 #(
-    .INIT(32'h69969696)) 
-    \distanza_corrente_reg[7]_i_8 
-       (.I0(\distanza_corrente_reg[7]_i_4_n_0 ),
-        .I1(\distanza_corrente_reg[7]_i_17_n_0 ),
-        .I2(\distanza_corrente_reg[7]_i_18_n_0 ),
-        .I3(current_state[0]),
-        .I4(tmp_distanza_corrente[6]),
-        .O(\distanza_corrente_reg[7]_i_8_n_0 ));
+        .S({\distanza_corrente[7]_i_7_n_0 ,\distanza_corrente[7]_i_8_n_0 ,\distanza_corrente[7]_i_9_n_0 ,\distanza_corrente[7]_i_10_n_0 }));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  LUT3 #(
+    .INIT(8'h08)) 
+    \distanza_minima[0]_i_1 
+       (.I0(\distanza_corrente_reg_n_0_[0] ),
+        .I1(next_state[3]),
+        .I2(next_state[2]),
+        .O(\distanza_minima[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  LUT3 #(
+    .INIT(8'h08)) 
+    \distanza_minima[1]_i_1 
+       (.I0(\distanza_corrente_reg_n_0_[1] ),
+        .I1(next_state[3]),
+        .I2(next_state[2]),
+        .O(\distanza_minima[1]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  LUT3 #(
+    .INIT(8'h08)) 
+    \distanza_minima[2]_i_1 
+       (.I0(\distanza_corrente_reg_n_0_[2] ),
+        .I1(next_state[3]),
+        .I2(next_state[2]),
+        .O(\distanza_minima[2]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  LUT3 #(
+    .INIT(8'h08)) 
+    \distanza_minima[3]_i_1 
+       (.I0(\distanza_corrente_reg_n_0_[3] ),
+        .I1(next_state[3]),
+        .I2(next_state[2]),
+        .O(\distanza_minima[3]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  LUT3 #(
+    .INIT(8'h08)) 
+    \distanza_minima[4]_i_1 
+       (.I0(\distanza_corrente_reg_n_0_[4] ),
+        .I1(next_state[3]),
+        .I2(next_state[2]),
+        .O(\distanza_minima[4]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  LUT3 #(
+    .INIT(8'h08)) 
+    \distanza_minima[5]_i_1 
+       (.I0(\distanza_corrente_reg_n_0_[5] ),
+        .I1(next_state[3]),
+        .I2(next_state[2]),
+        .O(\distanza_minima[5]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  LUT3 #(
+    .INIT(8'h08)) 
+    \distanza_minima[6]_i_1 
+       (.I0(\distanza_corrente_reg_n_0_[6] ),
+        .I1(next_state[3]),
+        .I2(next_state[2]),
+        .O(\distanza_minima[6]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hF20D0FF00DF20FF0)) 
-    \distanza_corrente_reg[7]_i_9 
-       (.I0(tmp_distanza_corrente[4]),
-        .I1(\distanza_corrente_reg[7]_i_14_n_0 ),
-        .I2(\distanza_corrente_reg[7]_i_13_n_0 ),
-        .I3(\distanza_corrente_reg[7]_i_20_n_0 ),
-        .I4(current_state[0]),
-        .I5(tmp_distanza_corrente[5]),
-        .O(\distanza_corrente_reg[7]_i_9_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \distanza_minima_reg[0] 
-       (.CLR(1'b0),
-        .D(\distanza_minima_reg[0]_i_1_n_0 ),
-        .G(\distanza_minima_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(distanza_minima[0]));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \distanza_minima_reg[0]_i_1 
-       (.I0(distanza_corrente[0]),
-        .I1(current_state[1]),
-        .I2(i_start_IBUF),
-        .O(\distanza_minima_reg[0]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \distanza_minima_reg[1] 
-       (.CLR(1'b0),
-        .D(\distanza_minima_reg[1]_i_1_n_0 ),
-        .G(\distanza_minima_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(distanza_minima[1]));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \distanza_minima_reg[1]_i_1 
-       (.I0(distanza_corrente[1]),
-        .I1(current_state[1]),
-        .I2(i_start_IBUF),
-        .O(\distanza_minima_reg[1]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \distanza_minima_reg[2] 
-       (.CLR(1'b0),
-        .D(\distanza_minima_reg[2]_i_1_n_0 ),
-        .G(\distanza_minima_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(distanza_minima[2]));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \distanza_minima_reg[2]_i_1 
-       (.I0(distanza_corrente[2]),
-        .I1(current_state[1]),
-        .I2(i_start_IBUF),
-        .O(\distanza_minima_reg[2]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \distanza_minima_reg[3] 
-       (.CLR(1'b0),
-        .D(\distanza_minima_reg[3]_i_1_n_0 ),
-        .G(\distanza_minima_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(distanza_minima[3]));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \distanza_minima_reg[3]_i_1 
-       (.I0(distanza_corrente[3]),
-        .I1(current_state[1]),
-        .I2(i_start_IBUF),
-        .O(\distanza_minima_reg[3]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \distanza_minima_reg[4] 
-       (.CLR(1'b0),
-        .D(\distanza_minima_reg[4]_i_1_n_0 ),
-        .G(\distanza_minima_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(distanza_minima[4]));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \distanza_minima_reg[4]_i_1 
-       (.I0(distanza_corrente[4]),
-        .I1(current_state[1]),
-        .I2(i_start_IBUF),
-        .O(\distanza_minima_reg[4]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \distanza_minima_reg[5] 
-       (.CLR(1'b0),
-        .D(\distanza_minima_reg[5]_i_1_n_0 ),
-        .G(\distanza_minima_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(distanza_minima[5]));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \distanza_minima_reg[5]_i_1 
-       (.I0(distanza_corrente[5]),
-        .I1(current_state[1]),
-        .I2(i_start_IBUF),
-        .O(\distanza_minima_reg[5]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \distanza_minima_reg[6] 
-       (.CLR(1'b0),
-        .D(\distanza_minima_reg[6]_i_1_n_0 ),
-        .G(\distanza_minima_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(distanza_minima[6]));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \distanza_minima_reg[6]_i_1 
-       (.I0(distanza_corrente[6]),
-        .I1(current_state[1]),
-        .I2(i_start_IBUF),
-        .O(\distanza_minima_reg[6]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \distanza_minima_reg[7] 
-       (.CLR(1'b0),
-        .D(\distanza_minima_reg[7]_i_1_n_0 ),
-        .G(\distanza_minima_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(distanza_minima[7]));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \distanza_minima_reg[7]_i_1 
-       (.I0(distanza_corrente[7]),
-        .I1(current_state[1]),
-        .I2(i_start_IBUF),
-        .O(\distanza_minima_reg[7]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h88888888888F8888)) 
-    \distanza_minima_reg[7]_i_2 
-       (.I0(\distanza_minima_reg[7]_i_3_n_0 ),
-        .I1(\maschera_output_reg[7]_i_2_n_0 ),
-        .I2(\distanza_minima_reg[7]_i_4_n_0 ),
-        .I3(current_state[0]),
+    .INIT(64'h0044000000F40000)) 
+    \distanza_minima[7]_i_1 
+       (.I0(\distanza_minima[7]_i_4_n_0 ),
+        .I1(maschera_output),
+        .I2(\distanza_minima[7]_i_5_n_0 ),
+        .I3(next_state[1]),
         .I4(i_start_IBUF),
-        .I5(current_state[1]),
-        .O(\distanza_minima_reg[7]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFD)) 
-    \distanza_minima_reg[7]_i_3 
-       (.I0(\distanza_minima_reg[7]_i_5_n_0 ),
-        .I1(\distanza_minima_reg[7]_i_6_n_0 ),
-        .I2(\distanza_minima_reg[7]_i_7_n_0 ),
-        .I3(\distanza_minima_reg[7]_i_8_n_0 ),
-        .O(\distanza_minima_reg[7]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+        .I5(next_state[0]),
+        .O(\distanza_minima[7]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h4444444444F44444)) 
+    \distanza_minima[7]_i_2 
+       (.I0(\distanza_minima[7]_i_4_n_0 ),
+        .I1(maschera_output),
+        .I2(\distanza_minima[7]_i_5_n_0 ),
+        .I3(next_state[1]),
+        .I4(i_start_IBUF),
+        .I5(next_state[0]),
+        .O(distanza_minima));
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  LUT3 #(
+    .INIT(8'h08)) 
+    \distanza_minima[7]_i_3 
+       (.I0(\distanza_corrente_reg_n_0_[7] ),
+        .I1(next_state[3]),
+        .I2(next_state[2]),
+        .O(\distanza_minima[7]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'h8200000000000000)) 
+    \distanza_minima[7]_i_4 
+       (.I0(\distanza_minima[7]_i_6_n_0 ),
+        .I1(\distanza_minima_reg_n_0_[6] ),
+        .I2(\distanza_corrente_reg_n_0_[6] ),
+        .I3(\distanza_minima[7]_i_7_n_0 ),
+        .I4(\distanza_minima[7]_i_8_n_0 ),
+        .I5(\distanza_minima[7]_i_9_n_0 ),
+        .O(\distanza_minima[7]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT2 #(
-    .INIT(4'hE)) 
-    \distanza_minima_reg[7]_i_4 
-       (.I0(current_state[3]),
-        .I1(current_state[2]),
-        .O(\distanza_minima_reg[7]_i_4_n_0 ));
+    .INIT(4'h1)) 
+    \distanza_minima[7]_i_5 
+       (.I0(next_state[3]),
+        .I1(next_state[2]),
+        .O(\distanza_minima[7]_i_5_n_0 ));
+  LUT2 #(
+    .INIT(4'h9)) 
+    \distanza_minima[7]_i_6 
+       (.I0(\distanza_minima_reg_n_0_[7] ),
+        .I1(\distanza_corrente_reg_n_0_[7] ),
+        .O(\distanza_minima[7]_i_6_n_0 ));
   LUT4 #(
     .INIT(16'h9009)) 
-    \distanza_minima_reg[7]_i_5 
-       (.I0(distanza_minima[1]),
-        .I1(distanza_corrente[1]),
-        .I2(distanza_minima[0]),
-        .I3(distanza_corrente[0]),
-        .O(\distanza_minima_reg[7]_i_5_n_0 ));
+    \distanza_minima[7]_i_7 
+       (.I0(\distanza_corrente_reg_n_0_[2] ),
+        .I1(\distanza_minima_reg_n_0_[2] ),
+        .I2(\distanza_corrente_reg_n_0_[3] ),
+        .I3(\distanza_minima_reg_n_0_[3] ),
+        .O(\distanza_minima[7]_i_7_n_0 ));
   LUT4 #(
-    .INIT(16'h6FF6)) 
-    \distanza_minima_reg[7]_i_6 
-       (.I0(distanza_minima[3]),
-        .I1(distanza_corrente[3]),
-        .I2(distanza_minima[2]),
-        .I3(distanza_corrente[2]),
-        .O(\distanza_minima_reg[7]_i_6_n_0 ));
+    .INIT(16'h9009)) 
+    \distanza_minima[7]_i_8 
+       (.I0(\distanza_corrente_reg_n_0_[0] ),
+        .I1(\distanza_minima_reg_n_0_[0] ),
+        .I2(\distanza_corrente_reg_n_0_[1] ),
+        .I3(\distanza_minima_reg_n_0_[1] ),
+        .O(\distanza_minima[7]_i_8_n_0 ));
   LUT4 #(
-    .INIT(16'h6FF6)) 
-    \distanza_minima_reg[7]_i_7 
-       (.I0(distanza_minima[7]),
-        .I1(distanza_corrente[7]),
-        .I2(distanza_minima[6]),
-        .I3(distanza_corrente[6]),
-        .O(\distanza_minima_reg[7]_i_7_n_0 ));
-  LUT4 #(
-    .INIT(16'h6FF6)) 
-    \distanza_minima_reg[7]_i_8 
-       (.I0(distanza_minima[5]),
-        .I1(distanza_corrente[5]),
-        .I2(distanza_minima[4]),
-        .I3(distanza_corrente[4]),
-        .O(\distanza_minima_reg[7]_i_8_n_0 ));
+    .INIT(16'h9009)) 
+    \distanza_minima[7]_i_9 
+       (.I0(\distanza_minima_reg_n_0_[5] ),
+        .I1(\distanza_corrente_reg_n_0_[5] ),
+        .I2(\distanza_minima_reg_n_0_[4] ),
+        .I3(\distanza_corrente_reg_n_0_[4] ),
+        .O(\distanza_minima[7]_i_9_n_0 ));
+  FDSE #(
+    .INIT(1'b0)) 
+    \distanza_minima_reg[0] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(distanza_minima),
+        .D(\distanza_minima[0]_i_1_n_0 ),
+        .Q(\distanza_minima_reg_n_0_[0] ),
+        .S(\distanza_minima[7]_i_1_n_0 ));
+  FDSE #(
+    .INIT(1'b0)) 
+    \distanza_minima_reg[1] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(distanza_minima),
+        .D(\distanza_minima[1]_i_1_n_0 ),
+        .Q(\distanza_minima_reg_n_0_[1] ),
+        .S(\distanza_minima[7]_i_1_n_0 ));
+  FDSE #(
+    .INIT(1'b0)) 
+    \distanza_minima_reg[2] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(distanza_minima),
+        .D(\distanza_minima[2]_i_1_n_0 ),
+        .Q(\distanza_minima_reg_n_0_[2] ),
+        .S(\distanza_minima[7]_i_1_n_0 ));
+  FDSE #(
+    .INIT(1'b0)) 
+    \distanza_minima_reg[3] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(distanza_minima),
+        .D(\distanza_minima[3]_i_1_n_0 ),
+        .Q(\distanza_minima_reg_n_0_[3] ),
+        .S(\distanza_minima[7]_i_1_n_0 ));
+  FDSE #(
+    .INIT(1'b0)) 
+    \distanza_minima_reg[4] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(distanza_minima),
+        .D(\distanza_minima[4]_i_1_n_0 ),
+        .Q(\distanza_minima_reg_n_0_[4] ),
+        .S(\distanza_minima[7]_i_1_n_0 ));
+  FDSE #(
+    .INIT(1'b0)) 
+    \distanza_minima_reg[5] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(distanza_minima),
+        .D(\distanza_minima[5]_i_1_n_0 ),
+        .Q(\distanza_minima_reg_n_0_[5] ),
+        .S(\distanza_minima[7]_i_1_n_0 ));
+  FDSE #(
+    .INIT(1'b0)) 
+    \distanza_minima_reg[6] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(distanza_minima),
+        .D(\distanza_minima[6]_i_1_n_0 ),
+        .Q(\distanza_minima_reg_n_0_[6] ),
+        .S(\distanza_minima[7]_i_1_n_0 ));
+  FDSE #(
+    .INIT(1'b0)) 
+    \distanza_minima_reg[7] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(distanza_minima),
+        .D(\distanza_minima[7]_i_3_n_0 ),
+        .Q(\distanza_minima_reg_n_0_[7] ),
+        .S(\distanza_minima[7]_i_1_n_0 ));
   BUFG i_clk_IBUF_BUFG_inst
        (.I(i_clk_IBUF),
         .O(i_clk_IBUF_BUFG));
@@ -1748,502 +1737,464 @@ end
   IBUF i_start_IBUF_inst
        (.I(i_start),
         .O(i_start_IBUF));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \maschera_in_reg[0] 
-       (.CLR(1'b0),
-        .D(\maschera_in_reg[0]_i_1_n_0 ),
-        .G(\maschera_in_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(maschera_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \maschera_in_reg[0]_i_1 
-       (.I0(p_0_in[0]),
-        .I1(current_state[3]),
-        .I2(i_data_IBUF[0]),
-        .O(\maschera_in_reg[0]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \maschera_in_reg[1] 
-       (.CLR(1'b0),
-        .D(\maschera_in_reg[1]_i_1_n_0 ),
-        .G(\maschera_in_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(maschera_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+    .INIT(8'hAC)) 
+    \maschera_in[0]_i_1 
+       (.I0(\maschera_in_reg_n_0_[1] ),
+        .I1(i_data_IBUF[0]),
+        .I2(next_state[3]),
+        .O(\maschera_in[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \maschera_in_reg[1]_i_1 
-       (.I0(p_0_in[1]),
-        .I1(current_state[3]),
-        .I2(i_data_IBUF[1]),
-        .O(\maschera_in_reg[1]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \maschera_in_reg[2] 
-       (.CLR(1'b0),
-        .D(\maschera_in_reg[2]_i_1_n_0 ),
-        .G(\maschera_in_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(maschera_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+    .INIT(8'hAC)) 
+    \maschera_in[1]_i_1 
+       (.I0(\maschera_in_reg_n_0_[2] ),
+        .I1(i_data_IBUF[1]),
+        .I2(next_state[3]),
+        .O(\maschera_in[1]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \maschera_in_reg[2]_i_1 
-       (.I0(p_0_in[2]),
-        .I1(current_state[3]),
-        .I2(i_data_IBUF[2]),
-        .O(\maschera_in_reg[2]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \maschera_in_reg[3] 
-       (.CLR(1'b0),
-        .D(\maschera_in_reg[3]_i_1_n_0 ),
-        .G(\maschera_in_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(maschera_in[3]));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+    .INIT(8'hAC)) 
+    \maschera_in[2]_i_1 
+       (.I0(\maschera_in_reg_n_0_[3] ),
+        .I1(i_data_IBUF[2]),
+        .I2(next_state[3]),
+        .O(\maschera_in[2]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \maschera_in_reg[3]_i_1 
-       (.I0(p_0_in[3]),
-        .I1(current_state[3]),
-        .I2(i_data_IBUF[3]),
-        .O(\maschera_in_reg[3]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \maschera_in_reg[4] 
-       (.CLR(1'b0),
-        .D(\maschera_in_reg[4]_i_1_n_0 ),
-        .G(\maschera_in_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(maschera_in[4]));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+    .INIT(8'hAC)) 
+    \maschera_in[3]_i_1 
+       (.I0(\maschera_in_reg_n_0_[4] ),
+        .I1(i_data_IBUF[3]),
+        .I2(next_state[3]),
+        .O(\maschera_in[3]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \maschera_in_reg[4]_i_1 
-       (.I0(p_0_in[4]),
-        .I1(current_state[3]),
-        .I2(i_data_IBUF[4]),
-        .O(\maschera_in_reg[4]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \maschera_in_reg[5] 
-       (.CLR(1'b0),
-        .D(\maschera_in_reg[5]_i_1_n_0 ),
-        .G(\maschera_in_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(maschera_in[5]));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+    .INIT(8'hAC)) 
+    \maschera_in[4]_i_1 
+       (.I0(\maschera_in_reg_n_0_[5] ),
+        .I1(i_data_IBUF[4]),
+        .I2(next_state[3]),
+        .O(\maschera_in[4]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \maschera_in_reg[5]_i_1 
-       (.I0(p_0_in[5]),
-        .I1(current_state[3]),
-        .I2(i_data_IBUF[5]),
-        .O(\maschera_in_reg[5]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \maschera_in_reg[6] 
-       (.CLR(1'b0),
-        .D(\maschera_in_reg[6]_i_1_n_0 ),
-        .G(\maschera_in_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(maschera_in[6]));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+    .INIT(8'hAC)) 
+    \maschera_in[5]_i_1 
+       (.I0(\maschera_in_reg_n_0_[6] ),
+        .I1(i_data_IBUF[5]),
+        .I2(next_state[3]),
+        .O(\maschera_in[5]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \maschera_in_reg[6]_i_1 
-       (.I0(p_0_in[6]),
-        .I1(current_state[3]),
-        .I2(i_data_IBUF[6]),
-        .O(\maschera_in_reg[6]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \maschera_in_reg[7] 
-       (.CLR(1'b0),
-        .D(\maschera_in_reg[7]_i_1_n_0 ),
-        .G(\maschera_in_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(maschera_in[7]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+    .INIT(8'hAC)) 
+    \maschera_in[6]_i_1 
+       (.I0(\maschera_in_reg_n_0_[7] ),
+        .I1(i_data_IBUF[6]),
+        .I2(next_state[3]),
+        .O(\maschera_in[6]_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'h40)) 
+    \maschera_in[7]_i_1 
+       (.I0(next_state[2]),
+        .I1(next_state[0]),
+        .I2(next_state[1]),
+        .O(\maschera_in[7]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h2)) 
-    \maschera_in_reg[7]_i_1 
+    \maschera_in[7]_i_2 
        (.I0(i_data_IBUF[7]),
-        .I1(current_state[3]),
-        .O(\maschera_in_reg[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT3 #(
-    .INIT(8'h08)) 
-    \maschera_in_reg[7]_i_2 
-       (.I0(current_state[0]),
-        .I1(current_state[1]),
-        .I2(current_state[2]),
-        .O(\maschera_in_reg[7]_i_2_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+        .I1(next_state[3]),
+        .O(\maschera_in[7]_i_2_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \maschera_in_reg[0] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\maschera_in[7]_i_1_n_0 ),
+        .D(\maschera_in[0]_i_1_n_0 ),
+        .Q(\maschera_in_reg_n_0_[0] ),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \maschera_in_reg[1] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\maschera_in[7]_i_1_n_0 ),
+        .D(\maschera_in[1]_i_1_n_0 ),
+        .Q(\maschera_in_reg_n_0_[1] ),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \maschera_in_reg[2] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\maschera_in[7]_i_1_n_0 ),
+        .D(\maschera_in[2]_i_1_n_0 ),
+        .Q(\maschera_in_reg_n_0_[2] ),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \maschera_in_reg[3] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\maschera_in[7]_i_1_n_0 ),
+        .D(\maschera_in[3]_i_1_n_0 ),
+        .Q(\maschera_in_reg_n_0_[3] ),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \maschera_in_reg[4] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\maschera_in[7]_i_1_n_0 ),
+        .D(\maschera_in[4]_i_1_n_0 ),
+        .Q(\maschera_in_reg_n_0_[4] ),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \maschera_in_reg[5] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\maschera_in[7]_i_1_n_0 ),
+        .D(\maschera_in[5]_i_1_n_0 ),
+        .Q(\maschera_in_reg_n_0_[5] ),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \maschera_in_reg[6] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\maschera_in[7]_i_1_n_0 ),
+        .D(\maschera_in[6]_i_1_n_0 ),
+        .Q(\maschera_in_reg_n_0_[6] ),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \maschera_in_reg[7] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\maschera_in[7]_i_1_n_0 ),
+        .D(\maschera_in[7]_i_2_n_0 ),
+        .Q(\maschera_in_reg_n_0_[7] ),
+        .R(1'b0));
+  LUT5 #(
+    .INIT(32'h40400040)) 
+    \maschera_o_parziale[7]_i_1 
+       (.I0(next_state[2]),
+        .I1(next_state[3]),
+        .I2(next_state[1]),
+        .I3(next_state[0]),
+        .I4(\FSM_sequential_next_state[1]_i_2_n_0 ),
+        .O(maschera_o_parziale));
+  FDRE #(
     .INIT(1'b1)) 
     \maschera_o_parziale_reg[0] 
-       (.CLR(1'b0),
+       (.C(i_clk_IBUF_BUFG),
+        .CE(maschera_o_parziale),
         .D(1'b0),
-        .G(\maschera_o_parziale_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(maschera_o_parziale[0]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+        .Q(\maschera_o_parziale_reg_n_0_[0] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \maschera_o_parziale_reg[1] 
-       (.CLR(1'b0),
-        .D(\maschera_o_parziale_reg[1]_i_1_n_0 ),
-        .G(\maschera_o_parziale_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(maschera_o_parziale[1]));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \maschera_o_parziale_reg[1]_i_1 
-       (.I0(maschera_o_parziale[0]),
-        .I1(current_state[0]),
-        .I2(tmp_maschera_o_parziale[0]),
-        .O(\maschera_o_parziale_reg[1]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(maschera_o_parziale),
+        .D(\maschera_o_parziale_reg_n_0_[0] ),
+        .Q(\maschera_o_parziale_reg_n_0_[1] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \maschera_o_parziale_reg[2] 
-       (.CLR(1'b0),
-        .D(\maschera_o_parziale_reg[2]_i_1_n_0 ),
-        .G(\maschera_o_parziale_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(maschera_o_parziale[2]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \maschera_o_parziale_reg[2]_i_1 
-       (.I0(maschera_o_parziale[1]),
-        .I1(current_state[0]),
-        .I2(tmp_maschera_o_parziale[1]),
-        .O(\maschera_o_parziale_reg[2]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(maschera_o_parziale),
+        .D(\maschera_o_parziale_reg_n_0_[1] ),
+        .Q(\maschera_o_parziale_reg_n_0_[2] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \maschera_o_parziale_reg[3] 
-       (.CLR(1'b0),
-        .D(\maschera_o_parziale_reg[3]_i_1_n_0 ),
-        .G(\maschera_o_parziale_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(maschera_o_parziale[3]));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \maschera_o_parziale_reg[3]_i_1 
-       (.I0(maschera_o_parziale[2]),
-        .I1(current_state[0]),
-        .I2(tmp_maschera_o_parziale[2]),
-        .O(\maschera_o_parziale_reg[3]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(maschera_o_parziale),
+        .D(\maschera_o_parziale_reg_n_0_[2] ),
+        .Q(\maschera_o_parziale_reg_n_0_[3] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \maschera_o_parziale_reg[4] 
-       (.CLR(1'b0),
-        .D(\maschera_o_parziale_reg[4]_i_1_n_0 ),
-        .G(\maschera_o_parziale_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(maschera_o_parziale[4]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \maschera_o_parziale_reg[4]_i_1 
-       (.I0(maschera_o_parziale[3]),
-        .I1(current_state[0]),
-        .I2(tmp_maschera_o_parziale[3]),
-        .O(\maschera_o_parziale_reg[4]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(maschera_o_parziale),
+        .D(\maschera_o_parziale_reg_n_0_[3] ),
+        .Q(\maschera_o_parziale_reg_n_0_[4] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \maschera_o_parziale_reg[5] 
-       (.CLR(1'b0),
-        .D(\maschera_o_parziale_reg[5]_i_1_n_0 ),
-        .G(\maschera_o_parziale_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(maschera_o_parziale[5]));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \maschera_o_parziale_reg[5]_i_1 
-       (.I0(maschera_o_parziale[4]),
-        .I1(current_state[0]),
-        .I2(tmp_maschera_o_parziale[4]),
-        .O(\maschera_o_parziale_reg[5]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(maschera_o_parziale),
+        .D(\maschera_o_parziale_reg_n_0_[4] ),
+        .Q(\maschera_o_parziale_reg_n_0_[5] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \maschera_o_parziale_reg[6] 
-       (.CLR(1'b0),
-        .D(\maschera_o_parziale_reg[6]_i_1_n_0 ),
-        .G(\maschera_o_parziale_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(maschera_o_parziale[6]));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \maschera_o_parziale_reg[6]_i_1 
-       (.I0(maschera_o_parziale[5]),
-        .I1(current_state[0]),
-        .I2(tmp_maschera_o_parziale[5]),
-        .O(\maschera_o_parziale_reg[6]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(maschera_o_parziale),
+        .D(\maschera_o_parziale_reg_n_0_[5] ),
+        .Q(\maschera_o_parziale_reg_n_0_[6] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \maschera_o_parziale_reg[7] 
-       (.CLR(1'b0),
-        .D(\maschera_o_parziale_reg[7]_i_1_n_0 ),
-        .G(\maschera_o_parziale_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(maschera_o_parziale[7]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(maschera_o_parziale),
+        .D(\maschera_o_parziale_reg_n_0_[6] ),
+        .Q(\maschera_o_parziale_reg_n_0_[7] ),
+        .R(1'b0));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
-    .INIT(8'hB8)) 
-    \maschera_o_parziale_reg[7]_i_1 
-       (.I0(maschera_o_parziale[6]),
-        .I1(current_state[0]),
-        .I2(tmp_maschera_o_parziale[6]),
-        .O(\maschera_o_parziale_reg[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+    .INIT(8'hF8)) 
+    \maschera_output[0]_i_1 
+       (.I0(\maschera_output_reg_n_0_[0] ),
+        .I1(\distanza_minima[7]_i_4_n_0 ),
+        .I2(\maschera_o_parziale_reg_n_0_[0] ),
+        .O(\maschera_output[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT3 #(
+    .INIT(8'hF8)) 
+    \maschera_output[1]_i_1 
+       (.I0(\maschera_output_reg_n_0_[1] ),
+        .I1(\distanza_minima[7]_i_4_n_0 ),
+        .I2(\maschera_o_parziale_reg_n_0_[1] ),
+        .O(\maschera_output[1]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT3 #(
+    .INIT(8'hF8)) 
+    \maschera_output[2]_i_1 
+       (.I0(\maschera_output_reg_n_0_[2] ),
+        .I1(\distanza_minima[7]_i_4_n_0 ),
+        .I2(\maschera_o_parziale_reg_n_0_[2] ),
+        .O(\maschera_output[2]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT3 #(
+    .INIT(8'hF8)) 
+    \maschera_output[3]_i_1 
+       (.I0(\maschera_output_reg_n_0_[3] ),
+        .I1(\distanza_minima[7]_i_4_n_0 ),
+        .I2(\maschera_o_parziale_reg_n_0_[3] ),
+        .O(\maschera_output[3]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT3 #(
+    .INIT(8'hF8)) 
+    \maschera_output[4]_i_1 
+       (.I0(\maschera_output_reg_n_0_[4] ),
+        .I1(\distanza_minima[7]_i_4_n_0 ),
+        .I2(\maschera_o_parziale_reg_n_0_[4] ),
+        .O(\maschera_output[4]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT3 #(
+    .INIT(8'hF8)) 
+    \maschera_output[5]_i_1 
+       (.I0(\maschera_output_reg_n_0_[5] ),
+        .I1(\distanza_minima[7]_i_4_n_0 ),
+        .I2(\maschera_o_parziale_reg_n_0_[5] ),
+        .O(\maschera_output[5]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT3 #(
+    .INIT(8'hF8)) 
+    \maschera_output[6]_i_1 
+       (.I0(\maschera_output_reg_n_0_[6] ),
+        .I1(\distanza_minima[7]_i_4_n_0 ),
+        .I2(\maschera_o_parziale_reg_n_0_[6] ),
+        .O(\maschera_output[6]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'h08080888)) 
-    \maschera_o_parziale_reg[7]_i_2 
-       (.I0(current_state[1]),
-        .I1(current_state[3]),
-        .I2(current_state[0]),
-        .I3(\tmp_maschera_in_reg_n_0_[0] ),
-        .I4(o_en_OBUF_inst_i_2_n_0),
-        .O(\maschera_o_parziale_reg[7]_i_2_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+    .INIT(32'h00100000)) 
+    \maschera_output[7]_i_1 
+       (.I0(distanza_minima1),
+        .I1(next_state[2]),
+        .I2(next_state[3]),
+        .I3(next_state[0]),
+        .I4(next_state[1]),
+        .O(maschera_output));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    \maschera_output[7]_i_10 
+       (.I0(\distanza_corrente_reg_n_0_[2] ),
+        .I1(\distanza_minima_reg_n_0_[2] ),
+        .I2(\distanza_corrente_reg_n_0_[3] ),
+        .I3(\distanza_minima_reg_n_0_[3] ),
+        .O(\maschera_output[7]_i_10_n_0 ));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    \maschera_output[7]_i_11 
+       (.I0(\distanza_corrente_reg_n_0_[0] ),
+        .I1(\distanza_minima_reg_n_0_[0] ),
+        .I2(\distanza_corrente_reg_n_0_[1] ),
+        .I3(\distanza_minima_reg_n_0_[1] ),
+        .O(\maschera_output[7]_i_11_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT3 #(
+    .INIT(8'hF8)) 
+    \maschera_output[7]_i_2 
+       (.I0(\maschera_output_reg_n_0_[7] ),
+        .I1(\distanza_minima[7]_i_4_n_0 ),
+        .I2(\maschera_o_parziale_reg_n_0_[7] ),
+        .O(\maschera_output[7]_i_2_n_0 ));
+  LUT4 #(
+    .INIT(16'h2F02)) 
+    \maschera_output[7]_i_4 
+       (.I0(\distanza_corrente_reg_n_0_[6] ),
+        .I1(\distanza_minima_reg_n_0_[6] ),
+        .I2(\distanza_minima_reg_n_0_[7] ),
+        .I3(\distanza_corrente_reg_n_0_[7] ),
+        .O(\maschera_output[7]_i_4_n_0 ));
+  LUT4 #(
+    .INIT(16'h2F02)) 
+    \maschera_output[7]_i_5 
+       (.I0(\distanza_corrente_reg_n_0_[4] ),
+        .I1(\distanza_minima_reg_n_0_[4] ),
+        .I2(\distanza_minima_reg_n_0_[5] ),
+        .I3(\distanza_corrente_reg_n_0_[5] ),
+        .O(\maschera_output[7]_i_5_n_0 ));
+  LUT4 #(
+    .INIT(16'h2F02)) 
+    \maschera_output[7]_i_6 
+       (.I0(\distanza_corrente_reg_n_0_[2] ),
+        .I1(\distanza_minima_reg_n_0_[2] ),
+        .I2(\distanza_minima_reg_n_0_[3] ),
+        .I3(\distanza_corrente_reg_n_0_[3] ),
+        .O(\maschera_output[7]_i_6_n_0 ));
+  LUT4 #(
+    .INIT(16'h2F02)) 
+    \maschera_output[7]_i_7 
+       (.I0(\distanza_corrente_reg_n_0_[0] ),
+        .I1(\distanza_minima_reg_n_0_[0] ),
+        .I2(\distanza_minima_reg_n_0_[1] ),
+        .I3(\distanza_corrente_reg_n_0_[1] ),
+        .O(\maschera_output[7]_i_7_n_0 ));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    \maschera_output[7]_i_8 
+       (.I0(\distanza_minima_reg_n_0_[7] ),
+        .I1(\distanza_corrente_reg_n_0_[7] ),
+        .I2(\distanza_minima_reg_n_0_[6] ),
+        .I3(\distanza_corrente_reg_n_0_[6] ),
+        .O(\maschera_output[7]_i_8_n_0 ));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    \maschera_output[7]_i_9 
+       (.I0(\distanza_minima_reg_n_0_[5] ),
+        .I1(\distanza_corrente_reg_n_0_[5] ),
+        .I2(\distanza_minima_reg_n_0_[4] ),
+        .I3(\distanza_corrente_reg_n_0_[4] ),
+        .O(\maschera_output[7]_i_9_n_0 ));
+  FDRE #(
     .INIT(1'b0)) 
     \maschera_output_reg[0] 
-       (.CLR(1'b0),
-        .D(\maschera_output_reg[0]_i_1_n_0 ),
-        .G(\maschera_output_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(maschera_output[0]));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
-  LUT3 #(
-    .INIT(8'hBA)) 
-    \maschera_output_reg[0]_i_1 
-       (.I0(maschera_o_parziale[0]),
-        .I1(\distanza_minima_reg[7]_i_3_n_0 ),
-        .I2(tmp_maschera_output[0]),
-        .O(\maschera_output_reg[0]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(maschera_output),
+        .D(\maschera_output[0]_i_1_n_0 ),
+        .Q(\maschera_output_reg_n_0_[0] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \maschera_output_reg[1] 
-       (.CLR(1'b0),
-        .D(\maschera_output_reg[1]_i_1_n_0 ),
-        .G(\maschera_output_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(maschera_output[1]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
-  LUT3 #(
-    .INIT(8'hBA)) 
-    \maschera_output_reg[1]_i_1 
-       (.I0(maschera_o_parziale[1]),
-        .I1(\distanza_minima_reg[7]_i_3_n_0 ),
-        .I2(tmp_maschera_output[1]),
-        .O(\maschera_output_reg[1]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(maschera_output),
+        .D(\maschera_output[1]_i_1_n_0 ),
+        .Q(\maschera_output_reg_n_0_[1] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \maschera_output_reg[2] 
-       (.CLR(1'b0),
-        .D(\maschera_output_reg[2]_i_1_n_0 ),
-        .G(\maschera_output_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(maschera_output[2]));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
-  LUT3 #(
-    .INIT(8'hBA)) 
-    \maschera_output_reg[2]_i_1 
-       (.I0(maschera_o_parziale[2]),
-        .I1(\distanza_minima_reg[7]_i_3_n_0 ),
-        .I2(tmp_maschera_output[2]),
-        .O(\maschera_output_reg[2]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(maschera_output),
+        .D(\maschera_output[2]_i_1_n_0 ),
+        .Q(\maschera_output_reg_n_0_[2] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \maschera_output_reg[3] 
-       (.CLR(1'b0),
-        .D(\maschera_output_reg[3]_i_1_n_0 ),
-        .G(\maschera_output_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(maschera_output[3]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
-  LUT3 #(
-    .INIT(8'hBA)) 
-    \maschera_output_reg[3]_i_1 
-       (.I0(maschera_o_parziale[3]),
-        .I1(\distanza_minima_reg[7]_i_3_n_0 ),
-        .I2(tmp_maschera_output[3]),
-        .O(\maschera_output_reg[3]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(maschera_output),
+        .D(\maschera_output[3]_i_1_n_0 ),
+        .Q(\maschera_output_reg_n_0_[3] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \maschera_output_reg[4] 
-       (.CLR(1'b0),
-        .D(\maschera_output_reg[4]_i_1_n_0 ),
-        .G(\maschera_output_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(maschera_output[4]));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
-  LUT3 #(
-    .INIT(8'hBA)) 
-    \maschera_output_reg[4]_i_1 
-       (.I0(maschera_o_parziale[4]),
-        .I1(\distanza_minima_reg[7]_i_3_n_0 ),
-        .I2(tmp_maschera_output[4]),
-        .O(\maschera_output_reg[4]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(maschera_output),
+        .D(\maschera_output[4]_i_1_n_0 ),
+        .Q(\maschera_output_reg_n_0_[4] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \maschera_output_reg[5] 
-       (.CLR(1'b0),
-        .D(\maschera_output_reg[5]_i_1_n_0 ),
-        .G(\maschera_output_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(maschera_output[5]));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
-  LUT3 #(
-    .INIT(8'hBA)) 
-    \maschera_output_reg[5]_i_1 
-       (.I0(maschera_o_parziale[5]),
-        .I1(\distanza_minima_reg[7]_i_3_n_0 ),
-        .I2(tmp_maschera_output[5]),
-        .O(\maschera_output_reg[5]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(maschera_output),
+        .D(\maschera_output[5]_i_1_n_0 ),
+        .Q(\maschera_output_reg_n_0_[5] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \maschera_output_reg[6] 
-       (.CLR(1'b0),
-        .D(\maschera_output_reg[6]_i_1_n_0 ),
-        .G(\maschera_output_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(maschera_output[6]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
-  LUT3 #(
-    .INIT(8'hBA)) 
-    \maschera_output_reg[6]_i_1 
-       (.I0(maschera_o_parziale[6]),
-        .I1(\distanza_minima_reg[7]_i_3_n_0 ),
-        .I2(tmp_maschera_output[6]),
-        .O(\maschera_output_reg[6]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(maschera_output),
+        .D(\maschera_output[6]_i_1_n_0 ),
+        .Q(\maschera_output_reg_n_0_[6] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \maschera_output_reg[7] 
-       (.CLR(1'b0),
-        .D(\maschera_output_reg[7]_i_1_n_0 ),
-        .G(\maschera_output_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(maschera_output[7]));
-  LUT3 #(
-    .INIT(8'hBA)) 
-    \maschera_output_reg[7]_i_1 
-       (.I0(maschera_o_parziale[7]),
-        .I1(\distanza_minima_reg[7]_i_3_n_0 ),
-        .I2(tmp_maschera_output[7]),
-        .O(\maschera_output_reg[7]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    \maschera_output_reg[7]_i_10 
-       (.I0(distanza_corrente[2]),
-        .I1(distanza_minima[2]),
-        .I2(distanza_corrente[3]),
-        .I3(distanza_minima[3]),
-        .O(\maschera_output_reg[7]_i_10_n_0 ));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    \maschera_output_reg[7]_i_11 
-       (.I0(distanza_minima[1]),
-        .I1(distanza_corrente[1]),
-        .I2(distanza_minima[0]),
-        .I3(distanza_corrente[0]),
-        .O(\maschera_output_reg[7]_i_11_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
-  LUT4 #(
-    .INIT(16'h0008)) 
-    \maschera_output_reg[7]_i_2 
-       (.I0(current_state[1]),
-        .I1(current_state[3]),
-        .I2(current_state[0]),
-        .I3(distanza_minima1),
-        .O(\maschera_output_reg[7]_i_2_n_0 ));
+       (.C(i_clk_IBUF_BUFG),
+        .CE(maschera_output),
+        .D(\maschera_output[7]_i_2_n_0 ),
+        .Q(\maschera_output_reg_n_0_[7] ),
+        .R(1'b0));
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 \maschera_output_reg[7]_i_3 
        (.CI(1'b0),
         .CO({distanza_minima1,\maschera_output_reg[7]_i_3_n_1 ,\maschera_output_reg[7]_i_3_n_2 ,\maschera_output_reg[7]_i_3_n_3 }),
         .CYINIT(1'b0),
-        .DI({\maschera_output_reg[7]_i_4_n_0 ,\maschera_output_reg[7]_i_5_n_0 ,\maschera_output_reg[7]_i_6_n_0 ,\maschera_output_reg[7]_i_7_n_0 }),
+        .DI({\maschera_output[7]_i_4_n_0 ,\maschera_output[7]_i_5_n_0 ,\maschera_output[7]_i_6_n_0 ,\maschera_output[7]_i_7_n_0 }),
         .O(\NLW_maschera_output_reg[7]_i_3_O_UNCONNECTED [3:0]),
-        .S({\maschera_output_reg[7]_i_8_n_0 ,\maschera_output_reg[7]_i_9_n_0 ,\maschera_output_reg[7]_i_10_n_0 ,\maschera_output_reg[7]_i_11_n_0 }));
+        .S({\maschera_output[7]_i_8_n_0 ,\maschera_output[7]_i_9_n_0 ,\maschera_output[7]_i_10_n_0 ,\maschera_output[7]_i_11_n_0 }));
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  LUT3 #(
+    .INIT(8'h32)) 
+    \o_address[0]_i_1 
+       (.I0(next_state00),
+        .I1(next_state[1]),
+        .I2(next_state[2]),
+        .O(o_address0_in[0]));
   LUT4 #(
-    .INIT(16'h22B2)) 
-    \maschera_output_reg[7]_i_4 
-       (.I0(distanza_corrente[7]),
-        .I1(distanza_minima[7]),
-        .I2(distanza_corrente[6]),
-        .I3(distanza_minima[6]),
-        .O(\maschera_output_reg[7]_i_4_n_0 ));
+    .INIT(16'h020A)) 
+    \o_address[15]_i_1 
+       (.I0(next_state[2]),
+        .I1(next_state[3]),
+        .I2(next_state[0]),
+        .I3(next_state[1]),
+        .O(\o_address[15]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
-    .INIT(16'h22B2)) 
-    \maschera_output_reg[7]_i_5 
-       (.I0(distanza_corrente[5]),
-        .I1(distanza_minima[5]),
-        .I2(distanza_corrente[4]),
-        .I3(distanza_minima[4]),
-        .O(\maschera_output_reg[7]_i_5_n_0 ));
+    .INIT(16'h6F66)) 
+    \o_address[1]_i_1 
+       (.I0(next_state[1]),
+        .I1(next_state[3]),
+        .I2(next_state[2]),
+        .I3(\address_reg_n_0_[1] ),
+        .O(o_address0_in[1]));
   LUT4 #(
-    .INIT(16'h22B2)) 
-    \maschera_output_reg[7]_i_6 
-       (.I0(distanza_corrente[3]),
-        .I1(distanza_minima[3]),
-        .I2(distanza_corrente[2]),
-        .I3(distanza_minima[2]),
-        .O(\maschera_output_reg[7]_i_6_n_0 ));
+    .INIT(16'h1304)) 
+    \o_address[4]_i_1 
+       (.I0(next_state[1]),
+        .I1(next_state[0]),
+        .I2(next_state[3]),
+        .I3(next_state[2]),
+        .O(\o_address[4]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
-    .INIT(16'h22B2)) 
-    \maschera_output_reg[7]_i_7 
-       (.I0(distanza_corrente[1]),
-        .I1(distanza_minima[1]),
-        .I2(distanza_corrente[0]),
-        .I3(distanza_minima[0]),
-        .O(\maschera_output_reg[7]_i_7_n_0 ));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    \maschera_output_reg[7]_i_8 
-       (.I0(distanza_corrente[6]),
-        .I1(distanza_minima[6]),
-        .I2(distanza_corrente[7]),
-        .I3(distanza_minima[7]),
-        .O(\maschera_output_reg[7]_i_8_n_0 ));
-  LUT4 #(
-    .INIT(16'h9009)) 
-    \maschera_output_reg[7]_i_9 
-       (.I0(distanza_corrente[4]),
-        .I1(distanza_minima[4]),
-        .I2(distanza_corrente[5]),
-        .I3(distanza_minima[5]),
-        .O(\maschera_output_reg[7]_i_9_n_0 ));
+    .INIT(16'h0EEE)) 
+    \o_address[4]_i_2 
+       (.I0(\address_reg_n_0_[4] ),
+        .I1(next_state[2]),
+        .I2(next_state[3]),
+        .I3(next_state[1]),
+        .O(o_address0_in[4]));
   OBUF \o_address_OBUF[0]_inst 
        (.I(o_address_OBUF[0]),
         .O(o_address[0]));
@@ -2292,1323 +2243,824 @@ end
   OBUF \o_address_OBUF[9]_inst 
        (.I(o_address_OBUF[9]),
         .O(o_address[9]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+  FDRE #(
     .INIT(1'b0)) 
     \o_address_reg[0] 
-       (.CLR(1'b0),
-        .D(\o_address_reg[0]_i_1_n_0 ),
-        .G(\o_address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(o_address_OBUF[0]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
-  LUT4 #(
-    .INIT(16'h88F8)) 
-    \o_address_reg[0]_i_1 
-       (.I0(current_state[0]),
-        .I1(address[0]),
-        .I2(current_state[2]),
-        .I3(current_state[1]),
-        .O(\o_address_reg[0]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\o_address[4]_i_1_n_0 ),
+        .D(o_address0_in[0]),
+        .Q(o_address_OBUF[0]),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \o_address_reg[10] 
-       (.CLR(1'b0),
-        .D(\o_address_reg[10]_i_1_n_0 ),
-        .G(\o_address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(o_address_OBUF[10]));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \o_address_reg[10]_i_1 
-       (.I0(address[10]),
-        .I1(current_state[2]),
-        .O(\o_address_reg[10]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\o_address[4]_i_1_n_0 ),
+        .D(\address_reg_n_0_[10] ),
+        .Q(o_address_OBUF[10]),
+        .R(\o_address[15]_i_1_n_0 ));
+  FDRE #(
     .INIT(1'b0)) 
     \o_address_reg[11] 
-       (.CLR(1'b0),
-        .D(\o_address_reg[11]_i_1_n_0 ),
-        .G(\o_address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(o_address_OBUF[11]));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \o_address_reg[11]_i_1 
-       (.I0(address[11]),
-        .I1(current_state[2]),
-        .O(\o_address_reg[11]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\o_address[4]_i_1_n_0 ),
+        .D(\address_reg_n_0_[11] ),
+        .Q(o_address_OBUF[11]),
+        .R(\o_address[15]_i_1_n_0 ));
+  FDRE #(
     .INIT(1'b0)) 
     \o_address_reg[12] 
-       (.CLR(1'b0),
-        .D(\o_address_reg[12]_i_1_n_0 ),
-        .G(\o_address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(o_address_OBUF[12]));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \o_address_reg[12]_i_1 
-       (.I0(address[12]),
-        .I1(current_state[2]),
-        .O(\o_address_reg[12]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\o_address[4]_i_1_n_0 ),
+        .D(\address_reg_n_0_[12] ),
+        .Q(o_address_OBUF[12]),
+        .R(\o_address[15]_i_1_n_0 ));
+  FDRE #(
     .INIT(1'b0)) 
     \o_address_reg[13] 
-       (.CLR(1'b0),
-        .D(\o_address_reg[13]_i_1_n_0 ),
-        .G(\o_address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(o_address_OBUF[13]));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \o_address_reg[13]_i_1 
-       (.I0(address[13]),
-        .I1(current_state[2]),
-        .O(\o_address_reg[13]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\o_address[4]_i_1_n_0 ),
+        .D(\address_reg_n_0_[13] ),
+        .Q(o_address_OBUF[13]),
+        .R(\o_address[15]_i_1_n_0 ));
+  FDRE #(
     .INIT(1'b0)) 
     \o_address_reg[14] 
-       (.CLR(1'b0),
-        .D(\o_address_reg[14]_i_1_n_0 ),
-        .G(\o_address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(o_address_OBUF[14]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \o_address_reg[14]_i_1 
-       (.I0(address[14]),
-        .I1(current_state[2]),
-        .O(\o_address_reg[14]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\o_address[4]_i_1_n_0 ),
+        .D(\address_reg_n_0_[14] ),
+        .Q(o_address_OBUF[14]),
+        .R(\o_address[15]_i_1_n_0 ));
+  FDRE #(
     .INIT(1'b0)) 
     \o_address_reg[15] 
-       (.CLR(1'b0),
-        .D(\o_address_reg[15]_i_1_n_0 ),
-        .G(\o_address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(o_address_OBUF[15]));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \o_address_reg[15]_i_1 
-       (.I0(address[15]),
-        .I1(current_state[2]),
-        .O(\o_address_reg[15]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT4 #(
-    .INIT(16'h3034)) 
-    \o_address_reg[15]_i_2 
-       (.I0(current_state[1]),
-        .I1(current_state[0]),
-        .I2(current_state[2]),
-        .I3(current_state[3]),
-        .O(\o_address_reg[15]_i_2_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\o_address[4]_i_1_n_0 ),
+        .D(\address_reg_n_0_[15] ),
+        .Q(o_address_OBUF[15]),
+        .R(\o_address[15]_i_1_n_0 ));
+  FDRE #(
     .INIT(1'b0)) 
     \o_address_reg[1] 
-       (.CLR(1'b0),
-        .D(\o_address_reg[1]_i_1_n_0 ),
-        .G(\o_address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(o_address_OBUF[1]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
-  LUT4 #(
-    .INIT(16'hFEEE)) 
-    \o_address_reg[1]_i_1 
-       (.I0(current_state[1]),
-        .I1(current_state[3]),
-        .I2(current_state[0]),
-        .I3(address[1]),
-        .O(\o_address_reg[1]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\o_address[4]_i_1_n_0 ),
+        .D(o_address0_in[1]),
+        .Q(o_address_OBUF[1]),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \o_address_reg[2] 
-       (.CLR(1'b0),
-        .D(\o_address_reg[2]_i_1_n_0 ),
-        .G(\o_address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(o_address_OBUF[2]));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \o_address_reg[2]_i_1 
-       (.I0(address[2]),
-        .I1(current_state[2]),
-        .O(\o_address_reg[2]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\o_address[4]_i_1_n_0 ),
+        .D(\address_reg_n_0_[2] ),
+        .Q(o_address_OBUF[2]),
+        .R(\o_address[15]_i_1_n_0 ));
+  FDRE #(
     .INIT(1'b0)) 
     \o_address_reg[3] 
-       (.CLR(1'b0),
-        .D(\o_address_reg[3]_i_1_n_0 ),
-        .G(\o_address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(o_address_OBUF[3]));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \o_address_reg[3]_i_1 
-       (.I0(address[3]),
-        .I1(current_state[2]),
-        .O(\o_address_reg[3]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\o_address[4]_i_1_n_0 ),
+        .D(\address_reg_n_0_[3] ),
+        .Q(o_address_OBUF[3]),
+        .R(\o_address[15]_i_1_n_0 ));
+  FDRE #(
     .INIT(1'b0)) 
     \o_address_reg[4] 
-       (.CLR(1'b0),
-        .D(\o_address_reg[4]_i_1_n_0 ),
-        .G(\o_address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(o_address_OBUF[4]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
-  LUT2 #(
-    .INIT(4'hB)) 
-    \o_address_reg[4]_i_1 
-       (.I0(address[4]),
-        .I1(current_state[0]),
-        .O(\o_address_reg[4]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\o_address[4]_i_1_n_0 ),
+        .D(o_address0_in[4]),
+        .Q(o_address_OBUF[4]),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \o_address_reg[5] 
-       (.CLR(1'b0),
-        .D(\o_address_reg[5]_i_1_n_0 ),
-        .G(\o_address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(o_address_OBUF[5]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \o_address_reg[5]_i_1 
-       (.I0(address[5]),
-        .I1(current_state[2]),
-        .O(\o_address_reg[5]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\o_address[4]_i_1_n_0 ),
+        .D(\address_reg_n_0_[5] ),
+        .Q(o_address_OBUF[5]),
+        .R(\o_address[15]_i_1_n_0 ));
+  FDRE #(
     .INIT(1'b0)) 
     \o_address_reg[6] 
-       (.CLR(1'b0),
-        .D(\o_address_reg[6]_i_1_n_0 ),
-        .G(\o_address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(o_address_OBUF[6]));
-  LUT2 #(
-    .INIT(4'h2)) 
-    \o_address_reg[6]_i_1 
-       (.I0(address[6]),
-        .I1(current_state[2]),
-        .O(\o_address_reg[6]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\o_address[4]_i_1_n_0 ),
+        .D(\address_reg_n_0_[6] ),
+        .Q(o_address_OBUF[6]),
+        .R(\o_address[15]_i_1_n_0 ));
+  FDRE #(
     .INIT(1'b0)) 
     \o_address_reg[7] 
-       (.CLR(1'b0),
-        .D(\o_address_reg[7]_i_1_n_0 ),
-        .G(\o_address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(o_address_OBUF[7]));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \o_address_reg[7]_i_1 
-       (.I0(address[7]),
-        .I1(current_state[2]),
-        .O(\o_address_reg[7]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\o_address[4]_i_1_n_0 ),
+        .D(\address_reg_n_0_[7] ),
+        .Q(o_address_OBUF[7]),
+        .R(\o_address[15]_i_1_n_0 ));
+  FDRE #(
     .INIT(1'b0)) 
     \o_address_reg[8] 
-       (.CLR(1'b0),
-        .D(\o_address_reg[8]_i_1_n_0 ),
-        .G(\o_address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(o_address_OBUF[8]));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \o_address_reg[8]_i_1 
-       (.I0(address[8]),
-        .I1(current_state[2]),
-        .O(\o_address_reg[8]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\o_address[4]_i_1_n_0 ),
+        .D(\address_reg_n_0_[8] ),
+        .Q(o_address_OBUF[8]),
+        .R(\o_address[15]_i_1_n_0 ));
+  FDRE #(
     .INIT(1'b0)) 
     \o_address_reg[9] 
-       (.CLR(1'b0),
-        .D(\o_address_reg[9]_i_1_n_0 ),
-        .G(\o_address_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(o_address_OBUF[9]));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \o_address_reg[9]_i_1 
-       (.I0(address[9]),
-        .I1(current_state[2]),
-        .O(\o_address_reg[9]_i_1_n_0 ));
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\o_address[4]_i_1_n_0 ),
+        .D(\address_reg_n_0_[9] ),
+        .Q(o_address_OBUF[9]),
+        .R(\o_address[15]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h00000002)) 
+    \o_data[7]_i_1 
+       (.I0(i_start_IBUF),
+        .I1(next_state[3]),
+        .I2(next_state[2]),
+        .I3(next_state[0]),
+        .I4(next_state[1]),
+        .O(\o_data[7]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h10011000)) 
+    \o_data[7]_i_2 
+       (.I0(next_state[1]),
+        .I1(next_state[0]),
+        .I2(next_state[2]),
+        .I3(next_state[3]),
+        .I4(i_start_IBUF),
+        .O(\o_data[7]_i_2_n_0 ));
   OBUF \o_data_OBUF[0]_inst 
        (.I(o_data_OBUF[0]),
         .O(o_data[0]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT4 #(
-    .INIT(16'h0080)) 
-    \o_data_OBUF[0]_inst_i_1 
-       (.I0(maschera_output[0]),
-        .I1(current_state[3]),
-        .I2(current_state[2]),
-        .I3(current_state[0]),
-        .O(o_data_OBUF[0]));
   OBUF \o_data_OBUF[1]_inst 
        (.I(o_data_OBUF[1]),
         .O(o_data[1]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
-  LUT4 #(
-    .INIT(16'h0080)) 
-    \o_data_OBUF[1]_inst_i_1 
-       (.I0(maschera_output[1]),
-        .I1(current_state[3]),
-        .I2(current_state[2]),
-        .I3(current_state[0]),
-        .O(o_data_OBUF[1]));
   OBUF \o_data_OBUF[2]_inst 
        (.I(o_data_OBUF[2]),
         .O(o_data[2]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
-  LUT4 #(
-    .INIT(16'h0080)) 
-    \o_data_OBUF[2]_inst_i_1 
-       (.I0(maschera_output[2]),
-        .I1(current_state[3]),
-        .I2(current_state[2]),
-        .I3(current_state[0]),
-        .O(o_data_OBUF[2]));
   OBUF \o_data_OBUF[3]_inst 
        (.I(o_data_OBUF[3]),
         .O(o_data[3]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
-  LUT4 #(
-    .INIT(16'h0080)) 
-    \o_data_OBUF[3]_inst_i_1 
-       (.I0(maschera_output[3]),
-        .I1(current_state[3]),
-        .I2(current_state[2]),
-        .I3(current_state[0]),
-        .O(o_data_OBUF[3]));
   OBUF \o_data_OBUF[4]_inst 
        (.I(o_data_OBUF[4]),
         .O(o_data[4]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
-  LUT4 #(
-    .INIT(16'h0080)) 
-    \o_data_OBUF[4]_inst_i_1 
-       (.I0(maschera_output[4]),
-        .I1(current_state[3]),
-        .I2(current_state[2]),
-        .I3(current_state[0]),
-        .O(o_data_OBUF[4]));
   OBUF \o_data_OBUF[5]_inst 
        (.I(o_data_OBUF[5]),
         .O(o_data[5]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT4 #(
-    .INIT(16'h0080)) 
-    \o_data_OBUF[5]_inst_i_1 
-       (.I0(maschera_output[5]),
-        .I1(current_state[3]),
-        .I2(current_state[2]),
-        .I3(current_state[0]),
-        .O(o_data_OBUF[5]));
   OBUF \o_data_OBUF[6]_inst 
        (.I(o_data_OBUF[6]),
         .O(o_data[6]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT4 #(
-    .INIT(16'h0080)) 
-    \o_data_OBUF[6]_inst_i_1 
-       (.I0(maschera_output[6]),
-        .I1(current_state[3]),
-        .I2(current_state[2]),
-        .I3(current_state[0]),
-        .O(o_data_OBUF[6]));
   OBUF \o_data_OBUF[7]_inst 
        (.I(o_data_OBUF[7]),
         .O(o_data[7]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT4 #(
-    .INIT(16'h0080)) 
-    \o_data_OBUF[7]_inst_i_1 
-       (.I0(maschera_output[7]),
-        .I1(current_state[3]),
-        .I2(current_state[2]),
-        .I3(current_state[0]),
-        .O(o_data_OBUF[7]));
+  FDRE #(
+    .INIT(1'b0)) 
+    \o_data_reg[0] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\o_data[7]_i_2_n_0 ),
+        .D(\maschera_output_reg_n_0_[0] ),
+        .Q(o_data_OBUF[0]),
+        .R(\o_data[7]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \o_data_reg[1] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\o_data[7]_i_2_n_0 ),
+        .D(\maschera_output_reg_n_0_[1] ),
+        .Q(o_data_OBUF[1]),
+        .R(\o_data[7]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \o_data_reg[2] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\o_data[7]_i_2_n_0 ),
+        .D(\maschera_output_reg_n_0_[2] ),
+        .Q(o_data_OBUF[2]),
+        .R(\o_data[7]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \o_data_reg[3] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\o_data[7]_i_2_n_0 ),
+        .D(\maschera_output_reg_n_0_[3] ),
+        .Q(o_data_OBUF[3]),
+        .R(\o_data[7]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \o_data_reg[4] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\o_data[7]_i_2_n_0 ),
+        .D(\maschera_output_reg_n_0_[4] ),
+        .Q(o_data_OBUF[4]),
+        .R(\o_data[7]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \o_data_reg[5] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\o_data[7]_i_2_n_0 ),
+        .D(\maschera_output_reg_n_0_[5] ),
+        .Q(o_data_OBUF[5]),
+        .R(\o_data[7]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \o_data_reg[6] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\o_data[7]_i_2_n_0 ),
+        .D(\maschera_output_reg_n_0_[6] ),
+        .Q(o_data_OBUF[6]),
+        .R(\o_data[7]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \o_data_reg[7] 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\o_data[7]_i_2_n_0 ),
+        .D(\maschera_output_reg_n_0_[7] ),
+        .Q(o_data_OBUF[7]),
+        .R(\o_data[7]_i_1_n_0 ));
   OBUF o_done_OBUF_inst
        (.I(o_done_OBUF),
         .O(o_done));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
-  LUT3 #(
-    .INIT(8'h40)) 
-    o_done_OBUF_inst_i_1
-       (.I0(current_state[0]),
-        .I1(current_state[2]),
-        .I2(current_state[3]),
-        .O(o_done_OBUF));
+  LUT5 #(
+    .INIT(32'h00202020)) 
+    o_done_i_1
+       (.I0(next_state[3]),
+        .I1(next_state[1]),
+        .I2(next_state[2]),
+        .I3(i_start_IBUF),
+        .I4(next_state[0]),
+        .O(o_done_i_1_n_0));
+  LUT2 #(
+    .INIT(4'hB)) 
+    o_done_i_2
+       (.I0(i_start_IBUF),
+        .I1(next_state[0]),
+        .O(o_done_i_2_n_0));
+  FDRE #(
+    .INIT(1'b0)) 
+    o_done_reg
+       (.C(i_clk_IBUF_BUFG),
+        .CE(o_done_i_1_n_0),
+        .D(o_done_i_2_n_0),
+        .Q(o_done_OBUF),
+        .R(1'b0));
   OBUF o_en_OBUF_inst
        (.I(o_en_OBUF),
         .O(o_en));
   LUT6 #(
-    .INIT(64'h0BF008F003F003F0)) 
-    o_en_OBUF_inst_i_1
-       (.I0(o_en_OBUF_inst_i_2_n_0),
-        .I1(current_state[3]),
-        .I2(current_state[2]),
-        .I3(current_state[0]),
-        .I4(o_en_OBUF_inst_i_3_n_0),
-        .I5(current_state[1]),
-        .O(o_en_OBUF));
+    .INIT(64'hFFFFFFFF00400FCE)) 
+    o_en_i_1
+       (.I0(i_start_IBUF),
+        .I1(next_state[2]),
+        .I2(next_state[3]),
+        .I3(next_state[1]),
+        .I4(next_state[0]),
+        .I5(o_en_i_3_n_0),
+        .O(o_en_i_1_n_0));
+  LUT5 #(
+    .INIT(32'h55CCF7CC)) 
+    o_en_i_2
+       (.I0(next_state[3]),
+        .I1(next_state[0]),
+        .I2(i_start_IBUF),
+        .I3(next_state[2]),
+        .I4(next_state[1]),
+        .O(o_en_i_2_n_0));
   LUT6 #(
-    .INIT(64'h0001000000000000)) 
-    o_en_OBUF_inst_i_2
-       (.I0(o_en_OBUF_inst_i_4_n_0),
-        .I1(o_en_OBUF_inst_i_5_n_0),
-        .I2(address[3]),
-        .I3(address[2]),
-        .I4(address[4]),
-        .I5(address[0]),
-        .O(o_en_OBUF_inst_i_2_n_0));
-  LUT5 #(
-    .INIT(32'h00000001)) 
-    o_en_OBUF_inst_i_3
-       (.I0(i_data_IBUF[2]),
-        .I1(i_data_IBUF[3]),
-        .I2(i_data_IBUF[0]),
-        .I3(i_data_IBUF[1]),
-        .I4(o_en_OBUF_inst_i_6_n_0),
-        .O(o_en_OBUF_inst_i_3_n_0));
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    o_en_OBUF_inst_i_4
-       (.I0(address[9]),
-        .I1(address[10]),
-        .I2(address[8]),
-        .I3(address[11]),
-        .I4(o_en_OBUF_inst_i_7_n_0),
-        .O(o_en_OBUF_inst_i_4_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    o_en_OBUF_inst_i_5
-       (.I0(address[5]),
-        .I1(address[1]),
-        .I2(address[7]),
-        .I3(address[6]),
-        .O(o_en_OBUF_inst_i_5_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    o_en_OBUF_inst_i_6
-       (.I0(i_data_IBUF[5]),
-        .I1(i_data_IBUF[4]),
-        .I2(i_data_IBUF[7]),
-        .I3(i_data_IBUF[6]),
-        .O(o_en_OBUF_inst_i_6_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    o_en_OBUF_inst_i_7
-       (.I0(address[14]),
-        .I1(address[12]),
-        .I2(address[15]),
-        .I3(address[13]),
-        .O(o_en_OBUF_inst_i_7_n_0));
+    .INIT(64'h00000000A000CF00)) 
+    o_en_i_3
+       (.I0(\FSM_sequential_next_state[2]_i_2_n_0 ),
+        .I1(\FSM_sequential_next_state[3]_i_5_n_0 ),
+        .I2(next_state[1]),
+        .I3(next_state[0]),
+        .I4(next_state[3]),
+        .I5(next_state[2]),
+        .O(o_en_i_3_n_0));
+  FDRE #(
+    .INIT(1'b0)) 
+    o_en_reg
+       (.C(i_clk_IBUF_BUFG),
+        .CE(o_en_i_1_n_0),
+        .D(o_en_i_2_n_0),
+        .Q(o_en_OBUF),
+        .R(1'b0));
   OBUF o_we_OBUF_inst
        (.I(o_we_OBUF),
         .O(o_we));
   LUT6 #(
-    .INIT(64'hCCE2CC000000CC00)) 
-    o_we_OBUF_inst_i_1
-       (.I0(o_en_OBUF_inst_i_3_n_0),
-        .I1(current_state[3]),
-        .I2(o_en_OBUF_inst_i_2_n_0),
-        .I3(current_state[2]),
-        .I4(current_state[0]),
-        .I5(current_state[1]),
-        .O(o_we_OBUF));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+    .INIT(64'h0070FFFF00700000)) 
+    o_we_i_1
+       (.I0(next_state[0]),
+        .I1(i_start_IBUF),
+        .I2(next_state[3]),
+        .I3(next_state[1]),
+        .I4(next_state[2]),
+        .I5(o_we_i_3_n_0),
+        .O(o_we_i_1_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT4 #(
+    .INIT(16'h31CC)) 
+    o_we_i_2
+       (.I0(next_state[0]),
+        .I1(next_state[1]),
+        .I2(i_start_IBUF),
+        .I3(next_state[2]),
+        .O(o_we_i_2_n_0));
+  LUT6 #(
+    .INIT(64'hF0000000CC0000AA)) 
+    o_we_i_3
+       (.I0(i_start_IBUF),
+        .I1(\FSM_sequential_next_state[3]_i_5_n_0 ),
+        .I2(\FSM_sequential_next_state[2]_i_2_n_0 ),
+        .I3(next_state[0]),
+        .I4(next_state[1]),
+        .I5(next_state[3]),
+        .O(o_we_i_3_n_0));
+  FDRE #(
+    .INIT(1'b0)) 
+    o_we_reg
+       (.C(i_clk_IBUF_BUFG),
+        .CE(o_we_i_1_n_0),
+        .D(o_we_i_2_n_0),
+        .Q(o_we_OBUF),
+        .R(1'b0));
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  LUT3 #(
+    .INIT(8'hA3)) 
+    \somma_parziale[0]_i_1 
+       (.I0(in17[0]),
+        .I1(next_state00),
+        .I2(next_state[3]),
+        .O(\somma_parziale[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \somma_parziale[10]_i_1 
+       (.I0(in17[10]),
+        .I1(in16[10]),
+        .I2(next_state[3]),
+        .O(\somma_parziale[10]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \somma_parziale[11]_i_1 
+       (.I0(in17[11]),
+        .I1(in16[11]),
+        .I2(next_state[3]),
+        .O(\somma_parziale[11]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \somma_parziale[12]_i_1 
+       (.I0(in17[12]),
+        .I1(in16[12]),
+        .I2(next_state[3]),
+        .O(\somma_parziale[12]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \somma_parziale[13]_i_1 
+       (.I0(in17[13]),
+        .I1(in16[13]),
+        .I2(next_state[3]),
+        .O(\somma_parziale[13]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \somma_parziale[14]_i_1 
+       (.I0(in17[14]),
+        .I1(in16[14]),
+        .I2(next_state[3]),
+        .O(\somma_parziale[14]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h08000300)) 
+    \somma_parziale[15]_i_1 
+       (.I0(\FSM_sequential_next_state[1]_i_2_n_0 ),
+        .I1(next_state[3]),
+        .I2(next_state[2]),
+        .I3(next_state[1]),
+        .I4(next_state[0]),
+        .O(somma_parziale));
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \somma_parziale[15]_i_2 
+       (.I0(in17[15]),
+        .I1(in16[15]),
+        .I2(next_state[3]),
+        .O(\somma_parziale[15]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \somma_parziale[1]_i_1 
+       (.I0(in17[1]),
+        .I1(in16[1]),
+        .I2(next_state[3]),
+        .O(\somma_parziale[1]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \somma_parziale[2]_i_1 
+       (.I0(in17[2]),
+        .I1(in16[2]),
+        .I2(next_state[3]),
+        .O(\somma_parziale[2]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \somma_parziale[3]_i_1 
+       (.I0(in17[3]),
+        .I1(in16[3]),
+        .I2(next_state[3]),
+        .O(\somma_parziale[3]_i_1_n_0 ));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \somma_parziale[3]_i_3 
+       (.I0(\address_reg_n_0_[1] ),
+        .O(\somma_parziale[3]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \somma_parziale[4]_i_1 
+       (.I0(in17[4]),
+        .I1(in16[4]),
+        .I2(next_state[3]),
+        .O(\somma_parziale[4]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \somma_parziale[5]_i_1 
+       (.I0(in17[5]),
+        .I1(in16[5]),
+        .I2(next_state[3]),
+        .O(\somma_parziale[5]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \somma_parziale[6]_i_1 
+       (.I0(in17[6]),
+        .I1(in16[6]),
+        .I2(next_state[3]),
+        .O(\somma_parziale[6]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \somma_parziale[7]_i_1 
+       (.I0(in17[7]),
+        .I1(in16[7]),
+        .I2(next_state[3]),
+        .O(\somma_parziale[7]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \somma_parziale[8]_i_1 
+       (.I0(in17[8]),
+        .I1(in16[8]),
+        .I2(next_state[3]),
+        .O(\somma_parziale[8]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
+    \somma_parziale[9]_i_1 
+       (.I0(in17[9]),
+        .I1(in16[9]),
+        .I2(next_state[3]),
+        .O(\somma_parziale[9]_i_1_n_0 ));
+  FDRE #(
     .INIT(1'b0)) 
     \somma_parziale_reg[0] 
-       (.CLR(1'b0),
-        .D(\somma_parziale_reg[0]_i_1_n_0 ),
-        .G(\somma_parziale_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(somma_parziale[0]));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
-  LUT3 #(
-    .INIT(8'h8B)) 
-    \somma_parziale_reg[0]_i_1 
-       (.I0(in20[0]),
-        .I1(current_state[0]),
-        .I2(address[0]),
-        .O(\somma_parziale_reg[0]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(somma_parziale),
+        .D(\somma_parziale[0]_i_1_n_0 ),
+        .Q(\somma_parziale_reg_n_0_[0] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \somma_parziale_reg[10] 
-       (.CLR(1'b0),
-        .D(\somma_parziale_reg[10]_i_1_n_0 ),
-        .G(\somma_parziale_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(somma_parziale[10]));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \somma_parziale_reg[10]_i_1 
-       (.I0(in20[10]),
-        .I1(current_state[0]),
-        .I2(in19[10]),
-        .O(\somma_parziale_reg[10]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(somma_parziale),
+        .D(\somma_parziale[10]_i_1_n_0 ),
+        .Q(\somma_parziale_reg_n_0_[10] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \somma_parziale_reg[11] 
-       (.CLR(1'b0),
-        .D(\somma_parziale_reg[11]_i_1_n_0 ),
-        .G(\somma_parziale_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(somma_parziale[11]));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \somma_parziale_reg[11]_i_1 
-       (.I0(in20[11]),
-        .I1(current_state[0]),
-        .I2(in19[11]),
-        .O(\somma_parziale_reg[11]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(somma_parziale),
+        .D(\somma_parziale[11]_i_1_n_0 ),
+        .Q(\somma_parziale_reg_n_0_[11] ),
+        .R(1'b0));
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
+  CARRY4 \somma_parziale_reg[11]_i_2 
+       (.CI(\somma_parziale_reg[7]_i_2_n_0 ),
+        .CO({\somma_parziale_reg[11]_i_2_n_0 ,\somma_parziale_reg[11]_i_2_n_1 ,\somma_parziale_reg[11]_i_2_n_2 ,\somma_parziale_reg[11]_i_2_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(in17[11:8]),
+        .S({\address_reg_n_0_[11] ,\address_reg_n_0_[10] ,\address_reg_n_0_[9] ,\address_reg_n_0_[8] }));
+  FDRE #(
     .INIT(1'b0)) 
     \somma_parziale_reg[12] 
-       (.CLR(1'b0),
-        .D(\somma_parziale_reg[12]_i_1_n_0 ),
-        .G(\somma_parziale_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(somma_parziale[12]));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \somma_parziale_reg[12]_i_1 
-       (.I0(in20[12]),
-        .I1(current_state[0]),
-        .I2(in19[12]),
-        .O(\somma_parziale_reg[12]_i_1_n_0 ));
+       (.C(i_clk_IBUF_BUFG),
+        .CE(somma_parziale),
+        .D(\somma_parziale[12]_i_1_n_0 ),
+        .Q(\somma_parziale_reg_n_0_[12] ),
+        .R(1'b0));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 \somma_parziale_reg[12]_i_2 
        (.CI(\somma_parziale_reg[8]_i_2_n_0 ),
         .CO({\somma_parziale_reg[12]_i_2_n_0 ,\somma_parziale_reg[12]_i_2_n_1 ,\somma_parziale_reg[12]_i_2_n_2 ,\somma_parziale_reg[12]_i_2_n_3 }),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(in19[12:9]),
-        .S(address[12:9]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+        .O(in16[12:9]),
+        .S({\address_reg_n_0_[12] ,\address_reg_n_0_[11] ,\address_reg_n_0_[10] ,\address_reg_n_0_[9] }));
+  FDRE #(
     .INIT(1'b0)) 
     \somma_parziale_reg[13] 
-       (.CLR(1'b0),
-        .D(\somma_parziale_reg[13]_i_1_n_0 ),
-        .G(\somma_parziale_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(somma_parziale[13]));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \somma_parziale_reg[13]_i_1 
-       (.I0(in20[13]),
-        .I1(current_state[0]),
-        .I2(in19[13]),
-        .O(\somma_parziale_reg[13]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(somma_parziale),
+        .D(\somma_parziale[13]_i_1_n_0 ),
+        .Q(\somma_parziale_reg_n_0_[13] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \somma_parziale_reg[14] 
-       (.CLR(1'b0),
-        .D(\somma_parziale_reg[14]_i_1_n_0 ),
-        .G(\somma_parziale_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(somma_parziale[14]));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \somma_parziale_reg[14]_i_1 
-       (.I0(in20[14]),
-        .I1(current_state[0]),
-        .I2(in19[14]),
-        .O(\somma_parziale_reg[14]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(somma_parziale),
+        .D(\somma_parziale[14]_i_1_n_0 ),
+        .Q(\somma_parziale_reg_n_0_[14] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \somma_parziale_reg[15] 
-       (.CLR(1'b0),
-        .D(\somma_parziale_reg[15]_i_1_n_0 ),
-        .G(\somma_parziale_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(somma_parziale[15]));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \somma_parziale_reg[15]_i_1 
-       (.I0(in20[15]),
-        .I1(current_state[0]),
-        .I2(in19[15]),
-        .O(\somma_parziale_reg[15]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000100F00000000)) 
-    \somma_parziale_reg[15]_i_2 
-       (.I0(\tmp_maschera_in_reg_n_0_[0] ),
-        .I1(o_en_OBUF_inst_i_2_n_0),
-        .I2(current_state[3]),
-        .I3(current_state[0]),
-        .I4(current_state[2]),
-        .I5(current_state[1]),
-        .O(\somma_parziale_reg[15]_i_2_n_0 ));
+       (.C(i_clk_IBUF_BUFG),
+        .CE(somma_parziale),
+        .D(\somma_parziale[15]_i_2_n_0 ),
+        .Q(\somma_parziale_reg_n_0_[15] ),
+        .R(1'b0));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 \somma_parziale_reg[15]_i_3 
-       (.CI(\somma_parziale_reg[12]_i_2_n_0 ),
-        .CO({\NLW_somma_parziale_reg[15]_i_3_CO_UNCONNECTED [3:2],\somma_parziale_reg[15]_i_3_n_2 ,\somma_parziale_reg[15]_i_3_n_3 }),
+       (.CI(\somma_parziale_reg[11]_i_2_n_0 ),
+        .CO({\NLW_somma_parziale_reg[15]_i_3_CO_UNCONNECTED [3],\somma_parziale_reg[15]_i_3_n_1 ,\somma_parziale_reg[15]_i_3_n_2 ,\somma_parziale_reg[15]_i_3_n_3 }),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\NLW_somma_parziale_reg[15]_i_3_O_UNCONNECTED [3],in19[15:13]}),
-        .S({1'b0,address[15:13]}));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+        .O(in17[15:12]),
+        .S({\address_reg_n_0_[15] ,\address_reg_n_0_[14] ,\address_reg_n_0_[13] ,\address_reg_n_0_[12] }));
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
+  CARRY4 \somma_parziale_reg[15]_i_4 
+       (.CI(\somma_parziale_reg[12]_i_2_n_0 ),
+        .CO({\NLW_somma_parziale_reg[15]_i_4_CO_UNCONNECTED [3:2],\somma_parziale_reg[15]_i_4_n_2 ,\somma_parziale_reg[15]_i_4_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\NLW_somma_parziale_reg[15]_i_4_O_UNCONNECTED [3],in16[15:13]}),
+        .S({1'b0,\address_reg_n_0_[15] ,\address_reg_n_0_[14] ,\address_reg_n_0_[13] }));
+  FDRE #(
     .INIT(1'b0)) 
     \somma_parziale_reg[1] 
-       (.CLR(1'b0),
-        .D(\somma_parziale_reg[1]_i_1_n_0 ),
-        .G(\somma_parziale_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(somma_parziale[1]));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \somma_parziale_reg[1]_i_1 
-       (.I0(in20[1]),
-        .I1(current_state[0]),
-        .I2(in19[1]),
-        .O(\somma_parziale_reg[1]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(somma_parziale),
+        .D(\somma_parziale[1]_i_1_n_0 ),
+        .Q(\somma_parziale_reg_n_0_[1] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \somma_parziale_reg[2] 
-       (.CLR(1'b0),
-        .D(\somma_parziale_reg[2]_i_1_n_0 ),
-        .G(\somma_parziale_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(somma_parziale[2]));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \somma_parziale_reg[2]_i_1 
-       (.I0(in20[2]),
-        .I1(current_state[0]),
-        .I2(in19[2]),
-        .O(\somma_parziale_reg[2]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(somma_parziale),
+        .D(\somma_parziale[2]_i_1_n_0 ),
+        .Q(\somma_parziale_reg_n_0_[2] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \somma_parziale_reg[3] 
-       (.CLR(1'b0),
-        .D(\somma_parziale_reg[3]_i_1_n_0 ),
-        .G(\somma_parziale_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(somma_parziale[3]));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \somma_parziale_reg[3]_i_1 
-       (.I0(in20[3]),
-        .I1(current_state[0]),
-        .I2(in19[3]),
-        .O(\somma_parziale_reg[3]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(somma_parziale),
+        .D(\somma_parziale[3]_i_1_n_0 ),
+        .Q(\somma_parziale_reg_n_0_[3] ),
+        .R(1'b0));
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
+  CARRY4 \somma_parziale_reg[3]_i_2 
+       (.CI(1'b0),
+        .CO({\somma_parziale_reg[3]_i_2_n_0 ,\somma_parziale_reg[3]_i_2_n_1 ,\somma_parziale_reg[3]_i_2_n_2 ,\somma_parziale_reg[3]_i_2_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,\address_reg_n_0_[1] ,1'b0}),
+        .O(in17[3:0]),
+        .S({\address_reg_n_0_[3] ,\address_reg_n_0_[2] ,\somma_parziale[3]_i_3_n_0 ,next_state00}));
+  FDRE #(
     .INIT(1'b0)) 
     \somma_parziale_reg[4] 
-       (.CLR(1'b0),
-        .D(\somma_parziale_reg[4]_i_1_n_0 ),
-        .G(\somma_parziale_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(somma_parziale[4]));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \somma_parziale_reg[4]_i_1 
-       (.I0(in20[4]),
-        .I1(current_state[0]),
-        .I2(in19[4]),
-        .O(\somma_parziale_reg[4]_i_1_n_0 ));
+       (.C(i_clk_IBUF_BUFG),
+        .CE(somma_parziale),
+        .D(\somma_parziale[4]_i_1_n_0 ),
+        .Q(\somma_parziale_reg_n_0_[4] ),
+        .R(1'b0));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 \somma_parziale_reg[4]_i_2 
        (.CI(1'b0),
         .CO({\somma_parziale_reg[4]_i_2_n_0 ,\somma_parziale_reg[4]_i_2_n_1 ,\somma_parziale_reg[4]_i_2_n_2 ,\somma_parziale_reg[4]_i_2_n_3 }),
-        .CYINIT(address[0]),
+        .CYINIT(next_state00),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(in19[4:1]),
-        .S(address[4:1]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+        .O(in16[4:1]),
+        .S({\address_reg_n_0_[4] ,\address_reg_n_0_[3] ,\address_reg_n_0_[2] ,\address_reg_n_0_[1] }));
+  FDRE #(
     .INIT(1'b0)) 
     \somma_parziale_reg[5] 
-       (.CLR(1'b0),
-        .D(\somma_parziale_reg[5]_i_1_n_0 ),
-        .G(\somma_parziale_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(somma_parziale[5]));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \somma_parziale_reg[5]_i_1 
-       (.I0(in20[5]),
-        .I1(current_state[0]),
-        .I2(in19[5]),
-        .O(\somma_parziale_reg[5]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(somma_parziale),
+        .D(\somma_parziale[5]_i_1_n_0 ),
+        .Q(\somma_parziale_reg_n_0_[5] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \somma_parziale_reg[6] 
-       (.CLR(1'b0),
-        .D(\somma_parziale_reg[6]_i_1_n_0 ),
-        .G(\somma_parziale_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(somma_parziale[6]));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \somma_parziale_reg[6]_i_1 
-       (.I0(in20[6]),
-        .I1(current_state[0]),
-        .I2(in19[6]),
-        .O(\somma_parziale_reg[6]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(somma_parziale),
+        .D(\somma_parziale[6]_i_1_n_0 ),
+        .Q(\somma_parziale_reg_n_0_[6] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \somma_parziale_reg[7] 
-       (.CLR(1'b0),
-        .D(\somma_parziale_reg[7]_i_1_n_0 ),
-        .G(\somma_parziale_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(somma_parziale[7]));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \somma_parziale_reg[7]_i_1 
-       (.I0(in20[7]),
-        .I1(current_state[0]),
-        .I2(in19[7]),
-        .O(\somma_parziale_reg[7]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+       (.C(i_clk_IBUF_BUFG),
+        .CE(somma_parziale),
+        .D(\somma_parziale[7]_i_1_n_0 ),
+        .Q(\somma_parziale_reg_n_0_[7] ),
+        .R(1'b0));
+  (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
+  CARRY4 \somma_parziale_reg[7]_i_2 
+       (.CI(\somma_parziale_reg[3]_i_2_n_0 ),
+        .CO({\somma_parziale_reg[7]_i_2_n_0 ,\somma_parziale_reg[7]_i_2_n_1 ,\somma_parziale_reg[7]_i_2_n_2 ,\somma_parziale_reg[7]_i_2_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(in17[7:4]),
+        .S({\address_reg_n_0_[7] ,\address_reg_n_0_[6] ,\address_reg_n_0_[5] ,\address_reg_n_0_[4] }));
+  FDRE #(
     .INIT(1'b0)) 
     \somma_parziale_reg[8] 
-       (.CLR(1'b0),
-        .D(\somma_parziale_reg[8]_i_1_n_0 ),
-        .G(\somma_parziale_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(somma_parziale[8]));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \somma_parziale_reg[8]_i_1 
-       (.I0(in20[8]),
-        .I1(current_state[0]),
-        .I2(in19[8]),
-        .O(\somma_parziale_reg[8]_i_1_n_0 ));
+       (.C(i_clk_IBUF_BUFG),
+        .CE(somma_parziale),
+        .D(\somma_parziale[8]_i_1_n_0 ),
+        .Q(\somma_parziale_reg_n_0_[8] ),
+        .R(1'b0));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 \somma_parziale_reg[8]_i_2 
        (.CI(\somma_parziale_reg[4]_i_2_n_0 ),
         .CO({\somma_parziale_reg[8]_i_2_n_0 ,\somma_parziale_reg[8]_i_2_n_1 ,\somma_parziale_reg[8]_i_2_n_2 ,\somma_parziale_reg[8]_i_2_n_3 }),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O(in19[8:5]),
-        .S(address[8:5]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+        .O(in16[8:5]),
+        .S({\address_reg_n_0_[8] ,\address_reg_n_0_[7] ,\address_reg_n_0_[6] ,\address_reg_n_0_[5] }));
+  FDRE #(
     .INIT(1'b0)) 
     \somma_parziale_reg[9] 
-       (.CLR(1'b0),
-        .D(\somma_parziale_reg[9]_i_1_n_0 ),
-        .G(\somma_parziale_reg[15]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(somma_parziale[9]));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \somma_parziale_reg[9]_i_1 
-       (.I0(in20[9]),
-        .I1(current_state[0]),
-        .I2(in19[9]),
-        .O(\somma_parziale_reg[9]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_distanza_corrente_reg[0] 
-       (.CLR(1'b0),
-        .D(distanza_corrente[0]),
-        .G(\tmp_distanza_corrente_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(tmp_distanza_corrente[0]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_distanza_corrente_reg[1] 
-       (.CLR(1'b0),
-        .D(distanza_corrente[1]),
-        .G(\tmp_distanza_corrente_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(tmp_distanza_corrente[1]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_distanza_corrente_reg[2] 
-       (.CLR(1'b0),
-        .D(distanza_corrente[2]),
-        .G(\tmp_distanza_corrente_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(tmp_distanza_corrente[2]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_distanza_corrente_reg[3] 
-       (.CLR(1'b0),
-        .D(distanza_corrente[3]),
-        .G(\tmp_distanza_corrente_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(tmp_distanza_corrente[3]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_distanza_corrente_reg[4] 
-       (.CLR(1'b0),
-        .D(distanza_corrente[4]),
-        .G(\tmp_distanza_corrente_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(tmp_distanza_corrente[4]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_distanza_corrente_reg[5] 
-       (.CLR(1'b0),
-        .D(distanza_corrente[5]),
-        .G(\tmp_distanza_corrente_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(tmp_distanza_corrente[5]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_distanza_corrente_reg[6] 
-       (.CLR(1'b0),
-        .D(distanza_corrente[6]),
-        .G(\tmp_distanza_corrente_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(tmp_distanza_corrente[6]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_distanza_corrente_reg[7] 
-       (.CLR(1'b0),
-        .D(distanza_corrente[7]),
-        .G(\tmp_distanza_corrente_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(tmp_distanza_corrente[7]));
-  LUT6 #(
-    .INIT(64'h0000000000000020)) 
-    \tmp_distanza_corrente_reg[7]_i_1 
-       (.I0(\tmp_distanza_corrente_reg[7]_i_2_n_0 ),
-        .I1(address[0]),
-        .I2(current_state[1]),
-        .I3(current_state[2]),
-        .I4(current_state[3]),
-        .I5(current_state[0]),
-        .O(\tmp_distanza_corrente_reg[7]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
-    \tmp_distanza_corrente_reg[7]_i_2 
-       (.I0(o_en_OBUF_inst_i_4_n_0),
-        .I1(address[3]),
-        .I2(address[2]),
-        .I3(address[4]),
-        .I4(address[0]),
-        .I5(o_en_OBUF_inst_i_5_n_0),
-        .O(\tmp_distanza_corrente_reg[7]_i_2_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_maschera_in_reg[0] 
-       (.CLR(1'b0),
-        .D(\tmp_maschera_in_reg[0]_i_1_n_0 ),
-        .G(\tmp_maschera_in_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(\tmp_maschera_in_reg_n_0_[0] ));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \tmp_maschera_in_reg[0]_i_1 
-       (.I0(p_0_in[0]),
-        .I1(current_state[3]),
-        .I2(maschera_in[0]),
-        .O(\tmp_maschera_in_reg[0]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_maschera_in_reg[1] 
-       (.CLR(1'b0),
-        .D(\tmp_maschera_in_reg[1]_i_1_n_0 ),
-        .G(\tmp_maschera_in_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(p_0_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \tmp_maschera_in_reg[1]_i_1 
-       (.I0(p_0_in[1]),
-        .I1(current_state[3]),
-        .I2(maschera_in[1]),
-        .O(\tmp_maschera_in_reg[1]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_maschera_in_reg[2] 
-       (.CLR(1'b0),
-        .D(\tmp_maschera_in_reg[2]_i_1_n_0 ),
-        .G(\tmp_maschera_in_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(p_0_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \tmp_maschera_in_reg[2]_i_1 
-       (.I0(p_0_in[2]),
-        .I1(current_state[3]),
-        .I2(maschera_in[2]),
-        .O(\tmp_maschera_in_reg[2]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_maschera_in_reg[3] 
-       (.CLR(1'b0),
-        .D(\tmp_maschera_in_reg[3]_i_1_n_0 ),
-        .G(\tmp_maschera_in_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(p_0_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \tmp_maschera_in_reg[3]_i_1 
-       (.I0(p_0_in[3]),
-        .I1(current_state[3]),
-        .I2(maschera_in[3]),
-        .O(\tmp_maschera_in_reg[3]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_maschera_in_reg[4] 
-       (.CLR(1'b0),
-        .D(\tmp_maschera_in_reg[4]_i_1_n_0 ),
-        .G(\tmp_maschera_in_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(p_0_in[3]));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \tmp_maschera_in_reg[4]_i_1 
-       (.I0(p_0_in[4]),
-        .I1(current_state[3]),
-        .I2(maschera_in[4]),
-        .O(\tmp_maschera_in_reg[4]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_maschera_in_reg[5] 
-       (.CLR(1'b0),
-        .D(\tmp_maschera_in_reg[5]_i_1_n_0 ),
-        .G(\tmp_maschera_in_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(p_0_in[4]));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \tmp_maschera_in_reg[5]_i_1 
-       (.I0(p_0_in[5]),
-        .I1(current_state[3]),
-        .I2(maschera_in[5]),
-        .O(\tmp_maschera_in_reg[5]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_maschera_in_reg[6] 
-       (.CLR(1'b0),
-        .D(\tmp_maschera_in_reg[6]_i_1_n_0 ),
-        .G(\tmp_maschera_in_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(p_0_in[5]));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \tmp_maschera_in_reg[6]_i_1 
-       (.I0(p_0_in[6]),
-        .I1(current_state[3]),
-        .I2(maschera_in[6]),
-        .O(\tmp_maschera_in_reg[6]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_maschera_in_reg[7] 
-       (.CLR(1'b0),
-        .D(\tmp_maschera_in_reg[7]_i_1_n_0 ),
-        .G(\tmp_maschera_in_reg[7]_i_2_n_0 ),
-        .GE(1'b1),
-        .Q(p_0_in[6]));
-  LUT2 #(
-    .INIT(4'h2)) 
-    \tmp_maschera_in_reg[7]_i_1 
-       (.I0(maschera_in[7]),
-        .I1(current_state[3]),
-        .O(\tmp_maschera_in_reg[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+       (.C(i_clk_IBUF_BUFG),
+        .CE(somma_parziale),
+        .D(\somma_parziale[9]_i_1_n_0 ),
+        .Q(\somma_parziale_reg_n_0_[9] ),
+        .R(1'b0));
   LUT4 #(
-    .INIT(16'hE000)) 
-    \tmp_maschera_in_reg[7]_i_2 
-       (.I0(current_state[2]),
-        .I1(current_state[3]),
-        .I2(current_state[0]),
-        .I3(current_state[1]),
-        .O(\tmp_maschera_in_reg[7]_i_2_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b1)) 
-    \tmp_maschera_o_parziale_reg[0] 
-       (.CLR(1'b0),
-        .D(maschera_o_parziale[0]),
-        .G(\tmp_maschera_o_parziale_reg[6]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(tmp_maschera_o_parziale[0]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_maschera_o_parziale_reg[1] 
-       (.CLR(1'b0),
-        .D(maschera_o_parziale[1]),
-        .G(\tmp_maschera_o_parziale_reg[6]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(tmp_maschera_o_parziale[1]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_maschera_o_parziale_reg[2] 
-       (.CLR(1'b0),
-        .D(maschera_o_parziale[2]),
-        .G(\tmp_maschera_o_parziale_reg[6]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(tmp_maschera_o_parziale[2]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_maschera_o_parziale_reg[3] 
-       (.CLR(1'b0),
-        .D(maschera_o_parziale[3]),
-        .G(\tmp_maschera_o_parziale_reg[6]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(tmp_maschera_o_parziale[3]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_maschera_o_parziale_reg[4] 
-       (.CLR(1'b0),
-        .D(maschera_o_parziale[4]),
-        .G(\tmp_maschera_o_parziale_reg[6]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(tmp_maschera_o_parziale[4]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_maschera_o_parziale_reg[5] 
-       (.CLR(1'b0),
-        .D(maschera_o_parziale[5]),
-        .G(\tmp_maschera_o_parziale_reg[6]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(tmp_maschera_o_parziale[5]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_maschera_o_parziale_reg[6] 
-       (.CLR(1'b0),
-        .D(maschera_o_parziale[6]),
-        .G(\tmp_maschera_o_parziale_reg[6]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(tmp_maschera_o_parziale[6]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
-  LUT3 #(
-    .INIT(8'h40)) 
-    \tmp_maschera_o_parziale_reg[6]_i_1 
-       (.I0(current_state[2]),
-        .I1(current_state[3]),
-        .I2(current_state[0]),
-        .O(\tmp_maschera_o_parziale_reg[6]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_maschera_output_reg[0] 
-       (.CLR(1'b0),
-        .D(maschera_output[0]),
-        .G(\tmp_maschera_output_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(tmp_maschera_output[0]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_maschera_output_reg[1] 
-       (.CLR(1'b0),
-        .D(maschera_output[1]),
-        .G(\tmp_maschera_output_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(tmp_maschera_output[1]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_maschera_output_reg[2] 
-       (.CLR(1'b0),
-        .D(maschera_output[2]),
-        .G(\tmp_maschera_output_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(tmp_maschera_output[2]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_maschera_output_reg[3] 
-       (.CLR(1'b0),
-        .D(maschera_output[3]),
-        .G(\tmp_maschera_output_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(tmp_maschera_output[3]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_maschera_output_reg[4] 
-       (.CLR(1'b0),
-        .D(maschera_output[4]),
-        .G(\tmp_maschera_output_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(tmp_maschera_output[4]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_maschera_output_reg[5] 
-       (.CLR(1'b0),
-        .D(maschera_output[5]),
-        .G(\tmp_maschera_output_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(tmp_maschera_output[5]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_maschera_output_reg[6] 
-       (.CLR(1'b0),
-        .D(maschera_output[6]),
-        .G(\tmp_maschera_output_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(tmp_maschera_output[6]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \tmp_maschera_output_reg[7] 
-       (.CLR(1'b0),
-        .D(maschera_output[7]),
-        .G(\tmp_maschera_output_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(tmp_maschera_output[7]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT4 #(
-    .INIT(16'h0008)) 
-    \tmp_maschera_output_reg[7]_i_1 
-       (.I0(current_state[0]),
-        .I1(current_state[3]),
-        .I2(current_state[2]),
-        .I3(current_state[1]),
-        .O(\tmp_maschera_output_reg[7]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+    .INIT(16'h0400)) 
+    \x_principale[7]_i_1 
+       (.I0(next_state[3]),
+        .I1(next_state[2]),
+        .I2(next_state[0]),
+        .I3(next_state[1]),
+        .O(x_principale));
+  FDRE #(
     .INIT(1'b0)) 
     \x_principale_reg[0] 
-       (.CLR(1'b0),
+       (.C(i_clk_IBUF_BUFG),
+        .CE(x_principale),
         .D(i_data_IBUF[0]),
-        .G(\x_principale_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(x_principale[0]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+        .Q(\x_principale_reg_n_0_[0] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \x_principale_reg[1] 
-       (.CLR(1'b0),
+       (.C(i_clk_IBUF_BUFG),
+        .CE(x_principale),
         .D(i_data_IBUF[1]),
-        .G(\x_principale_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(x_principale[1]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+        .Q(\x_principale_reg_n_0_[1] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \x_principale_reg[2] 
-       (.CLR(1'b0),
+       (.C(i_clk_IBUF_BUFG),
+        .CE(x_principale),
         .D(i_data_IBUF[2]),
-        .G(\x_principale_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(x_principale[2]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+        .Q(\x_principale_reg_n_0_[2] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \x_principale_reg[3] 
-       (.CLR(1'b0),
+       (.C(i_clk_IBUF_BUFG),
+        .CE(x_principale),
         .D(i_data_IBUF[3]),
-        .G(\x_principale_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(x_principale[3]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+        .Q(\x_principale_reg_n_0_[3] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \x_principale_reg[4] 
-       (.CLR(1'b0),
+       (.C(i_clk_IBUF_BUFG),
+        .CE(x_principale),
         .D(i_data_IBUF[4]),
-        .G(\x_principale_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(x_principale[4]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+        .Q(\x_principale_reg_n_0_[4] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \x_principale_reg[5] 
-       (.CLR(1'b0),
+       (.C(i_clk_IBUF_BUFG),
+        .CE(x_principale),
         .D(i_data_IBUF[5]),
-        .G(\x_principale_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(x_principale[5]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+        .Q(\x_principale_reg_n_0_[5] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \x_principale_reg[6] 
-       (.CLR(1'b0),
+       (.C(i_clk_IBUF_BUFG),
+        .CE(x_principale),
         .D(i_data_IBUF[6]),
-        .G(\x_principale_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(x_principale[6]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+        .Q(\x_principale_reg_n_0_[6] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \x_principale_reg[7] 
-       (.CLR(1'b0),
+       (.C(i_clk_IBUF_BUFG),
+        .CE(x_principale),
         .D(i_data_IBUF[7]),
-        .G(\x_principale_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(x_principale[7]));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
-  LUT3 #(
-    .INIT(8'h40)) 
-    \x_principale_reg[7]_i_1 
-       (.I0(current_state[0]),
-        .I1(current_state[2]),
-        .I2(current_state[1]),
-        .O(\x_principale_reg[7]_i_1_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+        .Q(\x_principale_reg_n_0_[7] ),
+        .R(1'b0));
+  LUT4 #(
+    .INIT(16'h4000)) 
+    \y_principale[7]_i_1 
+       (.I0(next_state[3]),
+        .I1(next_state[2]),
+        .I2(next_state[0]),
+        .I3(next_state[1]),
+        .O(\y_principale[7]_i_1_n_0 ));
+  FDRE #(
     .INIT(1'b0)) 
     \y_principale_reg[0] 
-       (.CLR(1'b0),
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\y_principale[7]_i_1_n_0 ),
         .D(i_data_IBUF[0]),
-        .G(\y_principale_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(y_principale[0]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+        .Q(\y_principale_reg_n_0_[0] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \y_principale_reg[1] 
-       (.CLR(1'b0),
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\y_principale[7]_i_1_n_0 ),
         .D(i_data_IBUF[1]),
-        .G(\y_principale_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(y_principale[1]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+        .Q(\y_principale_reg_n_0_[1] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \y_principale_reg[2] 
-       (.CLR(1'b0),
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\y_principale[7]_i_1_n_0 ),
         .D(i_data_IBUF[2]),
-        .G(\y_principale_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(y_principale[2]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+        .Q(\y_principale_reg_n_0_[2] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \y_principale_reg[3] 
-       (.CLR(1'b0),
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\y_principale[7]_i_1_n_0 ),
         .D(i_data_IBUF[3]),
-        .G(\y_principale_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(y_principale[3]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+        .Q(\y_principale_reg_n_0_[3] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \y_principale_reg[4] 
-       (.CLR(1'b0),
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\y_principale[7]_i_1_n_0 ),
         .D(i_data_IBUF[4]),
-        .G(\y_principale_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(y_principale[4]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+        .Q(\y_principale_reg_n_0_[4] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \y_principale_reg[5] 
-       (.CLR(1'b0),
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\y_principale[7]_i_1_n_0 ),
         .D(i_data_IBUF[5]),
-        .G(\y_principale_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(y_principale[5]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+        .Q(\y_principale_reg_n_0_[5] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \y_principale_reg[6] 
-       (.CLR(1'b0),
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\y_principale[7]_i_1_n_0 ),
         .D(i_data_IBUF[6]),
-        .G(\y_principale_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(y_principale[6]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
+        .Q(\y_principale_reg_n_0_[6] ),
+        .R(1'b0));
+  FDRE #(
     .INIT(1'b0)) 
     \y_principale_reg[7] 
-       (.CLR(1'b0),
+       (.C(i_clk_IBUF_BUFG),
+        .CE(\y_principale[7]_i_1_n_0 ),
         .D(i_data_IBUF[7]),
-        .G(\y_principale_reg[7]_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(y_principale[7]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
-  LUT3 #(
-    .INIT(8'h80)) 
-    \y_principale_reg[7]_i_1 
-       (.I0(current_state[0]),
-        .I1(current_state[1]),
-        .I2(current_state[2]),
-        .O(\y_principale_reg[7]_i_1_n_0 ));
+        .Q(\y_principale_reg_n_0_[7] ),
+        .R(1'b0));
 endmodule
 `ifndef GLBL
 `define GLBL
