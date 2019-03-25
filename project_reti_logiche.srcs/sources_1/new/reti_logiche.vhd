@@ -29,8 +29,8 @@ architecture Behavioral of project_reti_logiche is                              
     type type_state is (START, RICHIESTA_RAM, WAIT_RAM_AND_INCREMENTA_INDIRIZZO, LETTO_MASCHERA, RICHIESTA_X_PRINCIPALE, WAIT_RAM, LEGGI_X_PRINCIPALE_RICHIESTA_Y, LEGGI_Y_PRINCIPALE, CHECK_CENTROIDE, LEGGI_X, LEGGI_Y, MODIFICA_MASCHERA, DONE, SEGNALE_DONE);
     signal next_state, current_state : type_state;
     signal address : std_logic_vector(15 downto 0) := (others => '0');
-    signal maschera_output : std_logic_vector(7 downto 0);
-    signal x_principale, y_principale : std_logic_vector(7 downto 0);
+    signal maschera_output : std_logic_vector(7 downto 0) := (others => '0');
+    signal x_principale, y_principale : std_logic_vector(7 downto 0) := (others => '0');
     signal maschera_o_parziale : std_logic_vector(7 downto 0) := (0 => '1', others => '0');
     signal tmp_maschera_in : std_logic_vector(7 downto 0) := (others => '0');
       
@@ -40,7 +40,7 @@ begin
         
     variable somma_parziale : unsigned(15 downto 0) := to_unsigned(0,16); --Per incremento di indirizzo
     variable tmp_maschera_o_parziale : std_logic_vector(7 downto 0) := (0 => '1', others => '0');
-    variable distanza_minima, distanza_corrente, tmp_distanza_corrente : unsigned(7 downto 0) := to_unsigned(0,8);
+    variable distanza_minima, distanza_corrente, tmp_distanza_corrente : unsigned(8 downto 0) := to_unsigned(0,9);
     variable maschera_in : std_logic_vector(7 downto 0) := (others => '0');
     variable tmp_maschera_output : std_logic_vector(7 downto 0);
     
@@ -52,12 +52,20 @@ begin
         case next_state is
             when START =>
                 if (i_start='1') then --possibile aggiunta di lese con next state
-                    next_state <= RICHIESTA_RAM;
                     address <= "0000000000000000";
+                    o_address <= "0000000000000000";
                     o_data <= "00000000";
                     o_en <= '0';
                     o_we <= '0';
-                    distanza_minima := to_unsigned(255,8);
+                    distanza_minima := to_unsigned(255,9);
+                    distanza_corrente := to_unsigned(0,9);
+                    somma_parziale := to_unsigned(0,16);
+                    maschera_in := (others => '0');
+                    x_principale <= (others => '0');
+                    y_principale <= (others => '0');
+                    maschera_output <= (others => '0');
+                    maschera_o_parziale <= (0 => '1', others => '0');
+                    next_state <= RICHIESTA_RAM;
                 else
                     next_state <= START;
                 end if;
@@ -136,22 +144,22 @@ begin
                 end if;
                 maschera_in := '0' & maschera_in(7 downto 1); --Problema post sintesi????
                 --tmp_maschera_in <= maschera_in;
-                distanza_corrente := to_unsigned(0 ,8);
+                distanza_corrente := to_unsigned(0 ,9);
             
             when LEGGI_X => -- Da chiedere
                 if (UNSIGNED(x_principale) > UNSIGNED(i_data)) then
-                    distanza_corrente := UNSIGNED(x_principale) - UNSIGNED(i_data);
+                    distanza_corrente := UNSIGNED('0' & x_principale) - UNSIGNED('0' & i_data);
                 else
-                    distanza_corrente := UNSIGNED(i_data) - UNSIGNED(x_principale);
+                    distanza_corrente := UNSIGNED('0' & i_data) - UNSIGNED('0' & x_principale);
                 end if;
                 address <= std_logic_vector(somma_parziale);
                 next_state <= RICHIESTA_RAM;
                 
             when LEGGI_Y =>
                 if (UNSIGNED(y_principale) > UNSIGNED(i_data)) then
-                    distanza_corrente := distanza_corrente + UNSIGNED(y_principale) - UNSIGNED(i_data);
+                    distanza_corrente := UNSIGNED(distanza_corrente) + UNSIGNED('0' & y_principale) - UNSIGNED('0' & i_data);
                 else
-                    distanza_corrente := distanza_corrente + UNSIGNED(i_data) - UNSIGNED(y_principale);
+                    distanza_corrente := UNSIGNED(distanza_corrente) + UNSIGNED('0' & i_data) - UNSIGNED('0' & y_principale);
                 end if;
                 address <= std_logic_vector(somma_parziale);
                 --tmp_maschera_output := maschera_output;
@@ -162,10 +170,10 @@ begin
                 if (distanza_corrente > distanza_minima) then                    
                     maschera_o_parziale <= maschera_o_parziale(6 downto 0) & '0';
                 elsif (distanza_corrente = distanza_minima) then
-                    maschera_output <= maschera_output or maschera_o_parziale; --Legale ???????????????????????
+                    maschera_output <= maschera_output or maschera_o_parziale;
                     maschera_o_parziale <= maschera_o_parziale(6 downto 0) & '0';
                 else
-                    maschera_output <= "00000000" or maschera_o_parziale; --Legale ???????????????????????
+                    maschera_output <= "00000000" or maschera_o_parziale;
                     maschera_o_parziale <= maschera_o_parziale(6 downto 0) & '0';
                     distanza_minima := distanza_corrente;                                                                                                                
                 end if;                
