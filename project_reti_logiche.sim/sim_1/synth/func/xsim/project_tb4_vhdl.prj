@@ -1,0 +1,21 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"project_tb4_func_synth.vhd" \
+"../../../../../project_reti_logiche.srcs/sim_1/imports/testbench_generator_reti_logiche/random_TestBench_11.vhd" \
+"../../../../../project_reti_logiche.srcs/sim_1/imports/testbench_generator_reti_logiche/random_TestBench_4.vhd" \
+"../../../../../project_reti_logiche.srcs/sim_1/imports/testbench_generator_reti_logiche/random_TestBench_1.vhd" \
+"../../../../../project_reti_logiche.srcs/sim_1/imports/testbench_generator_reti_logiche/random_TestBench_6.vhd" \
+"../../../../../project_reti_logiche.srcs/sim_1/imports/testbench_generator_reti_logiche/random_TestBench_13.vhd" \
+"../../../../../project_reti_logiche.srcs/sim_1/imports/testbench_generator_reti_logiche/random_TestBench_7.vhd" \
+"../../../../../project_reti_logiche.srcs/sim_1/imports/testbench_generator_reti_logiche/random_TestBench_2.vhd" \
+"../../../../../project_reti_logiche.srcs/sim_1/imports/testbench_generator_reti_logiche/random_TestBench_15.vhd" \
+"../../../../../project_reti_logiche.srcs/sim_1/imports/testbench_generator_reti_logiche/random_TestBench_9.vhd" \
+"../../../../../project_reti_logiche.srcs/sim_1/imports/testbench_generator_reti_logiche/random_TestBench_12.vhd" \
+"../../../../../project_reti_logiche.srcs/sim_1/imports/testbench_generator_reti_logiche/random_TestBench_5.vhd" \
+"../../../../../project_reti_logiche.srcs/sim_1/imports/testbench_generator_reti_logiche/random_TestBench_3.vhd" \
+"../../../../../project_reti_logiche.srcs/sim_1/imports/testbench_generator_reti_logiche/random_TestBench_10.vhd" \
+"../../../../../project_reti_logiche.srcs/sim_1/imports/testbench_generator_reti_logiche/random_TestBench_8.vhd" \
+"../../../../../project_reti_logiche.srcs/sim_1/imports/testbench_generator_reti_logiche/random_TestBench_14.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,14 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+Failure: Simulation Ended!, TEST PASSATO
+Time: 3025100 ps  Iteration: 2  Process: /project_tb1/test  File: C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sim_1/imports/testbench_generator_reti_logiche/random_TestBench_1.vhd
+$finish called at time : 3025100 ps : File "C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sim_1/imports/testbench_generator_reti_logiche/random_TestBench_1.vhd" Line 113
+Failure: Simulation Ended!, TEST PASSATO
+Time: 6075100 ps  Iteration: 2  Process: /project_tb1/test  File: C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sim_1/imports/testbench_generator_reti_logiche/random_TestBench_1.vhd
+$finish called at time : 6075100 ps : File "C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sim_1/imports/testbench_generator_reti_logiche/random_TestBench_1.vhd" Line 113
+Failure: Simulation Ended!, TEST PASSATO
+Time: 9125100 ps  Iteration: 2  Process: /project_tb1/test  File: C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sim_1/imports/testbench_generator_reti_logiche/random_TestBench_1.vhd
+$finish called at time : 9125100 ps : File "C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sim_1/imports/testbench_generator_reti_logiche/random_TestBench_1.vhd" Line 113
+Failure: Simulation Ended!, TEST PASSATO
+Time: 12175100 ps  Iteration: 2  Process: /project_tb1/test  File: C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sim_1/imports/testbench_generator_reti_logiche/random_TestBench_1.vhd
+$finish called at time : 12175100 ps : File "C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sim_1/imports/testbench_generator_reti_logiche/random_TestBench_1.vhd" Line 113
