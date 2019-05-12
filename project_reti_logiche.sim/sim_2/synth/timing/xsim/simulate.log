@@ -1,0 +1,5 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+Failure: Simulation Ended!, TEST PASSATO
+Time: 1053737 ps  Iteration: 1  Process: /project_tb5/test  File: C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sim_2/imports/test specifici/test5.vhd
+$finish called at time : 1053737 ps : File "C:/Users/Mark2/Vivado/project_reti_logiche/project_reti_logiche.srcs/sim_2/imports/test specifici/test5.vhd" Line 115

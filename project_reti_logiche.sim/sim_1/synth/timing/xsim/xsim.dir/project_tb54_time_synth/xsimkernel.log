@@ -1,0 +1,7 @@
+Running: xsim.dir/project_tb54_time_synth/xsimk.exe -simmode gui -wdb project_tb54_time_synth.wdb -simrunnum 0 -socket 59109
+Design successfully loaded
+Design Loading Memory Usage: 12164 KB (Peak: 12164 KB)
+Design Loading CPU Usage: 62 ms
+Simulation completed
+Simulation Memory Usage: 16804 KB (Peak: 16804 KB)
+Simulation CPU Usage: 343 ms

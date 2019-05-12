@@ -25,7 +25,7 @@ entity project_reti_logiche is
     );
 end project_reti_logiche;
 
-architecture Behavioral of project_reti_logiche is                                               ---------------------------------STATI DA OTTIMIZZARE-------------------------------
+architecture Behavioral of project_reti_logiche is
     type type_state is (START, RICHIESTA_RAM, WAIT_RAM_AND_INCREMENTA_INDIRIZZO, LETTO_MASCHERA, RICHIESTA_X_PRINCIPALE, WAIT_RAM, LEGGI_X_PRINCIPALE_RICHIESTA_Y, LEGGI_Y_PRINCIPALE, CHECK_CENTROIDE, LEGGI_X, LEGGI_Y, MODIFICA_MASCHERA, DONE, SEGNALE_DONE);
     signal next_state, current_state : type_state;
     signal address : std_logic_vector(15 downto 0) := (others => '0');
@@ -54,7 +54,7 @@ begin
                     o_data <= "00000000";
                     o_en <= '0';
                     o_we <= '0';
-                    distanza_minima := to_unsigned(255,9);
+                    distanza_minima := to_unsigned(511,9); --inizializzazione di distanza minima al massimo possibile +1
                     distanza_corrente := to_unsigned(0,9);
                     somma_parziale := to_unsigned(0,16);
                     maschera_in := (others => '0');
