@@ -38,7 +38,7 @@ begin
     stato_prossimo : process(i_clk, i_rst)
         
     variable somma_parziale : unsigned(15 downto 0) := to_unsigned(0,16); --Per incremento di indirizzo
-    variable distanza_minima, distanza_corrente, tmp_distanza_corrente : unsigned(8 downto 0) := to_unsigned(0,9);
+    variable distanza_minima, distanza_corrente : unsigned(8 downto 0) := to_unsigned(0,9);
     variable maschera_in : std_logic_vector(7 downto 0) := (others => '0');
     
     begin
@@ -161,7 +161,7 @@ begin
                 elsif (distanza_corrente = distanza_minima) then --viene aggiunto un bit 1 alla maschera d'uscita nella posizione in cui si trova il centroide corrente nella maschera d'ingresso
                     maschera_output <= maschera_output or maschera_o_parziale;
                     maschera_o_parziale <= maschera_o_parziale(6 downto 0) & '0';
-                else --viene azzerata la maschera d'uscita finora creata e viene aggiunto viene aggiunto un bit 1 nella posizione in cui si trova il centroide corrente nella maschera d'ingresso
+                else --viene azzerata la maschera d'uscita finora creata e viene aggiunto un bit 1 nella posizione in cui si trova il centroide corrente nella maschera d'ingresso
                     maschera_output <= "00000000" or maschera_o_parziale;
                     maschera_o_parziale <= maschera_o_parziale(6 downto 0) & '0';
                     distanza_minima := distanza_corrente;                                                                                                                
