@@ -1,7 +1,0 @@
-Running: xsim.dir/project_tb61_behav/xsimk.exe -simmode gui -wdb project_tb61_behav.wdb -simrunnum 0 -socket 51939
-Design successfully loaded
-Design Loading Memory Usage: 7360 KB (Peak: 7360 KB)
-Design Loading CPU Usage: 31 ms
-Simulation completed
-Simulation Memory Usage: 10152 KB (Peak: 10152 KB)
-Simulation CPU Usage: 155 ms

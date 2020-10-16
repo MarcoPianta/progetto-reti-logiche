@@ -1,2 +1,7 @@
-project_reti_logiche/
+project_reti_logiche.cache/
+project_reti_logiche.hw/
+project_reti_logiche.ip_user_files/
+project_reti_logiche.runs/
+project_reti_logiche.sim/
+project_reti_logiche.srcs/
 project_reti_logiche.xpr
