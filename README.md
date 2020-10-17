@@ -9,4 +9,6 @@ The src_VHDL directory contains the VHDL code of the project and the testbenches
 The src_Generator directory contains the Python code of the script that can be
 used to generate random or custom testbenches. <br>
 The "Specifica e Regole" directory contains the specification and rules provided
-by Professors
+by Professors. <br>
+The Project's documentation -- Reti Logiche.pdf file is the documentation required by
+professor.
